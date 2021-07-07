@@ -1,0 +1,105 @@
+.footer {
+    color: #ffffff;
+    background-color: #27659c;
+    background-image: url('images/clavis-footer-bg.jpg');
+    background-size: contain;
+    background-position: left center;
+    background-repeat: no-repeat;
+
+    @media screen and (max-width: 768px) {
+        background-size: cover;
+    }
+    
+
+    .section-container {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        padding: 0 230px;
+        @media screen and (max-width: 1024px) {
+            padding: 0 50px;
+        }
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+            padding: 0 10px;
+        }
+        & > div {
+            width: 50%;
+            @media screen and (max-width: 768px) {
+                width: 100%;
+            }
+        }
+        .form-content {
+            padding-right: 4%;
+            @media screen and (max-width: 768px) {
+                padding-right: 0%;
+            }
+            h2 {
+                font-family: 'proxima-nova-light';
+                font-size: 45px;
+                line-height: 54px;
+                margin-bottom: 10%;
+                @media screen and (max-width: 768px) {
+                    margin-bottom: 5%;
+                    padding-top: 30px;
+                }
+            }
+        }
+    }
+
+    .lower-footer {
+        border-top: 1px solid #4882ae;
+        padding: 45px 0;
+        margin-left: -20px;
+        margin-right: -20px;
+        .footer-disclaimer {
+            display: flex;
+            align-items: center;
+            width: auto;
+            padding: 0 270px;
+            @media screen and (max-width: 1024px) {
+                padding: 0 50px;
+            }
+
+            @media screen and (max-width: 768px) {
+                flex-direction: column;
+                padding: 0 30px;
+                align-items: flex-start;
+                & div:first-child {
+                    margin-bottom: 10px;
+                }
+            }
+            
+            & > div {
+                width: 50%;
+                @media screen and (max-width: 768px) {
+                    width: 100%;
+                }
+                p {
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+            }
+            .fotter-terms {
+                text-transform: uppercase;
+                font-size: 13px;
+                line-height: 16px;
+                span {
+                    display: block;
+                    float: right;
+                    @media screen and (max-width: 768px) { 
+                        float: none;
+                    }
+                    a {
+                        color: #ffffff;
+                        text-decoration: none;
+                        text-align: right;
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,23 @@
+@font-face {
+	font-family: 'proxima-nova-regular';
+	src: url("./fonts/proxima-nova-regular.ttf") format('woff');
+	src: url("./fonts/proxima-nova-regular.otf") format('woff');
+	font-weight: 700;
+	font-style: normal;
+	font-stretch: normal;
+}
+
+@font-face {
+	font-family: 'proxima-nova-light';
+	src: url("./fonts/Proxima-Nova-Light.otf") format('woff');
+	font-weight: 700;
+	font-style: normal;
+	font-stretch: normal;
+}
+
+p {
+	font-size: 20px;
+	line-height: 24px;
+}
+
+

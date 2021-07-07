@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLAVIS</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    
+    <div class="wrapper">
+        
+        <div class="slab hero">
+
+            <div class="hero-video">
+                <video autoplay muted loop>
+                    <source src="video/ripple-hero-video.mp4" type="video/mp4">
+                    <source src="video/ripple-hero-video.mov" type="video/mov">
+                    <img src="images/clavis-hero-bg.jpg" title="Your browser does not support the <video> tag">
+                </video>
+                <div class="hero-content">
+                    <a href="http://www.claviscp.com" target="_blank">
+                        <img width="167" src="images/svg/clavis-logo.svg" alt="CLAVIS LOGO" />
+                    </a>
+                    <h2>Ripple Investing™</h2>
+                    <h1>Clavis Impact Fund</h1>
+                    <p>The Clavis Impact Fund is the private foundation arm of Clavis Capital Partners that seeks to use its resources to positively IMPACT the trajectory of people's lives throughout our community. More than just “charitable giving”, we aim to use our resources, energy, contacts and experience to make significant, positive “ripple” impact investments in our community.</p>
+                    <a class="hero-cta" href="#form-container" id="GIT">GET IN TOUCH</a>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="slab slab-1 section-main">
+            <div class="section-container">
+                <div class="info-box">
+                    <h2>About Us</h2>
+                    <p>At Clavis Capital Partners, we have been blessed with good fortune, great partners and a lot of good luck. The Clavis Impact Fund is our way of “paying it forward” and using our unique investing experience to create positive “ripple” impacts on people’s lives. </p>
+                    <div class="link-footer">
+                        <span>Todd and Kristen Dauphinais</span>
+                    </div>
+                </div>
+                <div class="spacer-box"></div>
+            </div>
+        </div>
+
+        <div class="slab slab-2 section-main">
+            <div class="section-container">
+                <div class="spacer-box"></div>
+                <div class="info-box">
+                    <h2>What is Ripple Investing™?</h2>
+                    <p>Like a ripple on the water, Ripple Investing™ is designed to amplify our giving efforts to impact as many people as possible. Simply put, our aim is to “invest” in situations — using our resources, energy, contacts and experience — that will positively impact the trajectory of not one, but multiple people’s lives. </p>
+                    <div class="link-footer">
+                        <p><em>noun:</em> ripple [ rip-uhl ] “A series of waves on the surface of water, especially as caused by an object dropping into it or a slight breeze.”</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slab footer">
+            <div class="section-container">
+                <div class="form-content">
+                    <h2>Get in Touch</h2>
+                    <p>The Clavis Impact Fund is anticipated to be operational in the second half of 2021. In the meantime, please direct all inquiries using this form.</p>
+                </div>
+                <div class="form-container" id="form-container">
+                    <div id="form" class="form">
+                        <form id="test-form" class="validity" method="get">
+                          
+                            <div>
+    
+                                <label>YOUR NAME</label>
+                                <input class="input1" type="text" name="form_field_1"  id="userName"/>
+    
+                                <label>EMAIL ADDRESS</label>
+                                <input class="input1" type="email" name="form_field_2" id="userEmail" placeholder="someone@example.com"/>
+    
+                                <label>PHONE NUMBER</label>
+                                <input class="input1" type="tel" name="form_field_3" pattern="\d{3}[\-]\d{3}[\-]\d{4}"  id="userPhone" placeholder="Requested format 000-000-0000"/>
+
+                                <div class="textarea">
+                                    <label>HOW CAN WE ASSIST?</label>
+                                    <textarea class="input4" name="comment" form="usrform" id="comment"></textarea>
+                                </div>
+    
+                            </div>
+    
+                            <p class="error-message display-none">All fields have to be filled</p>
+    
+                            <div class="button-container">
+                            <div class="button-blocker"></div>
+                            <button type="submit" id="submit-form">SUBMIT</button>
+                            </div>
+    
+                            <p class="final-message display-none">The message was sent<br/>Thank you!</p>
+                          
+                          </form>
+                    </div>
+                </div>
+            </div>
+            <div class="lower-footer">
+                <div class="footer-disclaimer">
+                    <div class="footer-date">
+                        <p>© 2021 — Clavis Capital Partners. All rights reserved.</p>
+                    </div>
+                    <div class="fotter-terms">
+                        <span><a href="http://www.claviscp.com/" target="_blank">clavis capital partners</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+
+    <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
+	<script src="js/jquery.validity.min.js"></script>
+	<script src="js/script.js"></script>
+
+    <script>
+
+
+        $( document ).ready(function() {
+
+            $('#submit-form').on('click', function(e) {
+            e.preventDefault();
+			  userName=$("#userName").val();
+			  userEmail=$("#userEmail").val();
+			  userPhone=$("#userPhone").val();
+			  comment=$("#comment").val();
+			  //console.log(userName,userEmail,userPhone,comment)
+			  $.post("form_post.asp",{userName:userName,userEmail:userEmail,userPhone:userPhone,comment:comment});
+            //   var jqxhr = $.ajax({
+            //     url: url,
+            //     method: "GET",
+            //     dataType: "json",
+            //     data: $form.serializeObject()
+            //   }).done(function(e) {
+            //         console.log(e) //{result: "success", row: 9}
+            //     });
+
+            $(".final-message").removeClass('display-none');
+            $(".button-blocker").css('display', 'block')
+            $("#test-form").trigger("reset");
+            $(".input4").val('');
+            $(":input").removeClass('error');
+            $("label.error-block").remove();
+            });
+
+
+            $(function(){
+                $(".button-blocker").click(function(){
+                    $(".error-message").removeClass('display-none');
+                    $(".final-message").addClass('display-none');
+                });
+            });
+
+            $(function(){
+                $('#test-form').keyup(function() {
+                    var input1 = $('.input1').val() != "";
+                    var input2 = $('.input2').val() != "";
+                    var input3 = $('.input3').val() != "";
+                    var input4 = $('.input4').val() != "";
+                    if(input1 && input2 && input3 && input4) {
+                        console.log('the button is enabled here');
+                        $('#submit-form').prop('disabled', false);
+                        $(".button-blocker").css('display', 'none');
+                        $(".error-message").addClass('display-none');
+                    } else {
+                        $(".error-message").addClass('display-none');
+                        $(".final-message").addClass('display-none');
+                    }
+                });
+            });
+
+            function scrollToElement (selector) {
+                $('html, body').animate({
+                    scrollTop: $(selector).offset().top
+                }, 500);    
+                };
+
+                $(document).on('click', 'a#GIT', function () {
+                    scrollToElement($(this).attr('href'));
+                });
+                
+            $('.error-block').css('color','red')
+        });
+        
+
+    </script>
+
+</body>
+</html>

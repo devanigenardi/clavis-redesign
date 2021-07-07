@@ -1,0 +1,92 @@
+
+        .form {
+            max-width: 468px;
+            width: 100%;
+            background-color: #21598e;
+            padding: 40px 40px 30px 40px;
+            color: $white;
+            float: right;
+            border-radius: 2px;
+            @media screen and (max-width: 768px) {
+                display: block;
+                width: 100vw;
+                margin: 30px 0 0 0;
+                padding: 40px 20px;
+                max-width: 100%;
+            }
+
+            div {
+                font-size: 14px;
+                padding: 5px 0px 5px 0px;
+                div {
+                    @include flexbox; 
+                    justify-content: space-between;
+                    border: none;
+                    padding: 0;
+                    margin: 0;
+                }
+                input {
+                    display: block;
+                    width: 100%;
+                    border: 0;
+                    outline: 0;
+                    padding: 10px;
+                    border-radius: 5px;
+                    margin: 7px 0 17px 0;
+                }
+                
+            }
+
+            .textarea {
+                display: flex;
+                flex-direction: column;
+                textarea {
+                    height: 150px;
+                    border-radius: 5px;
+                    border: none;
+                    margin-top: 7px;
+                    outline:0px !important;
+                    -webkit-appearance:none;
+                    box-shadow: none !important;
+                    padding: 10px;
+                }
+            }
+
+            .button-container {
+                border: 0;
+                position: relative;
+                padding-left: 0px;
+                .button-blocker {
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    height: 100%;
+                    width: 100%;
+                    z-index: 1;
+                }
+                button {
+                    margin-top: 45px;
+                    text-align: center;
+                    width: 100%;
+                    padding: 15px;
+                    color: #ffffff;
+                    border-radius: 5px;
+                    outline: 0;
+                    border: 1px solid #D0AF21;
+                    transition: all .3s ease 0s;
+                    cursor: pointer;
+                    background: #D0AF21;
+                    &:hover {
+                        background: #ffffff;
+                        color: #27659c;
+                        border: 1px solid $white;
+                        cursor: pointer;
+                    }
+                }
+            }
+            .final-message {
+                font-size: 14px;
+                text-align: center;
+                padding-top: 20px;
+            }
+        }

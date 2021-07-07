@@ -1,0 +1,902 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@font-face {
+  font-family: 'proxima-nova-regular';
+  src: url("./fonts/proxima-nova-regular.ttf") format("woff");
+  src: url("./fonts/proxima-nova-regular.otf") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'proxima-nova-light';
+  src: url("./fonts/Proxima-Nova-Light.otf") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+p {
+  font-size: 20px;
+  line-height: 24px;
+}
+
+body {
+  font-family: 'proxima-nova-regular';
+  position: relative;
+}
+
+body .wrapper {
+  width: 100%;
+}
+
+body .wrapper .slab {
+  margin: 0 auto;
+  max-width: 1636px;
+  width: 100%;
+  padding: 0 20px;
+  overflow: hidden;
+}
+
+body .wrapper .hero {
+  background-size: cover;
+  background-position: center center;
+  padding: 0px;
+  color: #ffffff;
+}
+
+body .wrapper .hero .hero-video {
+  position: relative;
+}
+
+body .wrapper .hero .hero-video video {
+  position: absolute;
+  background-image: url("images/clavis-hero-bg.jpg");
+  z-index: -1;
+}
+
+@media screen and (min-width: 1100px) {
+  body .wrapper .hero .hero-video video {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1099px) {
+  body .wrapper .hero .hero-video video {
+    margin: auto;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+  }
+}
+
+body .wrapper .hero .hero-video .hero-content {
+  padding: 30px 250px 90px;
+}
+
+@media screen and (max-width: 1024px) {
+  body .wrapper .hero .hero-video .hero-content {
+    padding: 30px 50px 90px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body .wrapper .hero .hero-video .hero-content {
+    padding: 40px 30px;
+  }
+}
+
+body .wrapper .hero .hero-video .hero-content img {
+  display: block;
+  margin-bottom: 8%;
+}
+
+@media screen and (max-width: 768px) {
+  body .wrapper .hero .hero-video .hero-content img {
+    width: 200px;
+    height: auto;
+    margin-bottom: 8%;
+  }
+}
+
+body .wrapper .hero .hero-video .hero-content h2 {
+  font-size: 20px;
+  line-height: 24px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+body .wrapper .hero .hero-video .hero-content h1 {
+  font-size: 60px;
+  line-height: 72px;
+  margin-bottom: 50px;
+}
+
+@media screen and (max-width: 768px) {
+  body .wrapper .hero .hero-video .hero-content h1 {
+    font-size: 45px;
+    line-height: 54px;
+  }
+}
+
+body .wrapper .hero .hero-video .hero-content p {
+  max-width: 476px;
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  body .wrapper .hero .hero-video .hero-content p {
+    max-width: 100%;
+  }
+}
+
+body .wrapper .hero .hero-video .hero-content .hero-cta {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 19px;
+  background-color: #D0AF21;
+  padding: 13px 44px;
+  border-radius: 5px;
+  display: inline-block;
+  text-align: center;
+  width: 200px;
+}
+
+body .wrapper .slab-1 {
+  background-image: url("images/clavis-section-1-bg.jpg");
+}
+
+@media screen and (max-width: 768px) {
+  body .wrapper .slab-1 {
+    background-image: none;
+  }
+}
+
+body .wrapper .slab-1 .section-container {
+  padding: 0 230px;
+}
+
+@media screen and (max-width: 1024px) {
+  body .wrapper .slab-1 .section-container {
+    padding: 0 30px;
+  }
+}
+
+body .wrapper .slab-1 .section-container .info-box {
+  padding: 5% 10% 7% 0;
+}
+
+@media screen and (max-width: 1024px) {
+  body .wrapper .slab-1 .section-container .info-box {
+    padding: 5% 5% 7% 0;
+  }
+}
+
+body .wrapper .slab-1 .section-container .info-box .link-footer {
+  left: -250px;
+}
+
+@media screen and (max-width: 1024px) {
+  body .wrapper .slab-1 .section-container .info-box .link-footer {
+    left: -50px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body .wrapper .slab-1 .section-container .info-box .link-footer {
+    left: 0px;
+    position: relative;
+    width: 100%;
+  }
+}
+
+body .wrapper .slab-1 .section-container .info-box .link-footer span {
+  text-align: right;
+  padding-right: 11px;
+  position: relative;
+  color: #ffffff;
+  float: right;
+  display: block;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+body .wrapper .slab-1 .section-container .info-box .link-footer span::after {
+  content: '';
+  position: absolute;
+  height: 11px;
+  width: 6px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  margin: auto;
+  background-image: url("images/svg/clavis-arrow.svg");
+  background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 768px) {
+  body .wrapper .slab-1 .section-container .info-box .link-footer span {
+    text-align: left;
+    max-width: 190px;
+    float: left;
+  }
+}
+
+body .wrapper .slab-1 .section-container .spacer-box {
+  padding-top: 65%;
+}
+
+@media screen and (max-width: 1024px) {
+  body .wrapper .slab-1 .section-container .spacer-box {
+    padding-top: 50%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body .wrapper .slab-1 .section-container .spacer-box {
+    background-image: url("images/clavis-img-1.jpg");
+    background-size: cover;
+    background-position: center center;
+    padding-top: 90%;
+  }
+}
+
+body .wrapper .slab-2 {
+  background-image: url("images/clavis-section-2-bg.jpg");
+}
+
+@media screen and (max-width: 768px) {
+  body .wrapper .slab-2 {
+    background-image: none;
+  }
+}
+
+body .wrapper .slab-2 .section-container {
+  padding: 0 180px;
+}
+
+@media screen and (max-width: 1024px) {
+  body .wrapper .slab-2 .section-container {
+    padding: 0 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body .wrapper .slab-2 .section-container {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: reverse !important;
+        -ms-flex-direction: column-reverse !important;
+            flex-direction: column-reverse !important;
+  }
+}
+
+body .wrapper .slab-2 .section-container .info-box {
+  padding: 5% 0% 7% 10%;
+}
+
+@media screen and (max-width: 1024px) {
+  body .wrapper .slab-2 .section-container .info-box {
+    padding: 5% 0% 7% 5%;
+  }
+}
+
+body .wrapper .slab-2 .section-container .info-box p {
+  max-width: 85%;
+}
+
+@media screen and (max-width: 1024px) {
+  body .wrapper .slab-2 .section-container .info-box p {
+    max-width: 100%;
+  }
+}
+
+body .wrapper .slab-2 .section-container .info-box .link-footer {
+  right: -200px;
+}
+
+@media screen and (max-width: 1024px) {
+  body .wrapper .slab-2 .section-container .info-box .link-footer {
+    left: 0px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body .wrapper .slab-2 .section-container .info-box .link-footer {
+    left: 0px;
+    position: relative;
+    width: 100%;
+  }
+}
+
+body .wrapper .slab-2 .section-container .info-box .link-footer p {
+  text-align: left;
+}
+
+body .wrapper .slab-2 .section-container .spacer-box {
+  padding-top: 60%;
+}
+
+@media screen and (max-width: 1024px) {
+  body .wrapper .slab-2 .section-container .spacer-box {
+    padding-top: 55%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body .wrapper .slab-2 .section-container .spacer-box {
+    background-image: url("images/clavis-img-2.jpg");
+    background-size: cover;
+    background-position: center center;
+    margin-bottom: 30px;
+    padding-top: 90%;
+  }
+}
+
+body .wrapper .section-main {
+  background-size: cover;
+  background-position: center center;
+}
+
+body .wrapper .section-main .section-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+@media screen and (max-width: 768px) {
+  body .wrapper .section-main .section-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0 10px;
+  }
+}
+
+body .wrapper .section-main .section-container div {
+  width: 817px;
+  position: relative;
+}
+
+@media screen and (max-width: 1636px) {
+  body .wrapper .section-main .section-container div {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body .wrapper .section-main .section-container div {
+    width: 100%;
+  }
+}
+
+body .wrapper .section-main .section-container div h2 {
+  font-family: 'proxima-nova-light';
+  font-size: 45px;
+  line-height: 54px;
+  margin-bottom: 10%;
+  color: #0065A1;
+}
+
+@media screen and (max-width: 1024px) {
+  body .wrapper .section-main .section-container div h2 {
+    margin-bottom: 5%;
+  }
+}
+
+body .wrapper .section-main .section-container div p {
+  margin-bottom: 30px;
+  color: #232323;
+}
+
+body .wrapper .section-main .section-container div .link-footer {
+  position: absolute;
+  bottom: 0px;
+  width: 818px;
+  padding: 22px 30px 22px 30px;
+  background-color: #5c92b9;
+}
+
+@media screen and (max-width: 1636px) {
+  body .wrapper .section-main .section-container div .link-footer {
+    width: 50vw;
+  }
+}
+
+body .wrapper .section-main .section-container div .link-footer a {
+  font-size: 14px;
+  line-height: 17px;
+  color: #ffffff;
+  text-decoration: none;
+  display: block;
+  position: relative;
+}
+
+body .wrapper .section-main .section-container div .link-footer p {
+  font-size: 14px;
+  line-height: 17px;
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0px;
+  width: 100%;
+  max-width: 600px;
+}
+
+body .wrapper .section-main .section-container .info-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  body .wrapper .section-main .section-container .info-box {
+    padding: 30px 0% 0% 0%;
+  }
+}
+
+.mobile-hero-image {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .mobile-hero-image {
+    display: block;
+    max-width: 480px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+.show-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .show-mobile {
+    display: block;
+  }
+}
+
+.hide-mobile {
+  display: block;
+}
+
+@media screen and (max-width: 768px) {
+  .hide-mobile {
+    display: none;
+  }
+}
+
+.nobr {
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 768px) {
+  .nobr {
+    white-space: normal;
+  }
+}
+
+.hide-mobile-arrow {
+  display: block;
+}
+
+@media screen and (max-width: 768px) {
+  .hide-mobile-arrow {
+    display: none;
+  }
+}
+
+.display-block {
+  display: block;
+}
+
+.display-none {
+  display: none;
+}
+
+.error-message {
+  color: #ffffff;
+  padding: 5px 10px;
+  background: #000000;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.error-block {
+  color: #D0AF21;
+  display: block;
+  font-size: 14px;
+}
+
+input.error {
+  border: 2px solid #D0AF21 !important;
+}
+
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #5c92b9;
+  opacity: 0.4;
+}
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #5c92b9;
+}
+
+:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #5c92b9;
+}
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: #5c92b9;
+}
+
+.form {
+  max-width: 468px;
+  width: 100%;
+  background-color: #21598e;
+  padding: 40px 40px 30px 40px;
+  color: #ffffff;
+  float: right;
+  border-radius: 2px;
+}
+
+@media screen and (max-width: 768px) {
+  .form {
+    display: block;
+    width: 100vw;
+    margin: 30px 0 0 0;
+    padding: 40px 20px;
+    max-width: 100%;
+  }
+}
+
+.form div {
+  font-size: 14px;
+  padding: 5px 0px 5px 0px;
+}
+
+.form div div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.form div input {
+  display: block;
+  width: 100%;
+  border: 0;
+  outline: 0;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 7px 0 17px 0;
+}
+
+.form .textarea {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.form .textarea textarea {
+  height: 150px;
+  border-radius: 5px;
+  border: none;
+  margin-top: 7px;
+  outline: 0px !important;
+  -webkit-appearance: none;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  padding: 10px;
+}
+
+.form .button-container {
+  border: 0;
+  position: relative;
+  padding-left: 0px;
+}
+
+.form .button-container .button-blocker {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
+.form .button-container button {
+  margin-top: 45px;
+  text-align: center;
+  width: 100%;
+  padding: 15px;
+  color: #ffffff;
+  border-radius: 5px;
+  outline: 0;
+  border: 1px solid #D0AF21;
+  -webkit-transition: all .3s ease 0s;
+  transition: all .3s ease 0s;
+  cursor: pointer;
+  background: #D0AF21;
+}
+
+.form .button-container button:hover {
+  background: #ffffff;
+  color: #27659c;
+  border: 1px solid #ffffff;
+  cursor: pointer;
+}
+
+.form .final-message {
+  font-size: 14px;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.footer {
+  color: #ffffff;
+  background-color: #27659c;
+  background-image: url("images/clavis-footer-bg.jpg");
+  background-size: contain;
+  background-position: left center;
+  background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    background-size: cover;
+  }
+}
+
+.footer .section-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  padding: 0 230px;
+}
+
+@media screen and (max-width: 1024px) {
+  .footer .section-container {
+    padding: 0 50px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer .section-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0 10px;
+  }
+}
+
+.footer .section-container > div {
+  width: 50%;
+}
+
+@media screen and (max-width: 768px) {
+  .footer .section-container > div {
+    width: 100%;
+  }
+}
+
+.footer .section-container .form-content {
+  padding-right: 4%;
+}
+
+@media screen and (max-width: 768px) {
+  .footer .section-container .form-content {
+    padding-right: 0%;
+  }
+}
+
+.footer .section-container .form-content h2 {
+  font-family: 'proxima-nova-light';
+  font-size: 45px;
+  line-height: 54px;
+  margin-bottom: 10%;
+}
+
+@media screen and (max-width: 768px) {
+  .footer .section-container .form-content h2 {
+    margin-bottom: 5%;
+    padding-top: 30px;
+  }
+}
+
+.footer .lower-footer {
+  border-top: 1px solid #4882ae;
+  padding: 45px 0;
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
+.footer .lower-footer .footer-disclaimer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: auto;
+  padding: 0 270px;
+}
+
+@media screen and (max-width: 1024px) {
+  .footer .lower-footer .footer-disclaimer {
+    padding: 0 50px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer .lower-footer .footer-disclaimer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0 30px;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .footer .lower-footer .footer-disclaimer div:first-child {
+    margin-bottom: 10px;
+  }
+}
+
+.footer .lower-footer .footer-disclaimer > div {
+  width: 50%;
+}
+
+@media screen and (max-width: 768px) {
+  .footer .lower-footer .footer-disclaimer > div {
+    width: 100%;
+  }
+}
+
+.footer .lower-footer .footer-disclaimer > div p {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.footer .lower-footer .footer-disclaimer .fotter-terms {
+  text-transform: uppercase;
+  font-size: 13px;
+  line-height: 16px;
+}
+
+.footer .lower-footer .footer-disclaimer .fotter-terms span {
+  display: block;
+  float: right;
+}
+
+@media screen and (max-width: 768px) {
+  .footer .lower-footer .footer-disclaimer .fotter-terms span {
+    float: none;
+  }
+}
+
+.footer .lower-footer .footer-disclaimer .fotter-terms span a {
+  color: #ffffff;
+  text-decoration: none;
+  text-align: right;
+}
+
+.footer .lower-footer .footer-disclaimer .fotter-terms span a:hover {
+  text-decoration: underline;
+}
+/*# sourceMappingURL=app.css.map */
