@@ -8,6 +8,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
 </head>
 <body>
     
@@ -51,13 +55,32 @@
         <header class="header">
 
             <div class="carousel">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
+                <div class="swiper-container mySwiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                          <div class="swiper-slider-container">
+                              <h2>Experienced operators,<br /> not financial engineers.</h2>
+                              <p>We are value added investors in unique manufacturing, industrial and business service companies.</p>
+                              <a href="who-we-are.html">WHO WE ARE</a>
+                          </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="swiper-slider-container">
+                            <h2>We don't invest in Companies.<br /> We invest in Cultures. </h2>
+                            <p>We are value added investors in unique manufacturing, industrial and business service companies.</p>
+                            <a href="who-we-are.html">WHO WE ARE</a>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="swiper-slider-container">
+                            <h2>We don't invest in Companies.<br /> We invest in Cultures. </h2>
+                            <p>We are value added investors in unique manufacturing, industrial and business service companies.</p>
+                            <a href="who-we-are.html">WHO WE ARE</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                  </div>
             </div>
             
         </header>
@@ -85,7 +108,29 @@
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 0,
+        effect: "fade",
+        centeredSlides: true,
+        autoplay: {
+          delay: 600000,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
 
     
 </body>

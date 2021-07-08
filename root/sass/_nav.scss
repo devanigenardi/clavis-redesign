@@ -1,15 +1,14 @@
 .nav{
-    background: green;
     width: 100vw;
-    height: 150px;
+    height: 130px;
     position: fixed;
     top: 0px;
     z-index: 2;
 }
 
 .nav-container {
-    height: 150px;
-    max-width: 1600px;
+    height: 130px;
+    max-width: 1430px;
     width: 100%;
     margin: 0 auto;
     display: flex;
@@ -42,8 +41,8 @@
 
 .nav-item {
     color: $white;
-    font-size: 17px;
-    line-height: 24px;
+    font-size: 15px;
+    line-height: 22px;
     font-weight: bold;
 }
 
@@ -80,7 +79,7 @@
 }
 
 .nav-logo {
-    width: 167px;
+    width: 195px;
     height: auto;
 }
 
@@ -101,7 +100,7 @@
     }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
     .nav-container {
         flex-direction: row;
         padding: 1rem;
