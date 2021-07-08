@@ -1,319 +1,63 @@
 
 body {
-    font-family: 'proxima-nova-regular';
     position: relative;
+    -webkit-font-smoothing: antialiased;
 
     .wrapper {
         width: 100%;
-    
-        .slab {
+        position: relative;
+
+        .slab-standard {
+            width: 1600px;
+            height: auto;
             margin: 0 auto;
-            max-width: 1636px;
+        }
+
+        .slab-full {
             width: 100%;
-            padding: 0 20px;
-            overflow: hidden;
+            height: auto;
         }
 
-        .hero {
-            background-size: cover;
-            background-position: center center;
-            padding: 0px;
-            color: #ffffff;
-            .hero-video {
-                
-                position: relative;
-                video {
-                    position: absolute;
-                    background-image: url('images/clavis-hero-bg.jpg');
-                    z-index: -1;
-                    @media screen and (min-width: 1100px) {
-                        width: 100%;
-                    }
+        .main {
+            height: 2000px;
+            width: 100%;
+            position: absolute;
+            margin-top: 100vh;
+            z-index: 1;
+            .top__spacer {
+                height: 10vh;
+                width: 100vw;
+                /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#d6d6d6+86,e5e5e5+100&0+0,1+100 */
+                background: -moz-linear-gradient(top,  rgba(214,214,214,0) 0%, rgba(214,214,214,0.86) 86%, rgba(229,229,229,1) 100%); /* FF3.6-15 */
+                background: -webkit-linear-gradient(top,  rgba(214,214,214,0) 0%,rgba(214,214,214,0.86) 86%,rgba(229,229,229,1) 100%); /* Chrome10-25,Safari5.1-6 */
+                background: linear-gradient(to bottom,  rgba(214,214,214,0) 0%,rgba(214,214,214,0.86) 86%,rgba(229,229,229,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00d6d6d6', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-9 */
+            }
+            .main__content {
+                height: 2000px;
+                width: 100vw;
+                background-color: black;
+            }
+            .bottom__spacer {
+                /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#e5e5e5+0,d6d6d6+23&1+1,0+22 */
+                background: -moz-linear-gradient(top,  rgba(229,229,229,1) 0%, rgba(228,228,228,1) 1%, rgba(215,215,215,0) 22%, rgba(214,214,214,0) 23%); /* FF3.6-15 */
+                background: -webkit-linear-gradient(top,  rgba(229,229,229,1) 0%,rgba(228,228,228,1) 1%,rgba(215,215,215,0) 22%,rgba(214,214,214,0) 23%); /* Chrome10-25,Safari5.1-6 */
+                background: linear-gradient(to bottom,  rgba(229,229,229,1) 0%,rgba(228,228,228,1) 1%,rgba(215,215,215,0) 22%,rgba(214,214,214,0) 23%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e5e5e5', endColorstr='#00d6d6d6',GradientType=0 ); /* IE6-9 */
 
-                    @media screen and (max-width: 1099px) {
-                        margin: auto;
-                        left: 0px;
-                        right: 0px;
-                        top: 0px;
-                        bottom: 0px;
-                    }
+                height: 31vh;
+                width: 100vw;
 
-                    
-                }
-                .hero-content {
-                    
-                    padding: 30px 250px 90px;
-                    @media screen and (max-width: 1024px) {
-                        padding: 30px 50px 90px;
-                    }
-
-                    @media screen and (max-width: 768px) {
-                        padding: 40px 30px ;
-                    }
-
-                    img {
-                        display: block;
-                        margin-bottom: 8%;
-                        @media screen and (max-width: 768px) {
-                            width: 200px;
-                            height: auto;
-                            margin-bottom: 8%;
-                        }
-                    }
-
-                    h2 {
-                        font-size: 20px;
-                        line-height: 24px;
-                        margin-bottom: 5px;
-                        text-transform: uppercase;
-                    }
-
-                    h1 {
-                        font-size: 60px;
-                        line-height: 72px;
-                        margin-bottom: 50px;
-                        @media screen and (max-width: 768px) {
-                            font-size: 45px;
-                            line-height: 54px;
-                        }
-                    }
-
-                    p {
-                        max-width: 476px;
-                        margin-bottom: 30px;
-                        @media screen and (max-width: 768px) {
-                            max-width: 100%;
-                        }
-                    }
-
-                    .hero-cta {
-                        color: #ffffff;
-                        text-decoration: none;
-                        font-size: 16px;
-                        line-height: 19px;
-                        background-color: #D0AF21;
-                        padding: 13px 44px;
-                        border-radius: 5px;
-                        display: inline-block;
-                        text-align: center;
-                        width: 200px;
-                    }
-                }
             }
         }
 
-        .slab-1 {
-            background-image: url('images/clavis-section-1-bg.jpg');
-            @media screen and (max-width: 768px) {
-                background-image: none;
-            }
-            .section-container {
-                padding: 0 230px;
-                @media screen and (max-width: 1024px) {
-                    padding: 0 30px;
-                }
-                .info-box {
-                    padding: 5% 10% 7% 0;
-                    @media screen and (max-width: 1024px) {
-                        padding: 5% 5% 7% 0;
-                    }
-                    .link-footer {
-                        left: -250px;
-
-                            @media screen and (max-width: 1024px) {
-                                left: -50px;
-                            }
-                            @media screen and (max-width: 768px) {
-                                left: 0px;
-                                position: relative;
-                                width: 100%;
-                            }
-                            span {
-                                text-align: right;
-                                padding-right: 11px;
-                                position: relative;
-                                color: #ffffff;
-                                float: right;
-                                display: block;
-                                font-size: 14px;
-                                line-height: 17px;
-                                &::after {
-                                    content: '';
-                                    position: absolute;
-                                    height: 11px;
-                                    width: 6px;
-                                    right: 0px;
-                                    top: 0px;
-                                    bottom: 0px;
-                                    margin: auto;
-                                    background-image: url('images/svg/clavis-arrow.svg');
-                                    background-repeat: no-repeat;
-                                }
-                                @media screen and (max-width: 768px) {
-                                    text-align: left;
-                                    max-width: 190px;
-                                    float: left;
-                                }
-                            }
-                    }
-                }
-                .spacer-box {
-                    padding-top: 65%;
-                    @media screen and (max-width: 1024px) {
-                        padding-top: 50%;
-                    }
-                    @media screen and (max-width: 768px) {
-                        background-image: url('images/clavis-img-1.jpg');
-                        background-size: cover;
-                        background-position: center center;
-                        padding-top: 90%;
-                    }
-                }
-            }
-            
-        }
-
-        .slab-2 {
-            background-image: url('images/clavis-section-2-bg.jpg');
-            @media screen and (max-width: 768px) {
-                background-image: none;
-            }
-            .section-container {
-                padding: 0 180px;
-                @media screen and (max-width: 1024px) {
-                    padding: 0 30px;
-                }
-                @media screen and (max-width: 768px) {
-                    flex-direction: column-reverse!important;
-                }
-                .info-box {
-                    padding: 5% 0% 7% 10%;
-                    @media screen and (max-width: 1024px) {
-                        padding: 5% 0% 7% 5%;
-                    }
-                    
-                    p {
-                        max-width: 85%;
-                        @media screen and (max-width: 1024px) {
-                            max-width: 100%;
-                        }
-                    }
-    
-                    .link-footer {
-                        right: -200px;
-
-                        @media screen and (max-width: 1024px) {
-                            left: 0px;
-                        }
-                        @media screen and (max-width: 768px) {
-                            left: 0px;
-                            position: relative;
-                            width: 100%;
-                        }
-                            p {
-                                text-align: left;
-                            }
-                    }
-                }
-                .spacer-box {
-                    padding-top: 60%;
-                    @media screen and (max-width: 1024px) {
-                        padding-top: 55%;
-                    }
-                    @media screen and (max-width: 768px) {
-                        background-image: url('images/clavis-img-2.jpg');
-                        background-size: cover;
-                        background-position: center center;
-                        margin-bottom: 30px;
-                        padding-top: 90%;
-                    }
-                }
-            }
-            
-        }
-
-        .section-main {
-            background-size: cover;
-            background-position: center center;
-
-            .section-container {
-                width: 100%;
-                display: flex;
-                flex-direction: row;
-
-
-                @media screen and (max-width: 768px) {
-                    flex-direction: column;
-                    padding: 0 10px;
-                }
-
-                div {
-                    width: 817px;
-                    position: relative;
-                    @media screen and (max-width: 1636px) {
-                        width: 50%;
-                    }
-
-                    @media screen and (max-width: 768px) {
-                        width: 100%;
-                    }
-
-                    h2 {
-                        font-family: 'proxima-nova-light';
-                        font-size: 45px;
-                        line-height: 54px;
-                        margin-bottom: 10%;
-                        color: #0065A1;
-                        @media screen and (max-width: 1024px) {
-                            margin-bottom: 5%;
-                        }
-                    }
-    
-                    p {
-                        margin-bottom: 30px;
-                        color: #232323;
-                    }
-                    
-                    .link-footer {
-                        position: absolute;
-                        bottom: 0px;
-                        width: 818px;
-                        padding: 22px 30px 22px 30px;
-                        background-color: #5c92b9;
-                        @media screen and (max-width: 1636px) {
-                            width: 50vw;
-                        }
-
-                        a {
-                            font-size: 14px;
-                            line-height: 17px;
-                            color: #ffffff;
-                            text-decoration: none;
-                            display: block;
-                            position: relative;
-                        }
-
-                        p {
-                            font-size: 14px;
-                            line-height: 17px;
-                            color: #ffffff;
-                            text-decoration: none;
-                            margin: 0px;
-                            width: 100%;
-                            max-width: 600px;
-                        }
-                    }
-                }
-
-                .info-box {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    @media screen and (max-width: 768px) {
-                        padding: 30px 0% 0% 0%;
-                    }
-                }
-            }
+        .footer {
+            width: 100vw;
+            height: 300px;
+            background-color: pink;
+            position: fixed;
+            bottom: 0;
+            z-index: 0;
         }
     }
 }
