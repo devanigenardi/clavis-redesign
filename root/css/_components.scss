@@ -1,0 +1,182 @@
+ // main CTA
+.standard-cta {
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: 23px;
+    text-align: center;
+    text-decoration: none;
+    padding: 16px 43px;
+    transition: all 0.3s ease;
+    margin-bottom: 1.8rem;
+    cursor: pointer;
+  }
+
+  .standard-cta-alt {
+    color: $blue;
+    border: 1px solid $blue;
+    padding: 16px 17px;
+  }
+
+  .standard-cta:hover {
+    background: $blue;
+    border: 1px solid $blue;
+    color: $yellow;
+  }
+
+   // yellow CTA
+
+   .yellow-cta {
+    background-color: $yellow;
+    padding: 3px 25px;
+    border-radius: 2px;
+    color: $white;
+    text-decoration: none;
+    font-weight: bold;
+   }
+
+  // quotes tabs
+
+  .tab-quotes {
+    background: url('../images/svg/clavis-quotes.svg') no-repeat;
+    background-position: left top;
+    background-size: 15%;
+    margin-top:11rem;
+    position: relative;
+    
+    .tab-content {
+        display: none;
+        & > p {
+            color: #060606;
+            font-size: 29px;
+            letter-spacing: 0;
+            line-height: 49px;
+            height: 165px;
+            padding: 2rem 0 15rem 0;
+        }
+        & > div {
+            position: absolute;
+            bottom: -8px;
+            left: 36%;
+            & > h5 {
+                color: $dark-grey;
+                font-size: 20px;
+                font-weight: bold;
+                letter-spacing: 0;
+                line-height: 20px;
+                margin: 0px;
+            } 
+            & > p {
+                color: #777777;
+                font-size: 17px;
+                font-weight: normal;
+                letter-spacing: 0;
+                line-height: 34px;
+                span {
+                    color: $dark-grey;
+                    font-weight: bold;
+                }
+            } 
+        }
+    }
+
+    .tab-nav {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        a {
+            width: 60px;
+            height: 60px;
+            display: inline-block;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin-right: 1rem;
+            &:nth-child(1) {
+                background-image: url('../images/clavis-usr1.png');
+            }
+            &:nth-child(2) {
+                background-image: url('../images/clavis-usr2.png');
+            }
+            &:nth-child(3) {
+                background-image: url('../images/clavis-usr3.png');
+            }
+        }
+    }
+    .tab-content.active {
+        display: block;
+    }
+    .fade-thum {
+        opacity: 0.5;
+    }
+  }
+
+  // footer 
+
+  .footer {
+    width: 100%;
+    height: auto;
+    background-color: $blue;
+    position: sticky;
+    bottom: 0;
+    z-index: 1;
+    font-size: 15px;
+    line-height: 19px;
+      .footer-top {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          position: relative;
+          .footer-info {
+              ul {
+                  padding:0;
+                  margin-top: 2rem;
+                  li {
+                    color: $white;
+                    list-style-type: none;
+                  }
+                  &:last-child {
+                    margin-top: 1.5rem;
+                  }
+              }
+          }
+          .footer-nav {
+              display: flex;
+              ul {
+                padding: 0px;
+                margin-top: 1rem;
+                li {
+                  list-style-type: none;
+                  margin-bottom: 1rem;
+                  a {
+                    color: $white;
+                    text-decoration: none;
+                    font-weight: bold;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                    }
+                }
+                &:first-child {
+                    margin-right: 4rem;
+                }
+            }
+          }
+          &::after {
+              content: '';
+              width: 100vw;
+              height: 1px;
+              background: $white;
+              position: absolute;
+              bottom: 0px;
+              margin-left: calc(-50vw + 50%);
+              opacity: 0.2;
+          }
+      }
+      .footer-bottom {
+          display: flex;
+          justify-content: space-between;
+          p, a {
+            color: $white;
+          }
+      }
+  }

@@ -1,0 +1,164 @@
+
+.flex-grid {
+    max-width: 1430px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    img {
+        width: 100%;
+        height: auto;
+    }
+  }
+  .flex-grid .col {
+    flex: 1;
+    position: relative;
+  }
+  .flex-grid-two,
+  .flex-grid-thirds {
+    display: flex;
+    justify-content: space-between;
+  }
+  .flex-grid-two .col {
+    width: 49%;
+  }
+  .flex-grid-thirds .col {
+    width: 32%;
+  }
+  
+  @media (max-width: 767px) {
+    .flex-grid,
+    .flex-grid-thirds,
+    .flex-grid-two {
+      display: block;
+      .col {
+        width: 100%;
+        margin: 0 0 10px 0;
+      }
+    }
+  }
+
+  .flex-grid-inner {
+      margin: 0 -1rem;
+  }
+  
+  .col {
+    padding: 1rem;
+  }
+
+//   <div class="flex-grid">
+//   <div class="col">This little piggy went to market.</div>
+//   <div class="col">This little piggy stayed home.</div>
+//   <div class="col">This little piggy had roast beef.</div>
+// </div>
+
+// <div class="flex-grid">
+//   <div class="col">This little piggy went to market.</div>
+//   <div class="col">This little piggy stayed home.</div>
+//   <div class="col">This little piggy had roast beef.</div>
+//   <div class="col">This little piggy had none.</div>
+//   <div class="col">This little piggy went wee wee wee all the way home.</div>
+// </div>
+
+// <div class="flex-grid-thirds">
+//   <div class="col">This little piggy went to market.</div>
+//   <div class="col">This little piggy stayed home.</div>
+//   <div class="col">This little piggy had roast beef.</div>
+// </div>
+
+// <div class="flex-grid-two">
+//   <div class="col">This little piggy went to market.</div>
+//   <div class="col">This little piggy stayed home.</div>
+// </div>
+
+.mt-1 {
+    margin-top: 1rem;
+}
+.mt-2 {
+    margin-top: 2rem;
+}
+.mt-3 {
+    margin-top: 3rem;
+}
+.mt-4 {
+    margin-top: 4rem;
+}
+.mt-5 {
+    margin-top: 5rem;
+}
+
+.pt-1 {
+    padding-top: 1rem;
+}
+.pt-2 {
+    padding-top: 2rem;
+}
+.pt-3 {
+    padding-top: 3rem;
+}
+.pt-4 {
+    padding-top: 4rem;
+}
+.pt-5 {
+    padding-top: 5rem;
+}
+
+.mb-1 {
+    margin-bottom: 1rem;
+}
+.mb-2 {
+    margin-bottom: 2rem;
+}
+.mb-3 {
+    margin-bottom: 3rem;
+}
+.mb-4 {
+    margin-bottom: 4rem;
+}
+.mb-5 {
+    margin-bottom: 5rem;
+}
+
+.pb-1 {
+    padding-bottom: 1rem;
+}
+.pb-2 {
+    padding-bottom: 2rem;
+}
+.pb-3 {
+    padding-bottom: 3rem;
+}
+.pb-4 {
+    padding-bottom: 4rem;
+}
+.pb-5 {
+    padding-bottom: 5rem;
+}
+.pb-6 {
+    padding-bottom: 6rem;
+}
+.pb-7 {
+    padding-bottom: 7rem;
+}
+
+.top-1 {
+    top: 1rem;
+}
+.top-2 {
+    top: 2rem;
+}
+.top-3 {
+    top: 3rem;
+}
+.top-4 {
+    top: 4rem;
+}
+.top-5 {
+    top: 5rem;
+}
+
+.w-80 {
+    width: 100%;
+    @media (min-width: 768px) {
+        width: 80%;
+      } 
+}

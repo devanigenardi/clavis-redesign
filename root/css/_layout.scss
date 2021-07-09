@@ -1,0 +1,63 @@
+
+body {
+    position: relative;
+    -webkit-font-smoothing: antialiased;
+    font-size: 16px;
+
+    .wrapper {
+        width: 100%;
+        position: relative;
+
+        .slab-standard {
+            max-width: 1430px;
+            width: 100%;
+            height: auto;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .slab-full {
+            width: 100%;
+            height: auto;
+        }
+
+        .main {
+            width: 100%;
+            position: absolute;
+            margin-top: 100vh;
+            z-index: 1;
+            .main-content {
+                height: auto;
+                width: 100vw;
+                background-color: $white;
+                position: relative;
+                z-index: 2;
+                .signature {
+                    position: relative;
+                    padding-top: 50%;
+                    background: url('/images/clavis-helmet-1.jpg') no-repeat;
+                    background-size: 86%;
+                    background-position: top left;
+                    h2 {
+                        position: absolute;
+                        left: 0px;
+                    }
+                }
+                .hard-hat {
+                    margin-bottom: -150px;
+                }
+            }
+            .bottom__spacer {
+                /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#e5e5e5+0,d6d6d6+23&1+1,0+22 */
+                // background: -moz-linear-gradient(top,  rgba(229,229,229,1) 0%, rgba(228,228,228,1) 1%, rgba(215,215,215,0) 22%, rgba(214,214,214,0) 23%); /* FF3.6-15 */
+                // background: -webkit-linear-gradient(top,  rgba(229,229,229,1) 0%,rgba(228,228,228,1) 1%,rgba(215,215,215,0) 22%,rgba(214,214,214,0) 23%); /* Chrome10-25,Safari5.1-6 */
+                // background: linear-gradient(to bottom,  rgba(229,229,229,1) 0%,rgba(228,228,228,1) 1%,rgba(215,215,215,0) 22%,rgba(214,214,214,0) 23%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e5e5e5', endColorstr='#00d6d6d6',GradientType=0 ); /* IE6-9 */
+
+                height: 31vh;
+                width: 100vw;
+
+            }
+        }
+    }
+}
