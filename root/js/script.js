@@ -44,6 +44,17 @@ $(document).ready(function(){
         $('.tab-content').removeClass('active').filter(sel).addClass('active');
       });
 
+      $('.js-btn-modal').on('click', function(){
+        $('#overlay').show();
+        var id = $(this).data('id');
+        $('.js-modal[data-id="modal' + id + '"]').show();
+      });
+      
+      $('.js-close-btn').on('click', function(){
+        $('#overlay').hide();
+        $('.js-modal').hide();
+      });
+
 });
 
 // $(window).scroll(function(){

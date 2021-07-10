@@ -8,84 +8,101 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+  }
+.profiles {
+  position: relative;
+  background: red;
+}
+.btn {
+  font-size: 14px;
+  line-height: 1.4;
+  padding: 13px 20px;
+  top: 0;
+}
+.modal {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  height:100vh;
+  padding: 1rem;
+  background: #ccc;
+  z-index: 1;
+}
+.modal-close-btn {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 20px;
+}
+
+    </style>
 </head>
 <body>
     
-    <div class="wrapper">
-
-        <section class="slab-full">
-            <nav class="nav">
-                <div class="nav-container">
-                    <a href="index.html">
-                        <img class="nav-logo" src="./images/svg/clavis-logo-home.svg" alt="Logo" />
-                    </a>
-                    <ul class="nav-menu">
-                        <li class="nav-item">
-                            <a href="who-we-are.html" class="nav-link">WHO WE ARE</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="what-we-believe.html" class="nav-link">WHAT WE BELEIVE</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="what-we-do.html" class="nav-link">WHAT WE DO</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="investment-focus.html" class="nav-link">INVESTMENT FOCUS</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="potfolio.html" class="nav-link">PORTFOLIO</a>
-                        </li>
-                        <li class="nav-item nav-item-last">
-                            <a href="lets-talk.html" class="nav-link-alt">LET'S TALK</a>
-                        </li>
-                    </ul>
-                    <div class="hamburger">
-                        <span class="bar"></span>
-                        <span class="bar"></span>
-                        <span class="bar"></span>
-                    </div>
-                </div>
-            </nav>
-        </section>
-
-        <header class="header">
-
-            <div class="carousel">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </div>
-            
-        </header>
-
-        <main class="main">
-            <section class="top__spacer">
-                top
-            </section>
-            <section class="main__content">
-                main content
-            </section>
-            <section class="bottom__spacer">
-                bottom
-            </section>
-        </main>
-
-        <footer class="footer hide-element">
-            <p>mklscd</p>
-            <p>mklscd</p>
-            <p>mklscd</p>
-        </footer>
-
-    </div>
+    <div class="collaborators-organigram">
+  
+        <div class="profiles">
+        <div class="btn js-btn-modal" data-id="1">item 1</div>
+        <div class="btn js-btn-modal" data-id="2">item 2</div>
+        <div class="btn js-btn-modal" data-id="3">item 3</div>
+        <div class="btn js-btn-modal" data-id="4">item 4</div>
+      </div>
+      
+      
+      
+        <div class="modal js-modal" data-id="modal1">
+        <button class="modal-close-btn js-close-btn">
+          <i class="fa fa-times" title="">x</i>
+        </button>
+        <div>item 1</div>
+      </div>
+      <div class="modal js-modal" data-id="modal2">
+        <button class="modal-close-btn js-close-btn">
+          <i class="fa fa-times" title="">x</i>
+        </button>
+        <div>item 2</div>
+      </div>
+      <div class="modal js-modal" data-id="modal3">
+        <button class="modal-close-btn js-close-btn">
+          <i class="fa fa-times" title="">x</i></button>
+          <div>item 3</div>
+      </div>
+      <div class="modal js-modal" data-id="modal4">
+        <button class="modal-close-btn js-close-btn">
+          <i class="fa fa-times" title="">x</i></button>
+          <div>item 4</div>
+      </div>
+        
+      </div>
+      
+      
 
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="js/script.js"></script>
+    <script>
+        $('document').ready(function () {
+            $('.my_class').click(function () {
+                $(this).find(".overlay").show();
+            });
+            $('.overlay').click(function () {
+                console.log($(this).next();
+            });
+        });
+    </script>
 
     
 </body>

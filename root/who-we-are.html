@@ -4,20 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CLAVIS</title>
-    <link rel="stylesheet" href="app.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
     
     <div class="wrapper">
 
         <section class="slab-full">
-            <nav class="nav">
+            <nav class="nav nav-alt">
                 <div class="nav-container">
-                    <a href="index.html">
-                        <img class="nav-logo" src="./images/svg/clavis-logo-home.svg" alt="Logo" />
+                    <a class="nav-logo-container" href="index.html">
+                        <img class="nav-logo" src="./images/svg/clavis-logo.svg" alt="Logo" />
                     </a>
                     <ul class="nav-menu">
                         <li class="nav-item">
@@ -36,7 +37,7 @@
                             <a href="potfolio.html" class="nav-link">PORTFOLIO</a>
                         </li>
                         <li class="nav-item nav-item-last">
-                            <a href="lets-talk.html" class="nav-link-alt">LET'S TALK</a>
+                            <a href="lets-talk.html" class="yellow-cta">LET'S TALK</a>
                         </li>
                     </ul>
                     <div class="hamburger">
@@ -48,44 +49,176 @@
             </nav>
         </section>
 
-        <header class="header">
+        <header class="header header-alt">
 
-            <div class="carousel">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </div>
+            <section class="slab-standard hero-standard">
+                <div class="flex-grid-inner">
+                    <div class="flex-grid pt-4">
+                        <div class="col">
+                            <h2 class="main-headline top-1">We are business builders first, investors second.</h2>
+                        </div>
+                        <div class="col">
+                            <p class="pb-2">In 2013, Clavis set out to build a different type of investment group. One that believes that operators don’t just make better partners—they build better businesses.</p>
+                            <p class="pb-2">Clavis Capital Partners is a private investment firm with deep experience in investing in, operating and growing US based industrial businesses. We provide flexible capital to make control investments in a broad range of unique industrial oriented companies that have built strong corporate cultures and are at an inflection point in their growth path.</p>
+                            <p class="pb-3">We ask a lot out of the companies we invest in. We demand a lot out of ourselves as well. We operate Clavis in an open, collaborative and ethical manner and have a win-win oriented culture.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero hero-image"></div>
+            </section>
             
         </header>
 
-        <main class="main">
-            <section class="top__spacer">
-                top
+        <main id="stick-here" class="main main-alt">
+            <section class="main-content">
+                <section class="slab-full pt-3 light-grey-bg">
+                    <div class="flex-grid">
+                        <div class="col">
+                            <div class="signature">
+                                <h2 class="main-headline top-1">We bring our hard hat.</h2>
+                            </div>
+                            <div class="flex-grid-inner">
+                                <div class="flex-grid pt-5 pb-2 pb-0 pt-0">
+                                    <div class="col">
+                                        <h2 class="main-headline-alt">2013</h2>
+                                        <p>Clavis Capital Partners began</p>
+                                    </div>
+                                    <div class="col">
+                                        <h2 class="main-headline-alt">50+</h2>
+                                        <p>deals completed as a team</p>
+                                    </div>
+                                </div>
+                                <div class="flex-grid pb-2 pb-0">
+                                    <div class="col">
+                                        <h2 class="main-headline-alt">$250M</h2>
+                                        <p>capital deployed by Clavis</p>
+                                    </div>
+                                    <div class="col">
+                                        <h2 class="main-headline-alt">$1B+</h2>
+                                        <p>collectively deployed by our principals</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <p class="pt-2 pb-4 pt-0">Clavis professionals are career operators, not financial engineers. All of our Principals have held leadership positions in large and small manufacturing and industrial companies across a number of different sectors throughout their careers. We bring an operator mindset to our investing activity. we bring experience. we bring connections. we bring resources. We bring our hard hat.
+                            </p>
+                            <img class="hard-hat" src="/images/clavis-helmet-2.jpeg" alt="We bring our hard hat." />
+                        </div>
+                    </div>
+                </section>
+
+                <!-- divider -->
+
+                <section class="slab-full pt-5 pb-5">
+                    <div class="flex-grid">
+                        <div class="col">
+                            <h3 class="headline-dark pt-5">The company we keep.</h3>
+                            <p class="pt-3 pb-5 w-80 ">Clavis Capital Partners is a private investment firm with deep experience in investing in, operating and growing US based industrial businesses. We provide flexible capital to make control investments in a broad range of unique industrial oriented companies that have built strong corporate cultures and are at an inflection point in their growth path.</p>
+                            <a class="standard-cta standard-cta-alt" href="#">Who We’ve Partnered With</a>
+                        </div>
+                        <div class="col">
+                            <div class="tab-quotes">
+                                <!-- Content -->
+                                <div class="tab-content tab-content-1 active">
+                                    <p>They have a fresh perspective, are wicked smart and super fast, and still dive into the strategic planning.</p>
+                                    <div>
+                                        <h5>Tammy P.</h5>
+                                        <p>Chief Commercial Officer, <span>DCG ONE</span></p>
+                                    </div>
+                                </div>
+                                <div class="tab-content tab-content-2">
+                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
+                                    <div>
+                                        <h5>Brad C.</h5>
+                                        <p>President, <span>DCG ONE</span></p>
+                                    </div>
+                                </div>
+                                <div class="tab-content tab-content-3">
+                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
+                                    <div>
+                                        <h5>Ben A.</h5>
+                                        <p>Managing Director, <span>DCG ONE</span></p>
+                                    </div>
+                                </div>
+                                <!-- Tabs -->
+                                <div class="tab-nav">
+                                    <a href="#" class="tab active fade-thum" data-toggle-target=".tab-content-1">&nbsp;</a>
+                                    <a href="#" class="tab" data-toggle-target=".tab-content-2">&nbsp;</a>
+                                    <a href="#" class="tab" data-toggle-target=".tab-content-3">&nbsp;</a>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                </section>
             </section>
-            <section class="main__content">
-                main content
-            </section>
-            <section class="bottom__spacer">
-                bottom
-            </section>
+
+            <footer class="footer pt-5 pb-2">
+                <section class="slab-standard">
+                    <div class="footer-top">
+                        <div class="footer-info pb-1">
+                            <a href="#" class="yellow-cta">LET’S TALK</a>
+                            <ul>
+                                <li>8235 Douglas</li>
+                                <li>Suite 960</li>
+                                <li>Dallas, Texas 75225</li>
+                            </ul>
+                            <ul>
+                                <li>214.812.9199</li>
+                                <li>info@claviscp.com</li>
+                            </ul>
+                        </div>
+                        <div class="footer-nav">
+                            <ul>
+                                <li><a href="#">INVESTMENT CRITERIA</a></li>
+                                <li><a href="#">INVESTOR LOGIN</a></li>
+                            </ul>
+                            <ul>
+                                <li><a href="#">CLAVIS IMPACT FUND</a></li>
+                                <li><a href="#">LINKEDIN</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer-bottom pt-2">
+                        <p>© 2021 — Clavis Capital Partners. All rights reserved.</p>
+                        <a href="#">privacy policy</a>
+                    </div>
+                </section>
+                
+            </footer>
+
         </main>
 
-        <footer class="footer hide-element">
-            <p>mklscd</p>
-            <p>mklscd</p>
-            <p>mklscd</p>
-        </footer>
+        
 
     </div>
 
 
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 0,
+        effect: "fade",
+        centeredSlides: true,
+        autoplay: {
+          delay: 6000,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
 
     
 </body>

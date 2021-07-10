@@ -6,6 +6,20 @@
     z-index: 2;
 }
 
+.nav-alt {
+    background-color: $white;
+    border-bottom: 1px solid #DBDBDB;
+    .nav-link::before {
+        background-color: $blue;
+    }
+    a {
+        color: $blue;
+    }
+    .nav-active {
+        color: $yellow;
+    }
+}
+
 .nav-container {
     height: 130px;
     max-width: 1430px;
