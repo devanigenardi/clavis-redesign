@@ -1131,6 +1131,13 @@ body .wrapper .main-alt {
       flex-basis: 49%;
 }
 
+@media (max-width: 767px) {
+  .our-team-cards .our-team-card-btn {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+}
+
 .our-team-cards .our-team-card-btn .team-card-info {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1142,9 +1149,28 @@ body .wrapper .main-alt {
   cursor: pointer;
 }
 
+@media (max-width: 767px) {
+  .our-team-cards .our-team-card-btn .team-card-info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .our-team-cards .our-team-card-btn .team-card-info img {
   width: 44%;
   height: auto;
+}
+
+@media (max-width: 767px) {
+  .our-team-cards .our-team-card-btn .team-card-info img {
+    width: 100%;
+    margin-bottom: 2rem;
+    height: 200px;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
 }
 
 .our-team-cards .our-team-card-btn .team-card-info div {
@@ -1160,6 +1186,16 @@ body .wrapper .main-alt {
           justify-content: center;
   width: 56%;
   padding: 0 2rem;
+}
+
+@media (max-width: 767px) {
+  .our-team-cards .our-team-card-btn .team-card-info div {
+    width: 100%;
+    padding: 0rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .our-team-cards .our-team-card-btn .team-card-info div p {
@@ -1180,6 +1216,13 @@ body .wrapper .main-alt {
   -webkit-transition: background-image 0.5s ease;
   transition: background-image 0.5s ease;
   height: 21px;
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  .our-team-cards .our-team-card-btn .team-card-info div a {
+    background-position: center center;
+  }
 }
 
 .our-team-cards .our-team-card-btn .team-card-info div a span {
@@ -1212,15 +1255,93 @@ body .wrapper .main-alt {
   right: -100vw;
   width: 100vw;
   height: 100vh;
-  padding: 1rem;
-  background: #ccc;
+  background: #ffffff;
   z-index: 1;
 }
 
-.modal-close-btn {
+.modal::before {
+  content: '';
   position: absolute;
-  right: 10px;
+  left: 0px;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background: #F8F8F8;
+}
+
+.modal .modal-wrapper {
+  max-width: 1430px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 130px 1rem 1rem;
+  position: relative;
+}
+
+.modal .modal-wrapper .modal-close-btn {
+  position: absolute;
+  right: 1rem;
   top: 150px;
   font-size: 20px;
+  border: none;
+  background: #ffffff;
+}
+
+.modal .modal-wrapper .modal-close-btn .close-modal {
+  width: 30px;
+  height: 30px;
+  display: block;
+  background: url("../images/svg/clavis-close-modal.svg") no-repeat;
+}
+
+.modal .members-cv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-top: -1rem;
+}
+
+@media (max-width: 767px) {
+  .modal .members-cv {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.modal .members-cv .member-info {
+  padding: 5rem 6rem 2rem 0;
+}
+
+@media (max-width: 1023px) {
+  .modal .members-cv .member-info {
+    padding: 5rem 2rem 2rem 0;
+  }
+}
+
+.modal .members-cv .member-info img {
+  width: 300px;
+  height: auto;
+}
+
+.modal .members-cv .member-desc {
+  padding: 5rem 7rem 2rem 8rem;
+  background: #ffffff;
+  height: 100vh;
+}
+
+@media (max-width: 1023px) {
+  .modal .members-cv .member-desc {
+    padding: 5rem 2rem 2rem 2rem;
+  }
+}
+
+.modal .members-cv .member-desc p {
+  font-size: 21px;
+  line-height: 33px;
 }
 /*# sourceMappingURL=app.css.map */

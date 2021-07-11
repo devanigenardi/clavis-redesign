@@ -258,13 +258,25 @@
     flex-wrap: wrap;
     .our-team-card-btn {
         flex-basis: 49%;
+        @media (max-width: 767px) {
+            flex-basis: 100%;
+        }
         .team-card-info {
             display: flex;
             flex-direction: row;
+            @media (max-width: 767px) {
+                flex-direction: column;
+            }
             cursor: pointer;
             img {
                 width: 44%;
                 height: auto;
+                @media (max-width: 767px) {
+                    width: 100%;
+                    margin-bottom: 2rem;
+                    height: 200px;
+                    object-fit: contain;
+                }
             }
             div {
                 display: flex;
@@ -272,6 +284,11 @@
                 justify-content: center;
                 width: 56%;
                 padding: 0 2rem;
+                @media (max-width: 767px) {
+                    width: 100%;
+                    padding: 0rem;
+                    align-items: center;
+                }
                 p {
                     font-size: 14px;
                     line-height: 26px;
@@ -288,6 +305,10 @@
                     background-position: left center;
                     transition: background-image 0.5s ease;
                     height: 21px;
+                    width: 100%;
+                    @media (max-width: 767px) {
+                        background-position: center center;
+                    }
                     span {
                         transition: opacity .2s ease-in-out;
                         transition: .2s;
@@ -321,14 +342,68 @@
     right: -100vw;
     width: 100vw;
     height:100vh;
-    padding: 1rem;
-    background: #ccc;
+    background: $white;
     z-index: 1;
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0px;
+        top: 0;
+        width: 50%;
+        height: 100%;
+        background: $light-greay;
+    }
+    .modal-wrapper {
+        max-width: 1430px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 130px 1rem 1rem;
+        position: relative;
+        .modal-close-btn {
+            position: absolute;
+            right: 1rem;
+            top: 150px;
+            font-size: 20px;
+            border: none;
+            background: $white;
+            .close-modal {
+                width: 30px;
+                height: 30px;
+                display: block;
+                background: url('../images/svg/clavis-close-modal.svg') no-repeat;
+            }
+          }
+    }
+    .members-cv {
+        display: flex;
+        flex-direction: row;
+        margin-top: -1rem;
+        @media (max-width: 767px) {
+            flex-direction: column;
+        }
+        .member-info {
+            padding: 5rem 6rem 2rem 0;
+            @media (max-width: 1023px) {
+                padding: 5rem 2rem 2rem 0;
+            }
+            img {
+                width: 300px;
+                height: auto;
+            }
+        }
+        .member-desc {
+            padding: 5rem 7rem 2rem 8rem;
+            background: $white;
+            height: 100vh;
+            @media (max-width: 1023px) {
+                padding: 5rem 2rem 2rem 2rem;
+            }
+            p {
+                font-size: 21px;
+                line-height: 33px;
+            }
+        }
+    }
   }
-  .modal-close-btn {
-    position: absolute;
-    right: 10px;
-    top: 150px;
-    font-size: 20px;
-  }
+
   
