@@ -323,12 +323,12 @@
     height:100vh;
     padding: 1rem;
     background: #ccc;
-    z-index: 3;
+    z-index: 1;
   }
   .modal-close-btn {
     position: absolute;
     right: 10px;
-    top: 10px;
+    top: 150px;
     font-size: 20px;
   }
   

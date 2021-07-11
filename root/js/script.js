@@ -48,19 +48,22 @@ $(document).ready(function(){
       var id;
       $('.js-btn-modal').on('click', function(){
         id = $(this).data('id');
-        console.log(id)
-        // $('.js-modal[data-id="modal' + id + '"]').show();
         $('.js-modal[data-id="modal' + id + '"]').animate({
             right: '0vw'
+        });
+        $('.main').animate({
+            left: '-100vw'
         });
         $('body').css({
             overflow: 'hidden'
         });
         $('.js-close-btn').on('click', function(){
-            console.log(id);
           $('.js-modal[data-id="modal' + id + '"]').animate({
               right: '-100vw'
           });
+        $('.main').animate({
+            left: '-0vw'
+        });
           $('body').css({
               overflow: 'scroll'
           });
