@@ -44,16 +44,30 @@ $(document).ready(function(){
         $('.tab-content').removeClass('active').filter(sel).addClass('active');
       });
 
+      //modal
+      var id;
       $('.js-btn-modal').on('click', function(){
-        $('#overlay').show();
-        var id = $(this).data('id');
-        $('.js-modal[data-id="modal' + id + '"]').show();
+        id = $(this).data('id');
+        console.log(id)
+        // $('.js-modal[data-id="modal' + id + '"]').show();
+        $('.js-modal[data-id="modal' + id + '"]').animate({
+            right: '0vw'
+        });
+        $('body').css({
+            overflow: 'hidden'
+        });
+        $('.js-close-btn').on('click', function(){
+            console.log(id);
+          $('.js-modal[data-id="modal' + id + '"]').animate({
+              right: '-100vw'
+          });
+          $('body').css({
+              overflow: 'scroll'
+          });
+        });
       });
       
-      $('.js-close-btn').on('click', function(){
-        $('#overlay').hide();
-        $('.js-modal').hide();
-      });
+      
 
 });
 

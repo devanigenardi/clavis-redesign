@@ -237,3 +237,98 @@
     background-size: cover;
     position: relative;
   }
+
+  .collaborators-chart {
+      div {
+          border: 1px solid $blue;
+          padding: 2rem;
+          img {
+              width: auto;
+              height: 70px;
+          }
+      }
+  }
+
+  //our team
+
+  .our-team-cards {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    .our-team-card-btn {
+        flex-basis: 49%;
+        .team-card-info {
+            display: flex;
+            flex-direction: row;
+            cursor: pointer;
+            img {
+                width: 44%;
+                height: auto;
+            }
+            div {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: 56%;
+                padding: 0 2rem;
+                p {
+                    font-size: 14px;
+                    line-height: 26px;
+                }
+                a {
+                    position: relative;
+                    font-size: 12px;
+                    line-height: 22px;
+                    font-weight: bold;
+                    color:$blue;
+                    text-decoration: none;
+                    background: url('../images/svg/clavis-arrow.svg') no-repeat;
+                    background-size: contain;
+                    background-position: left center;
+                    transition: background-image 0.5s ease;
+                    height: 21px;
+                    span {
+                        transition: opacity .2s ease-in-out;
+                        transition: .2s;
+                        position: absolute;
+                        opacity: 0;
+                        left: 20px;
+                        top: 0px;
+                        bottom: 0px;
+                        margin: auto;
+                    }
+                }
+            }
+            &:hover a {
+                background: url('../images/svg/clavis-arrow-hover.svg') no-repeat;
+                background-size: contain;
+                background-position: left center;
+            }
+            &:hover a span {
+                opacity: 1;
+                left: 50px;
+            }
+        }
+        
+      }
+  }
+
+
+.modal {
+    position: fixed;
+    top: 0;
+    right: -100vw;
+    width: 100vw;
+    height:100vh;
+    padding: 1rem;
+    background: #ccc;
+    z-index: 3;
+  }
+  .modal-close-btn {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 20px;
+  }
+  

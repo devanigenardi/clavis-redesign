@@ -9,14 +9,22 @@
 .nav-alt {
     background-color: $white;
     border-bottom: 1px solid #DBDBDB;
-    .nav-link::before {
-        background-color: $blue;
-    }
-    a {
-        color: $blue;
-    }
-    .nav-active {
-        color: $yellow;
+    .nav-item {
+        .nav-link::before {
+            background-color: $blue;
+        }
+        a {
+            color: $blue;
+        }
+        .nav-active {
+            color: $yellow;
+            pointer-events: none;
+        }
+        &.nav-item-last {
+            a {
+                color: $white;
+            }
+        }
     }
 }
 
