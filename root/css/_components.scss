@@ -302,41 +302,47 @@
                         line-height: 16px;
                     }
                 }
-                a {
+                .card-link {
                     position: relative;
                     font-size: 12px;
                     line-height: 22px;
                     font-weight: bold;
                     color:$blue;
                     text-decoration: none;
-                    background: url('../images/svg/clavis-arrow.svg') no-repeat;
-                    background-size: contain;
-                    background-position: left center;
                     transition: background-image 0.5s ease;
                     height: auto;
                     width: 100%;
                     padding: 0.8rem 0;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
                     @media (max-width: 767px) {
                        padding: 0.5rem 0;
                     }
+                    svg {
+                        width: 35px;
+                        .collab-arrow-0{fill:none;stroke:#060606;stroke-width:3;stroke-linecap:round;}
+                        .collab-arrow-1{fill:none;stroke:#060606;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;}
+                    }
+                    
                     span {
                         transition: opacity .2s ease-in-out;
                         transition: .2s;
                         position: absolute;
                         opacity: 0;
                         left: 20px;
-                        top: 0px;
-                        bottom: 0px;
-                        margin: auto;
-                        padding: 0.1rem 0;
-                        margin: auto;
+                        top: 50px;
+                        top: 50%;
+                        -ms-transform: translateY(-50%);
+                        transform: translateY(-50%);
                     }
                 }
             }
-            &:hover a {
-                background: url('../images/svg/clavis-arrow-hover.svg') no-repeat;
-                background-size: contain;
-                background-position: left center;
+            &:hover a svg .collab-arrow-0 {
+                stroke: $blue;
+            }
+            &:hover a svg .collab-arrow-1 {
+                stroke: $blue;
             }
             &:hover a span {
                 opacity: 1;
@@ -575,6 +581,17 @@
     background-size: cover;
     background-attachment: fixed;
   }
-  
 
-  
+.headline-animated {
+    .line{
+        width: 100%;
+        height: 50px;
+        position: relative;
+        span{
+          position: absolute;
+          font-size: 3rem;
+          line-height: 4.2rem;
+          opacity: 1;
+        }
+      }
+}
