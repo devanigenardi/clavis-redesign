@@ -10,6 +10,7 @@
     transition: all 0.3s ease;
     margin-bottom: 1.8rem;
     cursor: pointer;
+    text-transform: uppercase;
   }
 
   .standard-cta-alt {
@@ -21,7 +22,7 @@
   .standard-cta:hover {
     background: $blue;
     border: 1px solid $blue;
-    color: $yellow;
+    color: $white;
   }
 
    // yellow CTA
@@ -137,6 +138,9 @@
     z-index: 1;
     font-size: 15px;
     line-height: 19px;
+      .footer-bg {
+        background: url('../images/svg/clavis-foooter.svg') left center/auto auto no-repeat;
+      }
       .footer-top {
           display: flex;
           flex-direction: row;
@@ -265,16 +269,17 @@
             display: flex;
             flex-direction: row;
             @media (max-width: 767px) {
-                flex-direction: column;
+                flex-direction: row;
+                align-items: flex-start;
             }
             cursor: pointer;
             img {
                 width: 44%;
                 height: auto;
                 @media (max-width: 767px) {
-                    width: 100%;
+                    width: 30%;
                     margin-bottom: 2rem;
-                    height: 200px;
+                    height: auto;
                     object-fit: contain;
                 }
             }
@@ -287,11 +292,15 @@
                 @media (max-width: 767px) {
                     width: 100%;
                     padding: 0rem;
-                    align-items: center;
+                    align-items: flex-start;
+                    margin-left: 1rem;
                 }
                 p {
                     font-size: 14px;
                     line-height: 26px;
+                    @media (max-width: 767px) {
+                        line-height: 16px;
+                    }
                 }
                 a {
                     position: relative;
@@ -304,10 +313,11 @@
                     background-size: contain;
                     background-position: left center;
                     transition: background-image 0.5s ease;
-                    height: 21px;
+                    height: auto;
                     width: 100%;
+                    padding: 0.8rem 0;
                     @media (max-width: 767px) {
-                        background-position: center center;
+                       padding: 0.5rem 0;
                     }
                     span {
                         transition: opacity .2s ease-in-out;
@@ -317,6 +327,8 @@
                         left: 20px;
                         top: 0px;
                         bottom: 0px;
+                        margin: auto;
+                        padding: 0.1rem 0;
                         margin: auto;
                     }
                 }
@@ -352,6 +364,9 @@
         width: 50%;
         height: 100%;
         background: $light-greay;
+        @media (max-width: 767px) { 
+            width: 100%;
+        }
     }
     .modal-wrapper {
         max-width: 1430px;
@@ -359,6 +374,9 @@
         margin: 0 auto;
         padding: 130px 1rem 1rem;
         position: relative;
+        @media (max-width: 767px) { 
+            height: 100%;
+        }
         .modal-close-btn {
             position: absolute;
             right: 1rem;
@@ -366,11 +384,20 @@
             font-size: 20px;
             border: none;
             background: $white;
+            z-index: 4;
+            @media (max-width: 767px) { 
+                background: none;
+            }
             .close-modal {
                 width: 30px;
                 height: 30px;
                 display: block;
                 background: url('../images/svg/clavis-close-modal.svg') no-repeat;
+                @media (max-width: 767px) {
+                    width: 17px;
+                    height: 17px;
+                    background-size: cover;
+                }
             }
           }
     }
@@ -378,32 +405,176 @@
         display: flex;
         flex-direction: row;
         margin-top: -1rem;
+
+        &:before {
+            content: '';
+            height: 50px;
+            width: 100%;
+            bottom: 0px;
+            left: 0px;
+            /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#999999+0,e5e5e5+51&0+0,1+51 */
+            background: -moz-linear-gradient(top,  rgba(153,153,153,0) 0%, rgba(229,229,229,1) 51%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(top,  rgba(153,153,153,0) 0%,rgba(229,229,229,1) 51%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to bottom,  rgba(153,153,153,0) 0%,rgba(229,229,229,1) 51%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00999999', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-9 */
+
+
+            position: absolute;
+            z-index: 1;
+        }
         @media (max-width: 767px) {
             flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
         }
         .member-info {
             padding: 5rem 6rem 2rem 0;
+            max-width: 360px;
+            width: 100%;
             @media (max-width: 1023px) {
-                padding: 5rem 2rem 2rem 0;
+                padding: 2rem 0rem 0rem 0;
+                max-width: 100%;
             }
-            img {
-                width: 300px;
-                height: auto;
+            .member-header {
+                @media (max-width: 767px) {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                }
+                img {
+                    width: 340px;
+                    height: auto;
+
+                    @media (max-width: 767px) {
+                        width: 100px;
+                        height: 120px;
+                    }
+                }
+                div {
+                    margin-left: 0rem;
+                    @media (max-width: 767px) {
+                        margin-left: 1rem;
+                    }
+                    h4 {
+                        margin-top: 3rem;
+                        @media (max-width: 767px) {
+                            margin-top: 0rem;
+                        }
+                    }
+                    p {
+                        font-size: 13px;
+                        line-height: 26px;
+                        @media (max-width: 767px) {
+                            line-height: 13px;
+                        }
+                    }
+                }
+            }
+            
+
+            ul {
+                padding: 1rem 0 0 0;
+                border-top: 1px solid $grey;
+                @media (max-width: 767px) {
+                    border-top: none;
+                }
+                li {
+                    list-style-type: none;
+                    font-size: 13px;
+                    line-height: 26px;
+                    position: relative;
+                    color: $grey;
+                    padding-left: 2rem;
+                    &:nth-child(1) {
+                        background: url('../images/svg/clavis-contact.svg') left center/16px auto no-repeat;
+                    }
+                    &:nth-child(2) {
+                        background: url('../images/svg/clavis-phone.svg') left center/16px auto no-repeat;
+                    }
+                    &:nth-child(3) {
+                        background: url('../images/svg/clavis-in.svg') left center/16px auto no-repeat;
+                    }
+                }
             }
         }
-        .member-desc {
-            padding: 5rem 7rem 2rem 8rem;
-            background: $white;
+        .scrollable-member-desc {
+            position: relative;
             height: 100vh;
-            @media (max-width: 1023px) {
-                padding: 5rem 2rem 2rem 2rem;
+            @media (max-width: 767px) {
+                height: 50%;
             }
-            p {
-                font-size: 21px;
-                line-height: 33px;
+            .member-desc {
+                padding: 5.5rem 3rem 10rem 8rem;
+                margin-right: 4rem;
+                background: $white;
+                height: 100vh;
+                overflow: scroll;
+                position: relative;
+                @media (max-width: 1023px) {
+                    padding: 1rem 0rem 10rem 0rem;
+                    margin-right: 0rem;
+                    overflow: hidden;
+                    background: $light-greay;
+                }
+                @media (max-width: 767px) {
+                    padding: 1rem 0;
+                    margin-right: 0rem;
+                    overflow: scroll;
+                    overflow-x:hidden;
+                    height:100%
+                    /*-webkit-overflow-scrolling: touch;*/ 
+                }
+                p {
+                    font-size: 21px;
+                    line-height: 33px;
+                    width: 100%;
+                    max-width: 850px;
+                    @media (max-width: 1023px) {
+                        font-size: 14px;
+                        line-height: 20px;
+                    }
+                }
+                ul {
+                    padding: 0px;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: flex-start;
+                    li {
+                        list-style-type: none;
+                        margin-right: 1rem;
+                        padding-left: 1.5rem;
+                        font-size: 13px;
+                        color: $grey;
+                        &:nth-child(1) {
+                            background: url('../images/svg/clavis-temp.svg') left center/16px auto no-repeat;
+                        }
+                        &:nth-child(2) {
+                            background: url('../images/svg/clavis-temp.svg') left center/16px auto no-repeat;
+                        }
+                        &:nth-child(3) {
+                            background: url('../images/svg/clavis-temp.svg') left center/16px auto no-repeat;
+                        }
+                        &:nth-child(4) {
+                            background: url('../images/svg/clavis-temp.svg') left center/16px auto no-repeat;
+                        }
+                        &:nth-child(5) {
+                            background: url('../images/svg/clavis-temp.svg') left center/16px auto no-repeat;
+                        }
+                    }
+                }
             }
         }
     }
   }
+
+  .parallax-slide {
+    height: 70vh;
+  }
+  #parallax1 {
+    background: url('../images/clavis-parallax-1.jpg') no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  
 
   

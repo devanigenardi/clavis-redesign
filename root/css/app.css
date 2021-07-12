@@ -96,6 +96,13 @@ h2 {
   line-height: 66px;
 }
 
+@media (max-width: 767px) {
+  .main-headline {
+    font-size: 40px;
+    line-height: 50px;
+  }
+}
+
 .main-headline-alt {
   color: #0065A1;
   font-size: 62px;
@@ -123,6 +130,14 @@ h2 {
   font-weight: bold;
   letter-spacing: 0;
   line-height: 34px;
+}
+
+.headline-dark-alt-sm {
+  color: #060606;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 0;
+  line-height: 30px;
 }
 
 .eyebrow {
@@ -173,6 +188,35 @@ body .wrapper .slab-full {
   height: auto;
 }
 
+body .wrapper .slab-full .slab-row {
+  max-width: 1430px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+body .wrapper .slab-full-half {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+body .wrapper .slab-full-half::before {
+  content: '';
+  width: 100%;
+  height: 50%;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  background: #ffffff;
+}
+
+body .wrapper .slab-full-half img {
+  height: auto;
+  width: 100%;
+}
+
 body .wrapper .main {
   width: 100%;
   position: absolute;
@@ -191,7 +235,7 @@ body .wrapper .main .main-content {
 body .wrapper .main .main-content .signature {
   position: relative;
   padding-top: 50%;
-  background: url("/images/clavis-helmet-1.jpg") no-repeat;
+  background: url("../images/clavis-helmet-1.jpg") no-repeat;
   background-size: 86%;
   background-position: top left;
 }
@@ -212,7 +256,7 @@ body .wrapper .main .bottom__spacer {
 }
 
 body .wrapper .main-alt {
-  margin-top: 4rem;
+  margin-top: 50vh;
 }
 
 .hide-element {
@@ -238,6 +282,38 @@ body .wrapper .main-alt {
   transition: all 0.5s linear;
 }
 
+.capital-letter:first-letter {
+  color: #0065A1;
+  display: block;
+  float: left;
+  font-size: 100px;
+  line-height: 150px;
+  margin-top: -50px;
+}
+
+@media (max-width: 767px) {
+  .capital-letter:first-letter {
+    font-size: 60px;
+    line-height: 90px;
+    margin-top: -30px;
+  }
+}
+
+.headline-animation-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 300px;
+}
+
+.headline-animation {
+  position: absolute;
+  top: 40px;
+  opacity: 0;
+  left: 0px;
+  width: 100%;
+}
+
 .header {
   width: 100%;
   height: 100vh;
@@ -246,9 +322,8 @@ body .wrapper .main-alt {
 }
 
 .header-alt {
-  width: 100%;
   height: auto;
-  position: initial;
+  position: fixed;
 }
 
 .nav {
@@ -264,21 +339,29 @@ body .wrapper .main-alt {
   border-bottom: 1px solid #DBDBDB;
 }
 
-.nav-alt .nav-item .nav-link::before {
+.nav-alt .nav-menu {
+  background-color: #ffffff;
+}
+
+.nav-alt .nav-menu .nav-item .nav-link::before {
   background-color: #0065A1;
 }
 
-.nav-alt .nav-item a {
+.nav-alt .nav-menu .nav-item a {
   color: #0065A1;
 }
 
-.nav-alt .nav-item .nav-active {
+.nav-alt .nav-menu .nav-item .nav-active {
   color: #d0af21;
   pointer-events: none;
 }
 
-.nav-alt .nav-item.nav-item-last a {
+.nav-alt .nav-menu .nav-item.nav-item-last a {
   color: #ffffff;
+}
+
+.nav-alt .hamburger .bar {
+  background: #0065A1;
 }
 
 .nav-container {
@@ -420,7 +503,23 @@ body .wrapper .main-alt {
     top: 0;
   }
   .nav-item {
-    margin: 2.5rem 0;
+    margin: 0.5rem 0;
+    font-size: 17px;
+    line-height: 21px;
+    position: relative;
+    width: 100%;
+  }
+  .nav-item::before {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    left: 0px;
+    bottom: -5px;
+    background: #CCE0FF;
+  }
+  .nav-item:last-child::before {
+    content: none;
   }
   .hamburger {
     display: block;
@@ -572,6 +671,26 @@ body .wrapper .main-alt {
   background: #ffffff !important;
 }
 
+.arrow-dowm {
+  position: absolute;
+  top: 75vh;
+  left: 9vw;
+  z-index: 2;
+}
+
+@media (max-width: 1023px) {
+  .arrow-dowm {
+    top: 50vh;
+    left: 4vw;
+  }
+}
+
+@media (max-width: 767px) {
+  .arrow-dowm {
+    display: none;
+  }
+}
+
 @media only screen and (max-width: 1024px) {
   .swiper-slider-container {
     width: 100%;
@@ -619,7 +738,8 @@ body .wrapper .main-alt {
 }
 
 .flex-grid-two,
-.flex-grid-thirds {
+.flex-grid-thirds,
+.flex-grid-fourths {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -636,14 +756,20 @@ body .wrapper .main-alt {
   width: 32%;
 }
 
+.flex-grid-fourths .col {
+  width: 23.5%;
+}
+
 @media (max-width: 767px) {
   .flex-grid,
   .flex-grid-thirds,
+  .flex-grid-fourths,
   .flex-grid-two {
     display: block;
   }
   .flex-grid .col,
   .flex-grid-thirds .col,
+  .flex-grid-fourths .col,
   .flex-grid-two .col {
     width: 100%;
     margin: 0 0 10px 0;
@@ -797,6 +923,7 @@ body .wrapper .main-alt {
   transition: all 0.3s ease;
   margin-bottom: 1.8rem;
   cursor: pointer;
+  text-transform: uppercase;
 }
 
 .standard-cta-alt {
@@ -808,7 +935,7 @@ body .wrapper .main-alt {
 .standard-cta:hover {
   background: #0065A1;
   border: 1px solid #0065A1;
-  color: #d0af21;
+  color: #ffffff;
 }
 
 .yellow-cta {
@@ -944,6 +1071,10 @@ body .wrapper .main-alt {
   z-index: 1;
   font-size: 15px;
   line-height: 19px;
+}
+
+.footer .footer-bg {
+  background: url("../images/svg/clavis-foooter.svg") left center/auto auto no-repeat;
 }
 
 .footer .footer-top {
@@ -1151,10 +1282,13 @@ body .wrapper .main-alt {
 
 @media (max-width: 767px) {
   .our-team-cards .our-team-card-btn .team-card-info {
-    -webkit-box-orient: vertical;
+    -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
 }
 
@@ -1165,9 +1299,9 @@ body .wrapper .main-alt {
 
 @media (max-width: 767px) {
   .our-team-cards .our-team-card-btn .team-card-info img {
-    width: 100%;
+    width: 30%;
     margin-bottom: 2rem;
-    height: 200px;
+    height: auto;
     -o-object-fit: contain;
        object-fit: contain;
   }
@@ -1192,15 +1326,22 @@ body .wrapper .main-alt {
   .our-team-cards .our-team-card-btn .team-card-info div {
     width: 100%;
     padding: 0rem;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin-left: 1rem;
   }
 }
 
 .our-team-cards .our-team-card-btn .team-card-info div p {
   font-size: 14px;
   line-height: 26px;
+}
+
+@media (max-width: 767px) {
+  .our-team-cards .our-team-card-btn .team-card-info div p {
+    line-height: 16px;
+  }
 }
 
 .our-team-cards .our-team-card-btn .team-card-info div a {
@@ -1215,13 +1356,14 @@ body .wrapper .main-alt {
   background-position: left center;
   -webkit-transition: background-image 0.5s ease;
   transition: background-image 0.5s ease;
-  height: 21px;
+  height: auto;
   width: 100%;
+  padding: 0.8rem 0;
 }
 
 @media (max-width: 767px) {
   .our-team-cards .our-team-card-btn .team-card-info div a {
-    background-position: center center;
+    padding: 0.5rem 0;
   }
 }
 
@@ -1235,6 +1377,8 @@ body .wrapper .main-alt {
   left: 20px;
   top: 0px;
   bottom: 0px;
+  margin: auto;
+  padding: 0.1rem 0;
   margin: auto;
 }
 
@@ -1269,12 +1413,24 @@ body .wrapper .main-alt {
   background: #F8F8F8;
 }
 
+@media (max-width: 767px) {
+  .modal::before {
+    width: 100%;
+  }
+}
+
 .modal .modal-wrapper {
   max-width: 1430px;
   width: 100%;
   margin: 0 auto;
   padding: 130px 1rem 1rem;
   position: relative;
+}
+
+@media (max-width: 767px) {
+  .modal .modal-wrapper {
+    height: 100%;
+  }
 }
 
 .modal .modal-wrapper .modal-close-btn {
@@ -1284,6 +1440,13 @@ body .wrapper .main-alt {
   font-size: 20px;
   border: none;
   background: #ffffff;
+  z-index: 4;
+}
+
+@media (max-width: 767px) {
+  .modal .modal-wrapper .modal-close-btn {
+    background: none;
+  }
 }
 
 .modal .modal-wrapper .modal-close-btn .close-modal {
@@ -1291,6 +1454,14 @@ body .wrapper .main-alt {
   height: 30px;
   display: block;
   background: url("../images/svg/clavis-close-modal.svg") no-repeat;
+}
+
+@media (max-width: 767px) {
+  .modal .modal-wrapper .modal-close-btn .close-modal {
+    width: 17px;
+    height: 17px;
+    background-size: cover;
+  }
 }
 
 .modal .members-cv {
@@ -1304,44 +1475,242 @@ body .wrapper .main-alt {
   margin-top: -1rem;
 }
 
+.modal .members-cv:before {
+  content: '';
+  height: 50px;
+  width: 100%;
+  bottom: 0px;
+  left: 0px;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#999999+0,e5e5e5+51&0+0,1+51 */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(153, 153, 153, 0)), color-stop(51%, #e5e5e5));
+  background: linear-gradient(to bottom, rgba(153, 153, 153, 0) 0%, #e5e5e5 51%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00999999', endColorstr='#e5e5e5',GradientType=0 );
+  /* IE6-9 */
+  position: absolute;
+  z-index: 1;
+}
+
 @media (max-width: 767px) {
   .modal .members-cv {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    height: 100%;
   }
 }
 
 .modal .members-cv .member-info {
   padding: 5rem 6rem 2rem 0;
+  max-width: 360px;
+  width: 100%;
 }
 
 @media (max-width: 1023px) {
   .modal .members-cv .member-info {
-    padding: 5rem 2rem 2rem 0;
+    padding: 2rem 0rem 0rem 0;
+    max-width: 100%;
   }
 }
 
-.modal .members-cv .member-info img {
-  width: 300px;
+@media (max-width: 767px) {
+  .modal .members-cv .member-info .member-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.modal .members-cv .member-info .member-header img {
+  width: 340px;
   height: auto;
 }
 
-.modal .members-cv .member-desc {
-  padding: 5rem 7rem 2rem 8rem;
-  background: #ffffff;
-  height: 100vh;
-}
-
-@media (max-width: 1023px) {
-  .modal .members-cv .member-desc {
-    padding: 5rem 2rem 2rem 2rem;
+@media (max-width: 767px) {
+  .modal .members-cv .member-info .member-header img {
+    width: 100px;
+    height: 120px;
   }
 }
 
-.modal .members-cv .member-desc p {
+.modal .members-cv .member-info .member-header div {
+  margin-left: 0rem;
+}
+
+@media (max-width: 767px) {
+  .modal .members-cv .member-info .member-header div {
+    margin-left: 1rem;
+  }
+}
+
+.modal .members-cv .member-info .member-header div h4 {
+  margin-top: 3rem;
+}
+
+@media (max-width: 767px) {
+  .modal .members-cv .member-info .member-header div h4 {
+    margin-top: 0rem;
+  }
+}
+
+.modal .members-cv .member-info .member-header div p {
+  font-size: 13px;
+  line-height: 26px;
+}
+
+@media (max-width: 767px) {
+  .modal .members-cv .member-info .member-header div p {
+    line-height: 13px;
+  }
+}
+
+.modal .members-cv .member-info ul {
+  padding: 1rem 0 0 0;
+  border-top: 1px solid #6C6C6C;
+}
+
+@media (max-width: 767px) {
+  .modal .members-cv .member-info ul {
+    border-top: none;
+  }
+}
+
+.modal .members-cv .member-info ul li {
+  list-style-type: none;
+  font-size: 13px;
+  line-height: 26px;
+  position: relative;
+  color: #6C6C6C;
+  padding-left: 2rem;
+}
+
+.modal .members-cv .member-info ul li:nth-child(1) {
+  background: url("../images/svg/clavis-contact.svg") left center/16px auto no-repeat;
+}
+
+.modal .members-cv .member-info ul li:nth-child(2) {
+  background: url("../images/svg/clavis-phone.svg") left center/16px auto no-repeat;
+}
+
+.modal .members-cv .member-info ul li:nth-child(3) {
+  background: url("../images/svg/clavis-in.svg") left center/16px auto no-repeat;
+}
+
+.modal .members-cv .scrollable-member-desc {
+  position: relative;
+  height: 100vh;
+}
+
+@media (max-width: 767px) {
+  .modal .members-cv .scrollable-member-desc {
+    height: 50%;
+  }
+}
+
+.modal .members-cv .scrollable-member-desc .member-desc {
+  padding: 5.5rem 3rem 10rem 8rem;
+  margin-right: 4rem;
+  background: #ffffff;
+  height: 100vh;
+  overflow: scroll;
+  position: relative;
+}
+
+@media (max-width: 1023px) {
+  .modal .members-cv .scrollable-member-desc .member-desc {
+    padding: 1rem 0rem 10rem 0rem;
+    margin-right: 0rem;
+    overflow: hidden;
+    background: #F8F8F8;
+  }
+}
+
+@media (max-width: 767px) {
+  .modal .members-cv .scrollable-member-desc .member-desc {
+    padding: 1rem 0;
+    margin-right: 0rem;
+    overflow: scroll;
+    overflow-x: hidden;
+    height: 100%;
+  }
+}
+
+.modal .members-cv .scrollable-member-desc .member-desc p {
   font-size: 21px;
   line-height: 33px;
+  width: 100%;
+  max-width: 850px;
+}
+
+@media (max-width: 1023px) {
+  .modal .members-cv .scrollable-member-desc .member-desc p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+.modal .members-cv .scrollable-member-desc .member-desc ul {
+  padding: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.modal .members-cv .scrollable-member-desc .member-desc ul li {
+  list-style-type: none;
+  margin-right: 1rem;
+  padding-left: 1.5rem;
+  font-size: 13px;
+  color: #6C6C6C;
+}
+
+.modal .members-cv .scrollable-member-desc .member-desc ul li:nth-child(1) {
+  background: url("../images/svg/clavis-temp.svg") left center/16px auto no-repeat;
+}
+
+.modal .members-cv .scrollable-member-desc .member-desc ul li:nth-child(2) {
+  background: url("../images/svg/clavis-temp.svg") left center/16px auto no-repeat;
+}
+
+.modal .members-cv .scrollable-member-desc .member-desc ul li:nth-child(3) {
+  background: url("../images/svg/clavis-temp.svg") left center/16px auto no-repeat;
+}
+
+.modal .members-cv .scrollable-member-desc .member-desc ul li:nth-child(4) {
+  background: url("../images/svg/clavis-temp.svg") left center/16px auto no-repeat;
+}
+
+.modal .members-cv .scrollable-member-desc .member-desc ul li:nth-child(5) {
+  background: url("../images/svg/clavis-temp.svg") left center/16px auto no-repeat;
+}
+
+.parallax-slide {
+  height: 70vh;
+}
+
+#parallax1 {
+  background: url("../images/clavis-parallax-1.jpg") no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 /*# sourceMappingURL=app.css.map */

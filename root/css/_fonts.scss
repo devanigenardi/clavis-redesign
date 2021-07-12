@@ -11,6 +11,10 @@ h2 {
 	font-size: 52px;
 	letter-spacing: 0;
 	line-height: 66px;
+	@media (max-width: 767px){
+		font-size: 40px;
+		line-height: 50px;
+	}
 }
 
 .main-headline-alt {
@@ -37,6 +41,14 @@ h2 {
 	font-weight: bold;
 	letter-spacing: 0;
 	line-height: 34px;
+  }
+
+  .headline-dark-alt-sm {
+	color: $dark-grey;
+	font-size: 20px;
+	font-weight: bold;
+	letter-spacing: 0;
+	line-height: 30px;
   }
 
 .eyebrow {

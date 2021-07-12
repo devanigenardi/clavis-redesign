@@ -9,23 +9,33 @@
 .nav-alt {
     background-color: $white;
     border-bottom: 1px solid #DBDBDB;
-    .nav-item {
-        .nav-link::before {
-            background-color: $blue;
-        }
-        a {
-            color: $blue;
-        }
-        .nav-active {
-            color: $yellow;
-            pointer-events: none;
-        }
-        &.nav-item-last {
+    .nav-menu {
+        background-color: $white;
+        .nav-item {
+            .nav-link::before {
+                background-color: $blue;
+            }
             a {
-                color: $white;
+                color: $blue;
+            }
+            .nav-active {
+                color: $yellow;
+                pointer-events: none;
+            }
+            &.nav-item-last {
+                a {
+                    color: $white;
+                }
             }
         }
     }
+
+    .hamburger {
+        .bar {
+            background: $blue;
+        }
+    }
+    
 }
 
 .nav-container {
@@ -140,7 +150,25 @@
     }
 
     .nav-item {
-        margin: 2.5rem 0;
+        margin: 0.5rem 0;
+        font-size: 17px;
+        line-height: 21px;
+        position: relative;
+        width: 100%;
+        &::before {
+            content: '';
+            position: absolute;
+            height: 1px;
+            width: 100%;
+            left: 0px;
+            bottom: -5px;
+            background: $light-blue;
+        }
+        &:last-child {
+            &::before {
+                content: none;
+            }
+        }
     }
 
     .hamburger {

@@ -14,7 +14,8 @@
     position: relative;
   }
   .flex-grid-two,
-  .flex-grid-thirds {
+  .flex-grid-thirds,
+  .flex-grid-fourths {
     display: flex;
     justify-content: space-between;
   }
@@ -24,10 +25,15 @@
   .flex-grid-thirds .col {
     width: 32%;
   }
+
+  .flex-grid-fourths .col {
+    width: 23.5%;
+  }
   
   @media (max-width: 767px) {
     .flex-grid,
     .flex-grid-thirds,
+    .flex-grid-fourths,
     .flex-grid-two {
       display: block;
       .col {

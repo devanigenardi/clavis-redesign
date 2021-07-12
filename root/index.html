@@ -77,6 +77,9 @@
                       </div>
                     </div>
                     <div class="swiper-pagination"></div>
+                    <div class="arrow-dowm">
+                        <img src="images/svg/clavis-arrow-down.svg" alt="" />
+                    </div>
                   </div>
             </div>
             
@@ -88,7 +91,7 @@
                     <div class="flex-grid">
                         <div class="col">
                             <div class="signature">
-                                <h2 class="main-headline top-1">We bring our hard hat.</h2>
+                                <h2 class="main-headline top-1 headline-animation-container"><span class="headline-animation">We bring our hard hat.</span></h2>
                             </div>
                             <div class="flex-grid-inner">
                                 <div class="flex-grid pt-5 pb-2 pb-0 pt-0">
@@ -116,7 +119,7 @@
                         <div class="col">
                             <p class="pt-2 pb-4 pt-0">Clavis professionals are career operators, not financial engineers. All of our Principals have held leadership positions in large and small manufacturing and industrial companies across a number of different sectors throughout their careers. We bring an operator mindset to our investing activity. we bring experience. we bring connections. we bring resources. We bring our hard hat.
                             </p>
-                            <img class="hard-hat" src="/images/clavis-helmet-2.jpeg" alt="We bring our hard hat." />
+                            <img class="hard-hat" src="images/clavis-helmet-2.jpeg" alt="We bring our hard hat." />
                         </div>
                     </div>
                 </section>
@@ -166,9 +169,9 @@
                 </section>
             </section>
 
-            <footer class="footer pt-5 pb-2">
-                <section class="slab-standard">
-                    <div class="footer-top">
+            <footer class="footer">
+                <section class="slab-standard footer-bg">
+                    <div class="footer-top pt-5">
                         <div class="footer-info pb-1">
                             <a href="#" class="yellow-cta">LET’S TALK</a>
                             <ul>
@@ -192,7 +195,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="footer-bottom pt-2">
+                    <div class="footer-bottom pt-2  pb-2">
                         <p>© 2021 — Clavis Capital Partners. All rights reserved.</p>
                         <a href="#">privacy policy</a>
                     </div>
@@ -209,6 +212,8 @@
 
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/ScrollTrigger.min.js"></script>
     <script src="js/script.js"></script>
 
     <!-- Initialize Swiper -->
@@ -230,6 +235,24 @@
           prevEl: ".swiper-button-prev",
         },
       });
+
+
+      const tl = gsap.timeline( { 
+   
+   scrollTrigger: {
+     trigger: ".headline-animation",
+     start: "top 65%",
+     end: "bottom 55%",
+     scrub: true,
+     markers: true,
+
+   }
+   
+ });
+ 
+ tl
+   .to('.headline-animation', { top: 0, opacity: 1, duration: 0.3, ease: "back.out(1.7)"  });
+
     </script>
 
     

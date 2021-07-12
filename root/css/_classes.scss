@@ -19,3 +19,31 @@
     right: 0%!important;
     transition: all 0.5s linear;
 }
+
+.capital-letter:first-letter {
+    color: $blue;display: block;
+    float: left;
+    font-size: 100px;
+    line-height: 150px;
+    margin-top: -50px;
+    @media (max-width: 767px) {
+        font-size: 60px;
+        line-height: 90px;
+        margin-top: -30px;
+    }
+} 
+
+.headline-animation-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 300px;
+}
+
+.headline-animation{
+    position: absolute;
+    top: 40px;
+    opacity: 0;
+    left: 0px;
+    width: 100%;
+  }
