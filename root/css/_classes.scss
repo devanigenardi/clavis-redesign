@@ -85,5 +85,18 @@
       white-space: nowrap;
   }
 
+  @media (min-width: 768px) {
+    .hide-desktop {
+        display: none;
+    }
+}
+
+@media (max-width: 767px) {
+    .hide-mobile {
+        display: none;
+    }
+}
+
+
 
 

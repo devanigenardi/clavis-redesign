@@ -620,12 +620,25 @@
 
 .parallax-slide {
     height: 70vh;
-}
-#parallax1 {
-    background: url('../images/clavis-parallax-1.jpg') no-repeat center;
-    background-size: cover;
     background-attachment: fixed;
+    background-position: center center;
+    @media (max-width: 767px) {
+        height: 50vh;
+    }
 }
+
+.parallax-slide-1 {
+    background: url('../images/clavis-parallax-1.jpg') no-repeat center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.parallax-slide-2 {
+    background: url('../images/clavis-parallax-2.jpg') no-repeat center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
 
 .headline-animated {
     .line{
@@ -633,7 +646,7 @@
         height: 65px;
         position: relative;
         height: auto;
-        span{
+        span {
             position: relative;
             font-size: 52px;
             letter-spacing: 0;
@@ -644,4 +657,42 @@
             }
         }
       }
+}
+
+.slab-inner-card {
+    padding: 4.5rem 0;
+    background: url('/images/clavis-ripple.jpg') left center / auto auto no-repeat;
+    background-size: contain;
+    display: flex;
+    justify-content: flex-end;
+    @media (max-width: 1023px) {
+        background-size: cover;
+        justify-content: center;
+    }
+    .slab-card {
+        max-width: 670px;
+        width: 100%;
+        background-color: $white;
+        padding: 130px 95px 130px 45px;
+        box-shadow: 0 5px 83px 0 rgba(40,40,40,0.12);
+        @media (max-width: 767px) {
+            padding: 2rem 2rem 3rem 2rem;
+            width: 90%;
+            margin: 0 auto;
+        }
+        h2 {
+            @media (max-width: 767px) {
+                margin: 0 0 1rem 0;
+            }
+        }
+        p {
+            @media (max-width: 767px) {
+                margin: 2rem 0;
+            }
+        }
+        a.standard-cta-alt {
+            padding: 16px 40px;
+        }
+        
+    }
 }

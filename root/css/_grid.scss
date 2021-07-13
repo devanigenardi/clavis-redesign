@@ -22,12 +22,26 @@
   .flex-grid-two .col {
     width: 49%;
   }
-  .flex-grid-thirds .col {
-    width: 32%;
+  .flex-grid-thirds {
+      flex-wrap: wrap;
+        .col {
+            width: 32%;
+            margin-bottom: 2rem;
+        }
   }
 
   .flex-grid-fourths .col {
     width: 23.5%;
+  }
+
+  @media (max-width: 1023px) {
+    .flex-grid-thirds {
+        flex-wrap: wrap;
+      .col {
+        width: 49%;
+        margin: 0 0 1rem 0;
+      }
+    }
   }
 
   @media (max-width: 1023px) {
