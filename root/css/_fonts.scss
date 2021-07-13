@@ -26,6 +26,11 @@ h2 {
 		font-size: 40px;
 		line-height: 50px;
 	}
+	span {
+		position: relative;
+		display: inline-block;
+		opacity: 0;
+	}
 }
 
 .headline-dark {

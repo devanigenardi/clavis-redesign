@@ -117,6 +117,12 @@ h2 {
   }
 }
 
+.main-headline-alt span {
+  position: relative;
+  display: inline-block;
+  opacity: 0;
+}
+
 .headline-dark {
   color: #060606;
   font-size: 34px;
@@ -1308,8 +1314,8 @@ body .wrapper .main-alt {
   width: 44%;
   height: auto;
   padding-top: 48%;
-  -webkit-transition: all .3s;
-  transition: all .3s;
+  -webkit-transition: all .2s;
+  transition: all .2s;
   overflow: hidden;
 }
 

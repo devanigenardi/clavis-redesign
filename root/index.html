@@ -96,21 +96,21 @@
                             <div class="flex-grid-inner">
                                 <div class="flex-grid pt-5 pb-2 pb-0 pt-0">
                                     <div class="col">
-                                        <h2 class="main-headline-alt">2013</h2>
+                                        <h2 class="main-headline-alt"><span>2013</span></h2>
                                         <p>Clavis Capital Partners began</p>
                                     </div>
                                     <div class="col">
-                                        <h2 class="main-headline-alt">50+</h2>
+                                        <h2 class="main-headline-alt"><span>50+</span></h2>
                                         <p>deals completed as a team</p>
                                     </div>
                                 </div>
                                 <div class="flex-grid pb-2 pb-0">
                                     <div class="col">
-                                        <h2 class="main-headline-alt">$250M</h2>
+                                        <h2 class="main-headline-alt"><span>$250M</span></h2>
                                         <p>capital deployed by Clavis</p>
                                     </div>
                                     <div class="col">
-                                        <h2 class="main-headline-alt">$1B+</h2>
+                                        <h2 class="main-headline-alt"><span>$1B+</span></h2>
                                         <p>collectively deployed by our principals</p>
                                     </div>
                                 </div>
@@ -237,21 +237,35 @@
       });
 
 
-      const tl = gsap.timeline( { 
-   
-   scrollTrigger: {
-     trigger: ".headline-animation",
-     start: "top 65%",
-     end: "bottom 55%",
-     scrub: true,
-     markers: true,
+    const tl = gsap.timeline( { 
 
-   }
-   
- });
- 
- tl
-   .to('.headline-animation', { top: 0, opacity: 1, duration: 0.3, ease: "back.out(1.7)"  });
+        scrollTrigger: {
+            trigger: ".headline-animation",
+            start: "top 75%",
+            end: "bottom 65%",
+            once: true
+            //  markers: true,
+            
+
+        }
+
+    });
+
+    tl.to('.headline-animation', { left: 25, opacity: 1, duration: 0.3, ease: "back.out(1.7)"   });
+
+    const tl2 = gsap.timeline( { 
+
+    scrollTrigger: {
+        trigger: ".main-headline-alt span",
+        start: "top 75%",
+        end: "bottom 65%",
+        once: true
+
+    }
+
+    });
+
+    tl2.to('.main-headline-alt span', { stagger: 0.15, left: 25, opacity: 1, duration: 0.3, ease: "back.out(1.7)"  });
 
     </script>
 
