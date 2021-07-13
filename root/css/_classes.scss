@@ -1,3 +1,7 @@
+.body-no-scroll {
+    overflow: hidden;
+}
+
 .hide-element {
     display: none;
 }
@@ -8,7 +12,33 @@
 }
 
 .nav-background {
-    background-color: $blue;
+    background-color: $white;
+    border-bottom: 1px solid #DBDBDB;
+    .nav-logo-container {
+        z-index: 1;
+        background: url('../images/svg/clavis-logo.svg')  no-repeat;
+        background-size: contain;
+        width: 195px;
+        height: 67px;
+        position: relative;
+        @media only screen and (max-width: 767px) {
+            width: 150px;
+            height: 50px;
+        }
+    }
+    .nav-menu {
+        .nav-item {
+            .nav-link {
+                color: $blue;
+                &:before {
+                    background-color: $blue;
+                }
+                &:hover::before {
+                    width: 100%;
+                }
+            }
+        }
+    }
 }
 
 .light-grey-bg {
@@ -24,8 +54,8 @@
     color: $blue;display: block;
     float: left;
     font-size: 100px;
-    line-height: 150px;
-    margin-top: -50px;
+    line-height: 100px;
+    margin-top: -34px;
     @media (max-width: 767px) {
         font-size: 60px;
         line-height: 90px;
@@ -38,14 +68,21 @@
     width: 100%;
     overflow: hidden;
     height: 300px;
+    @media (max-width: 767px) {
+        height: 100%;
+    }
 }
 
 .headline-animation{
     position: absolute;
     top: 40px;
     opacity: 0;
-    left: 0px;
+    left: 25px;
     width: 100%;
+  }
+
+  .no-break {
+      white-space: nowrap;
   }
 
 

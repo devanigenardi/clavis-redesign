@@ -10,6 +10,7 @@ $(document).ready(function(){
     $(".hamburger").click(function(){
         $(".hamburger").toggleClass("active");
         $(".nav-menu").toggleClass("active");
+        $("body").toggleClass("body-no-scroll");
     });
 
     //current location

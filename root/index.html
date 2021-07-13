@@ -17,9 +17,7 @@
         <section class="slab-full">
             <nav class="nav">
                 <div class="nav-container">
-                    <a class="nav-logo-container" href="index.html">
-                        <img class="nav-logo" src="./images/svg/clavis-logo-home.svg" alt="Logo" />
-                    </a>
+                    <a class="nav-logo-container" href="index.html"></a>
                     <ul class="nav-menu">
                         <li class="nav-item">
                             <a href="who-we-are.html" class="nav-link">WHO WE ARE</a>
@@ -91,7 +89,7 @@
                     <div class="flex-grid">
                         <div class="col">
                             <div class="signature">
-                                <h2 class="main-headline top-1 headline-animation-container"><span class="headline-animation">We bring our hard hat.</span></h2>
+                                <h2 class="main-headline headline-animation-container"><span class="headline-animation">We bring our <span class="no-break">hard hat.</span></span></h2>
                             </div>
                             <div class="flex-grid-inner">
                                 <div class="flex-grid pt-5 pb-2 pb-0 pt-0">
@@ -251,7 +249,7 @@
 
     });
 
-    tl.to('.headline-animation', { left: 25, opacity: 1, duration: 0.3, ease: "back.out(1.7)"   });
+    tl.to('.headline-animation', { left: 0, opacity: 1, duration: 0.3, ease: "back.out(1.7)"   });
 
     const tl2 = gsap.timeline( { 
 
@@ -265,7 +263,7 @@
 
     });
 
-    tl2.to('.main-headline-alt span', { stagger: 0.15, left: 25, opacity: 1, duration: 0.3, ease: "back.out(1.7)"  });
+    tl2.to('.main-headline-alt span', { stagger: 0.15, left: 0, opacity: 1, duration: 0.3, ease: "back.out(1.7)"  });
 
     </script>
 

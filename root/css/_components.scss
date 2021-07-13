@@ -84,7 +84,6 @@
                 letter-spacing: 0;
                 line-height: 34px;
                 span {
-                    color: $dark-grey;
                     font-weight: bold;
                 }
             } 
@@ -573,32 +572,44 @@
                     display: flex;
                     flex-direction: row;
                     align-items: flex-start;
+                    align-items: center;
                     @media (max-width: 767px) {
                         flex-direction: column;
+                        align-items: flex-start;
                     }
                     li {
                         list-style-type: none;
                         margin-right: 1rem;
-                        padding-left: 1.5rem;
                         font-size: 13px;
                         color: $grey;
+                        display: flex;
+                        align-items: center;
                         @media (max-width: 767px) {
                             margin-bottom: 1rem;
+                            width: 130px;
                         }
-                        &:nth-child(1) {
-                            background: url('../images/svg/clavis-temp.svg') left center/16px auto no-repeat;
+                        i {
+                            padding-right: 0.5rem;
+                            @media (max-width: 767px) {
+                                width: 130px;
+                            }
+                            img {
+                                height: auto;
+                                width: 20px;
+                                &.ico-1 {
+                                    width: 40px;
+                                }
+                                &.ico-2 {
+                                    width: 29px;
+                                }
+
+                                &.ico-3 {
+                                    width: 27px;
+                                }
+                            }
                         }
-                        &:nth-child(2) {
-                            background: url('../images/svg/clavis-temp.svg') left center/16px auto no-repeat;
-                        }
-                        &:nth-child(3) {
-                            background: url('../images/svg/clavis-temp.svg') left center/16px auto no-repeat;
-                        }
-                        &:nth-child(4) {
-                            background: url('../images/svg/clavis-temp.svg') left center/16px auto no-repeat;
-                        }
-                        &:nth-child(5) {
-                            background: url('../images/svg/clavis-temp.svg') left center/16px auto no-repeat;
+                        span {
+                            display: inline-block;
                         }
                     }
                 }

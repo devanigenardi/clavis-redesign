@@ -19,6 +19,9 @@ body {
             padding: 0 1rem;
             &.hero-standard {
                 margin-top: 130px;
+                @media only screen and (max-width: 767px) {
+                  margin-top: 86px;
+                }
                 h2 {
                     max-width: 80%;
                     width: 100%;
@@ -77,6 +80,10 @@ body {
                     h2 {
                         position: absolute;
                         left: 0px;
+                        top: -1.2rem;
+                        @media only screen and (max-width: 767px) {
+                            top: -4rem;
+                          }
                     }
                 }
                 .hard-hat {
