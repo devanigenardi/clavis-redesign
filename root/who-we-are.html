@@ -246,25 +246,25 @@
                     <div class="slab-row">
                         <div class="flex-grid-fourths collaborators-chart pb-3">
                             <div class="col">
-                                <img src="images/svg/clavis-collaborators-icon.svg" alt="" />
-                                <h4 class="headline-dark-alt mt-1 mb-1">We are true collaborators.</h4>
-                                <p>Clavis functions as a true extension of your leadership team and a trusted advisor for ideas. We trust your know-how, hear where you want to go and work collaboratively to develop and clarify workable plans of action to accomplish ambitious growth goals.</p>
+                                <img src="images/svg/clavis-hat-icon.svg" alt="" />
+                                <h4 class="headline-dark-alt mt-1 mb-1">Scrappy</h4>
+                                <p>Resourceful, hands on and self reliant. We’re just as comfortable with blue jeans, hard hats and a little elbow grease as we are in the c-suite or a sea of spreadsheets.</p>
                             </div>
                             <div class="col">
-                                <img src="images/svg/clavis-growth-icon.svg" alt="" />
-                                <h4 class="headline-dark-alt mt-1 mb-1">We are growth partners.</h4>
-                                <p>We are an experienced deal team, adept at delivering flexible capital solutions and resources to achieve ambitious growth goals.</p>
+                                <img src="images/svg/clavis-curious-icon.svg" alt="" />
+                                <h4 class="headline-dark-alt mt-1 mb-1">Curious</h4>
+                                <p>Our consultancy roots are a key driver in the way we solve problems. We’re curious about the world around us and are in it to find the right answer, not the first or easiest one. We evaluate without ego and don’t shy away from deep dives or diverse voices.</p>
                             </div>
                             <div class="col">
-                                <img src="images/svg/clavis-operators-icon.svg" alt="" />
-                                <h4 class="headline-dark-alt mt-1 mb-1">We are expert operators.</h4>
-                                <p>Decades in operations equips us to forge a strategy around you. We work our way from the c-suite to the factory floor, building custom-fit solutions that leave a lasting impact.</p>
+                                <img src="images/svg/clavis-resilient-icon.svg" alt="" />
+                                <h4 class="headline-dark-alt mt-1 mb-1">Resilient</h4>
+                                <p>Our growth mindset is grounded in a lifetime of real-world experience. We work through problems, have the grit to overcome significant challenges and keep our eye on the larger picture.</p>
                             </div>
     
                             <div class="col">
-                                <img src="images/svg/clavis-operators-icon.svg" alt="" />
-                                <h4 class="headline-dark-alt mt-1 mb-1">We are expert operators.</h4>
-                                <p>Decades in operations equips us to forge a strategy around you. We work our way from the c-suite to the factory floor, building custom-fit solutions that leave a lasting impact.</p>
+                                <img src="images/svg/clavis-authentic-icon.svg" alt="" />
+                                <h4 class="headline-dark-alt mt-1 mb-1">Authentic</h4>
+                                <p>No egos or hidden agendas, we bring our whole selves to our work. We know who we are and who we are not and conduct ourselves in an open and honest manner.</p>
                             </div>
                         </div>
                     </div>
@@ -308,7 +308,7 @@
                                     </ul>
                                 </div>
                                 <div class="scrollable-member-desc">
-                                    <div class="member-desc">
+                                    <div class="member-desc pt-2">
                                         <p class="mb-2 capital-letter">Todd chairs the Clavis Investment Committee and runs point on all of the firm’s investment, operational and fundraising activities and is actively involved in the strategy and governance of all of Clavis’ portfolio companies.</p>
                                         <p class="mb-2">Todd lends a unique blend of successful strategic, operational, investment and acquisition experience to his efforts at Clavis. Prior to starting Clavis, he served as the Chief Executive Officer of EFI Electronics, an industry-leading manufacturer of electrical protection products, where he led his firm to record profitability for four straight years and was awarded the prestigious Shingo Prize for manufacturing. He has also held senior leadership positions in venture capital, corporate development, manufacturing operations and consulting at leading firms such as Aster Capital, Schneider Electric, Rockwell Automation and Deloitte Consulting.</p>
                                         <p>Todd holds degrees from both the University of Notre Dame and Texas A&M University and is an active member of the Young Presidents Organization, The Association for Corporate Growth, the National Association of Corporate Directors and various charity, faith and angel investing organizations in the Dallas area. He is a graduate of the Stagen Integrated Leadership Program and recently founded the Clavis Impact Fund. He resides in Dallas with his wife and two boys.</p>
@@ -435,14 +435,13 @@
 
     });
  
- tl
-   .to('.headline-animation', { top: 0, opacity: 1, duration: 0.3, ease: "back.out(1.7)"  });
+    tl.to('.headline-animation', { top: 0, opacity: 1, duration: 0.3, ease: "back.out(1.7)"  });
 
    const heroRevealing = gsap.timeline();
 
     heroRevealing.from(".line span", 0.7, {
         autoAlpha:0,
-        x: 25,
+        left: 25,
         ease: "back.out(1.7)",
         delay: .5,
         stagger: {

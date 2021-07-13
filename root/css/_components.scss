@@ -432,6 +432,7 @@
             flex-direction: column;
             justify-content: space-between;
             height: 100%;
+            overflow: scroll;
         }
         .member-info {
             padding: 5rem 6rem 2rem 0;
@@ -481,8 +482,12 @@
             ul {
                 padding: 1rem 0 0 0;
                 border-top: 1px solid $grey;
+                @media (max-width: 1023px) {
+                    margin: 0 2.5rem 0 0;
+                }
                 @media (max-width: 767px) {
                     border-top: none;
+                    margin: none;
                 }
                 li {
                     list-style-type: none;
@@ -507,7 +512,7 @@
             position: relative;
             height: 100vh;
             @media (max-width: 767px) {
-                height: 50%;
+                height: auto;
             }
             .member-desc {
                 padding: 5.5rem 3rem 10rem 8rem;
@@ -517,16 +522,13 @@
                 overflow: scroll;
                 position: relative;
                 @media (max-width: 1023px) {
-                    padding: 1rem 0rem 10rem 0rem;
+                    padding: 5.5rem 3rem 10rem 1rem;
                     margin-right: 0rem;
-                    overflow: hidden;
                     background: $light-greay;
                 }
                 @media (max-width: 767px) {
-                    padding: 1rem 0;
+                    padding: 4rem 0;
                     margin-right: 0rem;
-                    overflow: scroll;
-                    overflow-x:hidden;
                     height:100%
                     /*-webkit-overflow-scrolling: touch;*/ 
                 }
@@ -585,13 +587,15 @@
 .headline-animated {
     .line{
         width: 100%;
-        height: 50px;
+        height: 65px;
         position: relative;
+        height: auto;
         span{
-          position: absolute;
-          font-size: 3rem;
-          line-height: 4.2rem;
-          opacity: 1;
+        position: relative;
+        font-size: 52px;
+        letter-spacing: 0;
+        line-height: 1;
+        opacity: 1;
         }
       }
 }

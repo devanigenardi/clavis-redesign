@@ -1530,6 +1530,7 @@ body .wrapper .main-alt {
         -ms-flex-pack: justify;
             justify-content: space-between;
     height: 100%;
+    overflow: scroll;
   }
 }
 
@@ -1609,9 +1610,16 @@ body .wrapper .main-alt {
   border-top: 1px solid #6C6C6C;
 }
 
+@media (max-width: 1023px) {
+  .modal .members-cv .member-info ul {
+    margin: 0 2.5rem 0 0;
+  }
+}
+
 @media (max-width: 767px) {
   .modal .members-cv .member-info ul {
     border-top: none;
+    margin: none;
   }
 }
 
@@ -1643,7 +1651,7 @@ body .wrapper .main-alt {
 
 @media (max-width: 767px) {
   .modal .members-cv .scrollable-member-desc {
-    height: 50%;
+    height: auto;
   }
 }
 
@@ -1658,19 +1666,16 @@ body .wrapper .main-alt {
 
 @media (max-width: 1023px) {
   .modal .members-cv .scrollable-member-desc .member-desc {
-    padding: 1rem 0rem 10rem 0rem;
+    padding: 5.5rem 3rem 10rem 1rem;
     margin-right: 0rem;
-    overflow: hidden;
     background: #F8F8F8;
   }
 }
 
 @media (max-width: 767px) {
   .modal .members-cv .scrollable-member-desc .member-desc {
-    padding: 1rem 0;
+    padding: 4rem 0;
     margin-right: 0rem;
-    overflow: scroll;
-    overflow-x: hidden;
     height: 100%;
   }
 }
@@ -1743,14 +1748,16 @@ body .wrapper .main-alt {
 
 .headline-animated .line {
   width: 100%;
-  height: 50px;
+  height: 65px;
   position: relative;
+  height: auto;
 }
 
 .headline-animated .line span {
-  position: absolute;
-  font-size: 3rem;
-  line-height: 4.2rem;
+  position: relative;
+  font-size: 52px;
+  letter-spacing: 0;
+  line-height: 1;
   opacity: 1;
 }
 /*# sourceMappingURL=app.css.map */
