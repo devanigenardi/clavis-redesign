@@ -517,6 +517,7 @@ body .wrapper .main-alt {
     left: 0px;
     bottom: -5px;
     background: #CCE0FF;
+    opacity: 0.2;
   }
   .nav-item:last-child::before {
     content: none;
@@ -760,6 +761,17 @@ body .wrapper .main-alt {
   width: 23.5%;
 }
 
+@media (max-width: 1023px) {
+  .flex-grid-fourths {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .flex-grid-fourths .col {
+    width: 49%;
+    margin: 0 0 1rem 0;
+  }
+}
+
 @media (max-width: 767px) {
   .flex-grid,
   .flex-grid-thirds,
@@ -772,7 +784,7 @@ body .wrapper .main-alt {
   .flex-grid-fourths .col,
   .flex-grid-two .col {
     width: 100%;
-    margin: 0 0 10px 0;
+    margin: 0 0 1rem 0;
   }
 }
 
@@ -1292,22 +1304,46 @@ body .wrapper .main-alt {
   }
 }
 
-.our-team-cards .our-team-card-btn .team-card-info img {
+.our-team-cards .our-team-card-btn .team-card-info .profile-picture {
   width: 44%;
   height: auto;
+  padding-top: 48%;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  overflow: hidden;
 }
 
 @media (max-width: 767px) {
-  .our-team-cards .our-team-card-btn .team-card-info img {
-    width: 30%;
-    margin-bottom: 2rem;
-    height: auto;
-    -o-object-fit: contain;
-       object-fit: contain;
+  .our-team-cards .our-team-card-btn .team-card-info .profile-picture {
+    padding-top: 32%;
   }
 }
 
-.our-team-cards .our-team-card-btn .team-card-info div {
+.our-team-cards .our-team-card-btn .team-card-info .profile-picture.p-id-1 {
+  background: url("../images/clavis-team-1.jpg") no-repeat;
+  background-size: 100%;
+  background-position: center center;
+}
+
+.our-team-cards .our-team-card-btn .team-card-info .profile-picture.p-id-2 {
+  background: url("../images/clavis-team-2.jpg") no-repeat;
+  background-size: 100%;
+  background-position: center center;
+}
+
+.our-team-cards .our-team-card-btn .team-card-info .profile-picture.p-id-3 {
+  background: url("../images/clavis-team-3.jpg") no-repeat;
+  background-size: 100%;
+  background-position: center center;
+}
+
+.our-team-cards .our-team-card-btn .team-card-info .profile-picture.p-id-4 {
+  background: url("../images/clavis-team-4.jpg") no-repeat;
+  background-size: 100%;
+  background-position: center center;
+}
+
+.our-team-cards .our-team-card-btn .team-card-info .team-card-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1323,7 +1359,7 @@ body .wrapper .main-alt {
 }
 
 @media (max-width: 767px) {
-  .our-team-cards .our-team-card-btn .team-card-info div {
+  .our-team-cards .our-team-card-btn .team-card-info .team-card-content {
     width: 100%;
     padding: 0rem;
     -webkit-box-align: start;
@@ -1333,18 +1369,18 @@ body .wrapper .main-alt {
   }
 }
 
-.our-team-cards .our-team-card-btn .team-card-info div p {
+.our-team-cards .our-team-card-btn .team-card-info .team-card-content p {
   font-size: 14px;
   line-height: 26px;
 }
 
 @media (max-width: 767px) {
-  .our-team-cards .our-team-card-btn .team-card-info div p {
+  .our-team-cards .our-team-card-btn .team-card-info .team-card-content p {
     line-height: 16px;
   }
 }
 
-.our-team-cards .our-team-card-btn .team-card-info div .card-link {
+.our-team-cards .our-team-card-btn .team-card-info .team-card-content .card-link {
   position: relative;
   font-size: 12px;
   line-height: 22px;
@@ -1369,23 +1405,23 @@ body .wrapper .main-alt {
 }
 
 @media (max-width: 767px) {
-  .our-team-cards .our-team-card-btn .team-card-info div .card-link {
+  .our-team-cards .our-team-card-btn .team-card-info .team-card-content .card-link {
     padding: 0.5rem 0;
   }
 }
 
-.our-team-cards .our-team-card-btn .team-card-info div .card-link svg {
+.our-team-cards .our-team-card-btn .team-card-info .team-card-content .card-link svg {
   width: 35px;
 }
 
-.our-team-cards .our-team-card-btn .team-card-info div .card-link svg .collab-arrow-0 {
+.our-team-cards .our-team-card-btn .team-card-info .team-card-content .card-link svg .collab-arrow-0 {
   fill: none;
   stroke: #060606;
   stroke-width: 3;
   stroke-linecap: round;
 }
 
-.our-team-cards .our-team-card-btn .team-card-info div .card-link svg .collab-arrow-1 {
+.our-team-cards .our-team-card-btn .team-card-info .team-card-content .card-link svg .collab-arrow-1 {
   fill: none;
   stroke: #060606;
   stroke-width: 3;
@@ -1393,7 +1429,7 @@ body .wrapper .main-alt {
   stroke-linejoin: round;
 }
 
-.our-team-cards .our-team-card-btn .team-card-info div .card-link span {
+.our-team-cards .our-team-card-btn .team-card-info .team-card-content .card-link span {
   -webkit-transition: opacity .2s ease-in-out;
   transition: opacity .2s ease-in-out;
   -webkit-transition: .2s;
@@ -1407,15 +1443,20 @@ body .wrapper .main-alt {
           transform: translateY(-50%);
 }
 
-.our-team-cards .our-team-card-btn .team-card-info:hover a svg .collab-arrow-0 {
+.our-team-cards .our-team-card-btn .team-card-info:hover .profile-picture {
+  background-size: 120%;
+  background-position: center;
+}
+
+.our-team-cards .our-team-card-btn .team-card-info:hover .team-card-content a svg .collab-arrow-0 {
   stroke: #0065A1;
 }
 
-.our-team-cards .our-team-card-btn .team-card-info:hover a svg .collab-arrow-1 {
+.our-team-cards .our-team-card-btn .team-card-info:hover .team-card-content a svg .collab-arrow-1 {
   stroke: #0065A1;
 }
 
-.our-team-cards .our-team-card-btn .team-card-info:hover a span {
+.our-team-cards .our-team-card-btn .team-card-info:hover .team-card-content a span {
   opacity: 1;
   left: 50px;
 }
@@ -1674,7 +1715,7 @@ body .wrapper .main-alt {
 
 @media (max-width: 767px) {
   .modal .members-cv .scrollable-member-desc .member-desc {
-    padding: 4rem 0;
+    padding: 4rem 0 1rem 0;
     margin-right: 0rem;
     height: 100%;
   }
@@ -1708,12 +1749,27 @@ body .wrapper .main-alt {
           align-items: flex-start;
 }
 
+@media (max-width: 767px) {
+  .modal .members-cv .scrollable-member-desc .member-desc ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .modal .members-cv .scrollable-member-desc .member-desc ul li {
   list-style-type: none;
   margin-right: 1rem;
   padding-left: 1.5rem;
   font-size: 13px;
   color: #6C6C6C;
+}
+
+@media (max-width: 767px) {
+  .modal .members-cv .scrollable-member-desc .member-desc ul li {
+    margin-bottom: 1rem;
+  }
 }
 
 .modal .members-cv .scrollable-member-desc .member-desc ul li:nth-child(1) {
@@ -1759,5 +1815,11 @@ body .wrapper .main-alt {
   letter-spacing: 0;
   line-height: 1;
   opacity: 1;
+}
+
+@media (max-width: 767px) {
+  .headline-animated .line span {
+    font-size: 40px;
+  }
 }
 /*# sourceMappingURL=app.css.map */

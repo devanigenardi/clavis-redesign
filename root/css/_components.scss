@@ -268,22 +268,42 @@
         .team-card-info {
             display: flex;
             flex-direction: row;
+            cursor: pointer;
             @media (max-width: 767px) {
                 flex-direction: row;
                 align-items: flex-start;
             }
-            cursor: pointer;
-            img {
+            .profile-picture {
                 width: 44%;
                 height: auto;
+                padding-top: 48%;
+                transition: all .3s;
+                overflow: hidden;
                 @media (max-width: 767px) {
-                    width: 30%;
-                    margin-bottom: 2rem;
-                    height: auto;
-                    object-fit: contain;
+                    padding-top: 32%;
+                }
+                &.p-id-1 {
+                    background: url('../images/clavis-team-1.jpg') no-repeat;
+                    background-size: 100%;
+                    background-position: center center;
+                }
+                &.p-id-2 {
+                    background: url('../images/clavis-team-2.jpg') no-repeat;
+                    background-size: 100%;
+                    background-position: center center;
+                }
+                &.p-id-3 {
+                    background: url('../images/clavis-team-3.jpg') no-repeat;
+                    background-size: 100%;
+                    background-position: center center;
+                }
+                &.p-id-4 {
+                    background: url('../images/clavis-team-4.jpg') no-repeat;
+                    background-size: 100%;
+                    background-position: center center;
                 }
             }
-            div {
+            .team-card-content {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -338,13 +358,19 @@
                     }
                 }
             }
-            &:hover a svg .collab-arrow-0 {
+
+            &:hover .profile-picture {
+                background-size: 120%;
+                background-position: center;
+            }
+
+            &:hover .team-card-content a svg .collab-arrow-0 {
                 stroke: $blue;
             }
-            &:hover a svg .collab-arrow-1 {
+            &:hover .team-card-content a svg .collab-arrow-1 {
                 stroke: $blue;
             }
-            &:hover a span {
+            &:hover .team-card-content a span {
                 opacity: 1;
                 left: 50px;
             }
@@ -527,7 +553,7 @@
                     background: $light-greay;
                 }
                 @media (max-width: 767px) {
-                    padding: 4rem 0;
+                    padding: 4rem 0 1rem 0;
                     margin-right: 0rem;
                     height:100%
                     /*-webkit-overflow-scrolling: touch;*/ 
@@ -547,12 +573,18 @@
                     display: flex;
                     flex-direction: row;
                     align-items: flex-start;
+                    @media (max-width: 767px) {
+                        flex-direction: column;
+                    }
                     li {
                         list-style-type: none;
                         margin-right: 1rem;
                         padding-left: 1.5rem;
                         font-size: 13px;
                         color: $grey;
+                        @media (max-width: 767px) {
+                            margin-bottom: 1rem;
+                        }
                         &:nth-child(1) {
                             background: url('../images/svg/clavis-temp.svg') left center/16px auto no-repeat;
                         }
@@ -575,14 +607,14 @@
     }
   }
 
-  .parallax-slide {
+.parallax-slide {
     height: 70vh;
-  }
-  #parallax1 {
+}
+#parallax1 {
     background: url('../images/clavis-parallax-1.jpg') no-repeat center;
     background-size: cover;
     background-attachment: fixed;
-  }
+}
 
 .headline-animated {
     .line{
@@ -591,11 +623,14 @@
         position: relative;
         height: auto;
         span{
-        position: relative;
-        font-size: 52px;
-        letter-spacing: 0;
-        line-height: 1;
-        opacity: 1;
+            position: relative;
+            font-size: 52px;
+            letter-spacing: 0;
+            line-height: 1;
+            opacity: 1;
+            @media (max-width: 767px) {
+                font-size: 40px;
+            }
         }
       }
 }
