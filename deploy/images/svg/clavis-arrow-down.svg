@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="21px" height="64px" viewBox="0 0 21 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>DC1371A4-C024-4EA2-91EB-FD79386FB7FF</title>
+    <g id="1_Home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+        <g id="01A.1_Home_v4" transform="translate(-160.000000, -843.000000)" stroke="#FFFFFF" stroke-width="3">
+            <g id="Arrow_down" transform="translate(162.000000, 845.000000)">
+                <line x1="8.67099342" y1="0" x2="8.67099342" y2="60" id="Path-2"></line>
+                <line x1="8.67099342" y1="60" x2="17.3419868" y2="51.3290066" id="Path-3" stroke-linejoin="round"></line>
+                <line x1="8.67099342" y1="60" x2="0" y2="51.3290066" id="Path-4" stroke-linejoin="round"></line>
+            </g>
+        </g>
+    </g>
+</svg>

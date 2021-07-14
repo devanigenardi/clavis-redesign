@@ -1987,7 +1987,7 @@ body .wrapper .main-alt {
 
 .slab-inner-card {
   padding: 4.5rem 0;
-  background: url("../images/clavis-ripple.jpg") left center/auto auto no-repeat;
+  background: url("/images/clavis-ripple.jpg") left center/auto auto no-repeat;
   background-size: contain;
   display: -webkit-box;
   display: -ms-flexbox;

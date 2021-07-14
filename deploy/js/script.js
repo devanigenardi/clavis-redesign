@@ -60,18 +60,16 @@ $(document).ready(function(){
         $('body').css({
             overflow: 'hidden'
         });
-        
-      });
-
-      $('.js-close-btn').on('click', function(){
-        $('.js-modal[data-id="modal' + id + '"]').animate({
-            right: '-100vw'
+        $('.js-close-btn').on('click', function(){
+          $('.js-modal[data-id="modal' + id + '"]').animate({
+              right: '-100vw'
+          });
+        $('.main').animate({
+            left: '-0vw'
         });
-      $('.main').animate({
-          left: '-0vw'
-      });
-        $('body').css({
-            overflow: 'scroll'
+          $('body').css({
+              overflow: 'scroll'
+          });
         });
       });
       
