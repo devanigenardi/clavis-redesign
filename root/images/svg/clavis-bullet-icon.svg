@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="11px" height="48px" viewBox="0 0 11 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>arrow bullet</title>
+    <desc>Created with Sketch.</desc>
+    <g id="4_Investment-Focus" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="04_Investment-Focus_v4" transform="translate(-1027.000000, -2959.000000)">
+            <g id="BODY" transform="translate(159.000000, 1472.000000)">
+                <g id="INVESTMENT-FOCUS" transform="translate(0.000000, 928.000000)">
+                    <g id="Copy" transform="translate(825.000000, 84.000000)">
+                        <g id="Bullet_4" transform="translate(44.000000, 473.000000)">
+                            <g id="arrow-bullet" transform="translate(0.000000, 3.000000)">
+                                <line x1="0.5" y1="0.5" x2="0.5" y2="45.5" id="Line" stroke="#0065A1" stroke-width="1.5" stroke-linecap="square"></line>
+                                <g id="arrow-right-alt" transform="translate(0.000000, 14.000000)" fill="#0065A1" fill-rule="nonzero">
+                                    <path d="M0,17.1555322 L0,0.985493373 C0,0.110774387 1.06274269,-0.330672578 1.67586348,0.29062315 L9.71183323,8.37564257 C10.0960556,8.75986492 10.0960556,9.37298571 9.71183323,9.75720807 L1.67586348,17.8422275 C1.06274269,18.4716982 0,18.0302512 0,17.1555322 L0,17.1555322 Z" id="Path"></path>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
