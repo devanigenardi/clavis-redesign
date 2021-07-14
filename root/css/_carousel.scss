@@ -1,73 +1,125 @@
 .carousel {
     width: 100vw;
     height: 100vh;
-    background: blue;
-}
-
-.swiper-container {
-    width: 100%;
-    height: 100%;
-  }
-
-  .swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
-
-    /* Center slide text vertically */
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
-    background-position: center;
+    background: url('../images/clavis-slide-1.jpg');
+    background-repeat: no-repeat;
     background-size: cover;
+    .flexslider {
+      width: 100vw;
+      height: 100vh;
+      .slides {
+        width: 100vw;
+        height: 100vh;
+        li {
+          width: 100vw;
+          height: 100vh;
+          .slider-container {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .slider-container-inner {
+              width: 80%;
+              color: $white;
+              padding: 0rem 1rem 1rem 1rem;
+              @media (max-width: 767px) {
+                width: 100%;
+                padding: 0 1rem;
+              }
+              h2 {
+                font-size: 52px;
+                font-weight: bold;
+                letter-spacing: 0;
+                line-height: 66px;
+                margin: 0 0 1rem 5.5%;
+                @media (max-width: 767px) {
+                  font-size: 36px;
+                  line-height: 44px;
+                  margin-left: 0px;
+                }
+              }
+            
+              p {
+                font-size: 19px;
+                letter-spacing: 0;
+                line-height: 27px;
+                width: 100%;
+                max-width: 550px;
+                margin: 0 0 2.5rem  5.5%;;
+                color: $white;
+                @media (max-width: 767px) {
+                  margin-left: 0px;
+                }
+              }
+            
+              .standard-cta {
+                margin: 0 0 0 5.5%;
+                border: 1px solid $white;
+                color: $white;
+                @media (max-width: 767px) {
+                  margin-left: 0px;
+                }
+                &:hover {
+                  border: 1px solid $blue;
+                }
+              }
+            }
+            &.slide-1-bg {
+              background-image: url('../images/clavis-slide-1.jpg');
+            }
+            &.slide-2-bg {
+              background-image: url('../images/clavis-slide-2.jpg');
+            }
+            &.slide-3-bg {
+              background-image: url('../images/clavis-slide-3.jpg');
+            }
+        }
+        }
+      }
+      .flex-control-nav {
+        position: absolute;
+        text-align: center;
+        transition: .3s opacity;
+        z-index: 10;
+        transform: rotate(90deg)!important;
+        width: 80px !important;
+        margin: auto;
+        height: 16px !important;
+        bottom: 0 !important;
+        left: 6.6% !important;
+        top: -160px !important;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        li {
+          a {
+            font-size: 0px;
+            line-height: 0px;
+            padding: 4px;
+            width: 8px!important;
+            height: 8px!important;
+            opacity: 1!important;
+            background: none!important;
+            border: 2px solid $white;
+            border-radius: 50%;
+            position: relative;
+            &.flex-active {
+              background: $white!important;
+            }
+          }
+          
+        }
+        @media (max-width: 767px) {
+          display: none;
+        }
+      }
+      .flex-direction-nav {
+        display: none;
+      }
   }
-
-  .swiper-slider-container {
-      width: 85%;
-      padding: 1rem;
-      height: 80vh;
-      display: flex;
-      align-items: baseline;
-      flex-direction: column;
-      justify-content: center;
-  }
-
-  .swiper-slider-container > * {
-      margin-left: 117px;
-      color: $white;
-      text-align: left;
-  }
-
-  .swiper-slider-container h2 {
-    font-size: 52px;
-    font-weight: bold;
-    letter-spacing: 0;
-    line-height: 66px;
-    margin-bottom: 1rem;
-  }
-
-  .swiper-slider-container p {
-    font-size: 19px;
-    letter-spacing: 0;
-    line-height: 27px;
-    width: 100%;
-    max-width: 550px;
-    margin-bottom: 2.5rem;
-  }
-
-  .standard-cta {
-    border: 1px solid $white;
-    color: $white;
-  }
+}
 
   .swiper-slide:nth-child(1) {
       background-image: url('../images/clavis-slide-1.jpg');
@@ -81,80 +133,17 @@
     background-image: url('../images/clavis-slide-3.jpg');
   }
 
-  .swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .swiper-pagination {
-    position: absolute;
-    text-align: center;
-    transition: .3s opacity;
-    z-index: 10;
-    transform: rotate(90deg)!important;
-    width: 87px !important;
-    margin: auto;
-    height: 20px !important;
-    bottom: 0 !important;
-    left: 6% !important;
-    top: -160px !important;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.swiper-pagination-bullet {
-    width: 13px!important;
-    height: 13px!important;
-    opacity: 1!important;
-    background: none!important;
-    border: 2px solid $white;
-}
-
-.swiper-pagination-bullet-active {
-    background: $white!important;
-}
-
 .arrow-dowm {
   position: absolute;
-  top: 75vh;
-  left: 9vw;
+  top: 77vh;
+  left: 8vw;
   z-index: 2;
   @media (max-width: 1023px) {
-    top: 50vh;
-    left: 4vw;
+    top: 70vh;
+    left: 9vw;
   }
   @media (max-width: 767px) {
     display: none;
   }
 }
 
-
-@media only screen and (max-width: 1024px) { 
-    .swiper-slider-container {
-        width: 100%;
-    }
-    .swiper-slider-container h2 br {
-        display: none;
-    }
-    .swiper-pagination {
-        left: 0%!important;
-    }
-}
-
-@media only screen and (max-width: 767px) { 
-    .swiper-pagination {
-        display: none;
-    }
-
-    .swiper-slider-container > * {
-        margin-left: 0px;
-    }
-
-    .swiper-slider-container h2 {
-        font-size: 36px;
-        line-height: 44px;
-    }
-}

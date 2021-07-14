@@ -8,100 +8,73 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-
-body {
-  padding: 0;
-  margin: 0;
-}
-
-* {
-    box-sizing: border-box;
-  }
-.profiles {
-  position: relative;
-  background: red;
-}
-.btn {
-  font-size: 14px;
-  line-height: 1.4;
-  padding: 13px 20px;
-  top: 0;
-}
-.modal {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100vw;
-  height:100vh;
-  padding: 1rem;
-  background: #ccc;
-  z-index: 1;
-}
-.modal-close-btn {
-  position: absolute;
-  right: 10px;
-  top: 10px;
-  font-size: 20px;
-}
-
-    </style>
+    <style type="text/css">
+        .flex-caption {
+          width: 96%;
+          padding: 2%;
+          left: 0;
+          bottom: 0;
+          background: rgba(0,0,0,.5);
+          color: #fff;
+          text-shadow: 0 -1px 0 rgba(0,0,0,.3);
+          font-size: 14px;
+          line-height: 18px;
+        }
+      </style>
 </head>
 <body>
     
-    <div class="collaborators-organigram">
+    <div class="carousel">
   
-        <div class="profiles">
-            <div class="btn js-btn-modal" data-id="1">item 1</div>
-            <div class="btn js-btn-modal" data-id="2">item 2</div>
-            <div class="btn js-btn-modal" data-id="3">item 3</div>
-            <div class="btn js-btn-modal" data-id="4">item 4</div>
-        </div>
-      
-      
-      
-        <div class="modal js-modal" data-id="modal1">
-            <button class="modal-close-btn js-close-btn">
-                <i class="fa fa-times" title="">x</i>
-            </button>
-            <div>item 1</div>
-        </div>
-        <div class="modal js-modal" data-id="modal2">
-            <button class="modal-close-btn js-close-btn">
-                <i class="fa fa-times" title="">x</i>
-            </button>
-            <div>item 2</div>
-        </div>
-        <div class="modal js-modal" data-id="modal3">
-            <button class="modal-close-btn js-close-btn">
-                <i class="fa fa-times" title="">x</i>
-            </button>
-            <div>item 3</div>
-        </div>
-        <div class="modal js-modal" data-id="modal4">
-            <button class="modal-close-btn js-close-btn">
-                <i class="fa fa-times" title="">x</i>
-            </button>
-            <div>item 4</div>
-        </div>
+        <section class="slider">
+            <div class="flexslider">
+              <ul class="slides">
+                <li>
+                  <div>
+                    <img src="http://flexslider.woothemes.com/images/kitchen_adventurer_cheesecake_brownie.jpg" />
+                    <p class="flex-caption">Adventurer Cheesecake Brownie</p>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <img src="http://flexslider.woothemes.com/images/kitchen_adventurer_lemon.jpg" />
+                  <p class="flex-caption">Adventurer Lemon</p>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <img src="http://flexslider.woothemes.com/images/kitchen_adventurer_donut.jpg" />
+                  <p class="flex-caption">Adventurer Donut</p>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <img src="http://flexslider.woothemes.com/images/kitchen_adventurer_caramel.jpg" />
+                  <p class="flex-caption">Adventurer Caramel</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
         
       </div>
       
       
 
 
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script src="js/script.js"></script>
-    <script>
-        $('document').ready(function () {
-            $('.my_class').click(function () {
-                $(this).find(".overlay").show();
-            });
+      <script src="js/jqery-min.js"></script>
+
+      <!-- FlexSlider -->
+      <script defer src="js/jquery.flexslider.js"></script>
+    
+      <script type="text/javascript">
+        $(window).load(function(){
+          $('.flexslider').flexslider({
+            animation: "fade",
+            animationLoop: true,
+          });
         });
-    </script>
+      </script>
 
     
 </body>

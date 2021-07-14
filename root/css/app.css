@@ -301,7 +301,7 @@ body .wrapper .main-alt {
   border-bottom: 1px solid #DBDBDB;
 }
 
-.nav-background .nav-logo-container {
+.nav-background .nav-container .nav-logo-container {
   z-index: 1;
   background: url("../images/svg/clavis-logo.svg") no-repeat;
   background-size: contain;
@@ -311,22 +311,45 @@ body .wrapper .main-alt {
 }
 
 @media only screen and (max-width: 767px) {
-  .nav-background .nav-logo-container {
+  .nav-background .nav-container .nav-logo-container {
     width: 150px;
     height: 50px;
   }
 }
 
-.nav-background .nav-menu .nav-item .nav-link {
+.nav-background .nav-container .nav-menu .nav-item .nav-link {
   color: #0065A1;
 }
 
-.nav-background .nav-menu .nav-item .nav-link:before {
+.nav-background .nav-container .nav-menu .nav-item .nav-link:before {
   background-color: #0065A1;
 }
 
-.nav-background .nav-menu .nav-item .nav-link:hover::before {
+.nav-background .nav-container .nav-menu .nav-item .nav-link:hover::before {
   width: 100%;
+}
+
+@media (max-width: 767px) {
+  .nav-background .nav-container .nav-menu .nav-item .nav-link {
+    color: #ffffff;
+  }
+}
+
+@media (max-width: 767px) {
+  .nav-background .nav-container .hamburger .bar {
+    background: #0065A1;
+  }
+}
+
+@media (max-width: 767px) {
+  .nav-background .nav-container .hamburger.active .bar {
+    background: #ffffff;
+  }
+}
+
+.nav-background.logo-white-home-scroll .nav-logo-container {
+  background: url("../images/svg/clavis-logo-home.svg") no-repeat;
+  background-size: contain;
 }
 
 .light-grey-bg {
@@ -651,77 +674,164 @@ body .wrapper .main-alt {
 .carousel {
   width: 100vw;
   height: 100vh;
-  background: blue;
-}
-
-.swiper-container {
-  width: 100%;
-  height: 100%;
-}
-
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-  /* Center slide text vertically */
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-position: center;
+  background: url("../images/clavis-slide-1.jpg");
+  background-repeat: no-repeat;
   background-size: cover;
 }
 
-.swiper-slider-container {
-  width: 85%;
-  padding: 1rem;
-  height: 80vh;
+.carousel .flexslider {
+  width: 100vw;
+  height: 100vh;
+}
+
+.carousel .flexslider .slides {
+  width: 100vw;
+  height: 100vh;
+}
+
+.carousel .flexslider .slides li {
+  width: 100vw;
+  height: 100vh;
+}
+
+.carousel .flexslider .slides li .slider-container {
+  width: 100vw;
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 
-.swiper-slider-container > * {
-  margin-left: 117px;
+.carousel .flexslider .slides li .slider-container .slider-container-inner {
+  width: 80%;
   color: #ffffff;
-  text-align: left;
+  padding: 0rem 1rem 1rem 1rem;
 }
 
-.swiper-slider-container h2 {
+@media (max-width: 767px) {
+  .carousel .flexslider .slides li .slider-container .slider-container-inner {
+    width: 100%;
+    padding: 0 1rem;
+  }
+}
+
+.carousel .flexslider .slides li .slider-container .slider-container-inner h2 {
   font-size: 52px;
   font-weight: bold;
   letter-spacing: 0;
   line-height: 66px;
-  margin-bottom: 1rem;
+  margin: 0 0 1rem 5.5%;
 }
 
-.swiper-slider-container p {
+@media (max-width: 767px) {
+  .carousel .flexslider .slides li .slider-container .slider-container-inner h2 {
+    font-size: 36px;
+    line-height: 44px;
+    margin-left: 0px;
+  }
+}
+
+.carousel .flexslider .slides li .slider-container .slider-container-inner p {
   font-size: 19px;
   letter-spacing: 0;
   line-height: 27px;
   width: 100%;
   max-width: 550px;
-  margin-bottom: 2.5rem;
+  margin: 0 0 2.5rem  5.5%;
+  color: #ffffff;
 }
 
-.standard-cta {
+@media (max-width: 767px) {
+  .carousel .flexslider .slides li .slider-container .slider-container-inner p {
+    margin-left: 0px;
+  }
+}
+
+.carousel .flexslider .slides li .slider-container .slider-container-inner .standard-cta {
+  margin: 0 0 0 5.5%;
   border: 1px solid #ffffff;
   color: #ffffff;
+}
+
+@media (max-width: 767px) {
+  .carousel .flexslider .slides li .slider-container .slider-container-inner .standard-cta {
+    margin-left: 0px;
+  }
+}
+
+.carousel .flexslider .slides li .slider-container .slider-container-inner .standard-cta:hover {
+  border: 1px solid #0065A1;
+}
+
+.carousel .flexslider .slides li .slider-container.slide-1-bg {
+  background-image: url("../images/clavis-slide-1.jpg");
+}
+
+.carousel .flexslider .slides li .slider-container.slide-2-bg {
+  background-image: url("../images/clavis-slide-2.jpg");
+}
+
+.carousel .flexslider .slides li .slider-container.slide-3-bg {
+  background-image: url("../images/clavis-slide-3.jpg");
+}
+
+.carousel .flexslider .flex-control-nav {
+  position: absolute;
+  text-align: center;
+  -webkit-transition: .3s opacity;
+  transition: .3s opacity;
+  z-index: 10;
+  -webkit-transform: rotate(90deg) !important;
+          transform: rotate(90deg) !important;
+  width: 80px !important;
+  margin: auto;
+  height: 16px !important;
+  bottom: 0 !important;
+  left: 6.6% !important;
+  top: -160px !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.carousel .flexslider .flex-control-nav li a {
+  font-size: 0px;
+  line-height: 0px;
+  padding: 4px;
+  width: 8px !important;
+  height: 8px !important;
+  opacity: 1 !important;
+  background: none !important;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  position: relative;
+}
+
+.carousel .flexslider .flex-control-nav li a.flex-active {
+  background: #ffffff !important;
+}
+
+@media (max-width: 767px) {
+  .carousel .flexslider .flex-control-nav {
+    display: none;
+  }
+}
+
+.carousel .flexslider .flex-direction-nav {
+  display: none;
 }
 
 .swiper-slide:nth-child(1) {
@@ -736,93 +846,23 @@ body .wrapper .main-alt {
   background-image: url("../images/clavis-slide-3.jpg");
 }
 
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.swiper-pagination {
-  position: absolute;
-  text-align: center;
-  -webkit-transition: .3s opacity;
-  transition: .3s opacity;
-  z-index: 10;
-  -webkit-transform: rotate(90deg) !important;
-          transform: rotate(90deg) !important;
-  width: 87px !important;
-  margin: auto;
-  height: 20px !important;
-  bottom: 0 !important;
-  left: 6% !important;
-  top: -160px !important;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.swiper-pagination-bullet {
-  width: 13px !important;
-  height: 13px !important;
-  opacity: 1 !important;
-  background: none !important;
-  border: 2px solid #ffffff;
-}
-
-.swiper-pagination-bullet-active {
-  background: #ffffff !important;
-}
-
 .arrow-dowm {
   position: absolute;
-  top: 75vh;
-  left: 9vw;
+  top: 77vh;
+  left: 8vw;
   z-index: 2;
 }
 
 @media (max-width: 1023px) {
   .arrow-dowm {
-    top: 50vh;
-    left: 4vw;
+    top: 70vh;
+    left: 9vw;
   }
 }
 
 @media (max-width: 767px) {
   .arrow-dowm {
     display: none;
-  }
-}
-
-@media only screen and (max-width: 1024px) {
-  .swiper-slider-container {
-    width: 100%;
-  }
-  .swiper-slider-container h2 br {
-    display: none;
-  }
-  .swiper-pagination {
-    left: 0% !important;
-  }
-}
-
-@media only screen and (max-width: 767px) {
-  .swiper-pagination {
-    display: none;
-  }
-  .swiper-slider-container > * {
-    margin-left: 0px;
-  }
-  .swiper-slider-container h2 {
-    font-size: 36px;
-    line-height: 44px;
   }
 }
 
@@ -1059,9 +1099,9 @@ body .wrapper .main-alt {
   padding: 16px 43px;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  margin-bottom: 1.8rem;
   cursor: pointer;
   text-transform: uppercase;
+  display: inline-block;
 }
 
 .standard-cta-alt {

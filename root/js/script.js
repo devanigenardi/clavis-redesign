@@ -11,6 +11,7 @@ $(document).ready(function(){
         $(".hamburger").toggleClass("active");
         $(".nav-menu").toggleClass("active");
         $("body").toggleClass("body-no-scroll");
+        $(".nav").toggleClass("logo-white-home-scroll");
     });
 
     //current location

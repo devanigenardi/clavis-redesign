@@ -14,30 +14,57 @@
 .nav-background {
     background-color: $white;
     border-bottom: 1px solid #DBDBDB;
-    .nav-logo-container {
-        z-index: 1;
-        background: url('../images/svg/clavis-logo.svg')  no-repeat;
-        background-size: contain;
-        width: 195px;
-        height: 67px;
-        position: relative;
-        @media only screen and (max-width: 767px) {
-            width: 150px;
-            height: 50px;
+    .nav-container {
+        .nav-logo-container {
+            z-index: 1;
+            background: url('../images/svg/clavis-logo.svg')  no-repeat;
+            background-size: contain;
+            width: 195px;
+            height: 67px;
+            position: relative;
+            @media only screen and (max-width: 767px) {
+                width: 150px;
+                height: 50px;
+                
+            }
         }
-    }
-    .nav-menu {
-        .nav-item {
-            .nav-link {
-                color: $blue;
-                &:before {
-                    background-color: $blue;
-                }
-                &:hover::before {
-                    width: 100%;
+        .nav-menu {
+            .nav-item {
+                .nav-link {
+                    color: $blue;
+                    &:before {
+                        background-color: $blue;
+                    }
+                    &:hover::before {
+                        width: 100%;
+                    }
+                    @media (max-width: 767px) {
+                        color: $white;
+                    }
                 }
             }
         }
+        .hamburger {
+            .bar {
+                @media (max-width: 767px) {
+                    background: $blue;
+                }
+            }
+            &.active {
+                .bar {
+                    @media (max-width: 767px) {
+                        background: $white;
+                    }
+                }
+            }
+        }
+    }
+    &.logo-white-home-scroll {
+        .nav-logo-container {
+            background: url('../images/svg/clavis-logo-home.svg')  no-repeat;
+            background-size: contain;
+        }
+        
     }
 }
 

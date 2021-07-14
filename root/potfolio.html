@@ -4,21 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CLAVIS</title>
-    <link rel="stylesheet" href="app.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
+
+    
     
     <div class="wrapper">
 
         <section class="slab-full">
             <nav class="nav">
                 <div class="nav-container">
-                    <a href="index.html">
-                        <img class="nav-logo" src="./images/svg/clavis-logo-home.svg" alt="Logo" />
-                    </a>
+                    <a class="nav-logo-container" href="index.html"></a>
                     <ul class="nav-menu">
                         <li class="nav-item">
                             <a href="who-we-are.html" class="nav-link">WHO WE ARE</a>
@@ -27,16 +28,13 @@
                             <a href="what-we-believe.html" class="nav-link">WHAT WE BELEIVE</a>
                         </li>
                         <li class="nav-item">
-                            <a href="what-we-do.html" class="nav-link">WHAT WE DO</a>
-                        </li>
-                        <li class="nav-item">
                             <a href="investment-focus.html" class="nav-link">INVESTMENT FOCUS</a>
                         </li>
                         <li class="nav-item">
                             <a href="potfolio.html" class="nav-link">PORTFOLIO</a>
                         </li>
                         <li class="nav-item nav-item-last">
-                            <a href="lets-talk.html" class="nav-link-alt">LET'S TALK</a>
+                            <a href="lets-talk.html" class="yellow-cta">LET'S TALK</a>
                         </li>
                     </ul>
                     <div class="hamburger">
@@ -51,41 +49,221 @@
         <header class="header">
 
             <div class="carousel">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </div>
+                <div class="flexslider">
+                    <ul class="slides">
+                      <li>
+                          <div class="slider-container slide-1-bg">
+                              <div class="slider-container-inner">
+                                <h2>Experienced operators,<br /> not financial engineers.</h2>
+                                <p>We are value added investors in unique manufacturing, industrial and business service companies.</p>
+                                <a class="standard-cta" href="who-we-are.html">WHO WE ARE</a>
+                              </div>
+                          </div>
+                      </li>
+                      <li>
+                          <div class="slider-container slide-2-bg">
+                              <div class="slider-container-inner">
+                                <h2>We don't invest in Companies.<br /> We invest in Cultures. </h2>
+                                <p>We are value added investors in unique manufacturing, industrial and business service companies.</p>
+                                <a class="standard-cta" href="who-we-are.html">WHO WE ARE</a>
+                              </div>
+                          </div>
+                      </li>
+                      <li>
+                        <div class="slider-container slide-3-bg">
+                            <div class="slider-container-inner">
+                                <h2>We don't invest in Companies.<br /> We invest in Cultures. </h2>
+                                <p>We are value added investors in unique manufacturing, industrial and business service companies.</p>
+                                <a class="standard-cta" href="who-we-are.html">WHO WE ARE</a>
+                            </div>
+                        </div>
+                      </li>
+                    </ul>
+
+                    <div class="arrow-dowm">
+                        <img src="images/svg/clavis-arrow-down.svg" alt="" />
+                    </div>
+                  </div>
+                
+              </div>
             
         </header>
 
-        <main class="main">
-            <section class="top__spacer">
-                top
+        <main id="stick-here" class="main">
+            <section class="main-content">
+                <section class="slab-full pt-3 light-grey-bg">
+                    <div class="flex-grid">
+                        <div class="col">
+                            <div class="signature">
+                                <h2 class="main-headline headline-animation-container"><span class="headline-animation">We bring our <span class="no-break">hard hat.</span></span></h2>
+                            </div>
+                            <p class="pt-2 pb-3 hide-desktop">Clavis professionals are career operators, not financial engineers. All of our Principals have held leadership positions in large and small manufacturing and industrial companies across a number of different sectors throughout their careers. We bring an operator mindset to our investing activity. we bring experience. we bring connections. we bring resources. We bring our hard hat.
+                            </p>
+                            <div class="flex-grid-inner">
+                                <div class="flex-grid pt-5 pb-2 pb-0 pt-0">
+                                    <div class="col">
+                                        <h2 class="main-headline-alt"><span>2013</span></h2>
+                                        <p>Clavis Capital Partners began</p>
+                                    </div>
+                                    <div class="col">
+                                        <h2 class="main-headline-alt"><span>50+</span></h2>
+                                        <p>deals completed as a team</p>
+                                    </div>
+                                </div>
+                                <div class="flex-grid pb-2 pb-0">
+                                    <div class="col">
+                                        <h2 class="main-headline-alt"><span>$250M</span></h2>
+                                        <p>capital deployed by Clavis</p>
+                                    </div>
+                                    <div class="col">
+                                        <h2 class="main-headline-alt"><span>$1B+</span></h2>
+                                        <p>collectively deployed by our principals</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <p class="pt-2 pb-3 pt-0 hide-mobile">Clavis professionals are career operators, not financial engineers. All of our Principals have held leadership positions in large and small manufacturing and industrial companies across a number of different sectors throughout their careers. We bring an operator mindset to our investing activity. we bring experience. we bring connections. we bring resources. We bring our hard hat.
+                            </p>
+                            <img class="hard-hat" src="images/clavis-helmet-2.jpeg" alt="We bring our hard hat." />
+                        </div>
+                    </div>
+                </section>
+
+                <!-- divider -->
+
+                <section class="slab-full pt-5 pb-4">
+                    <div class="flex-grid">
+                        <div class="col">
+                            <h3 class="headline-dark pt-5">The company we keep.</h3>
+                            <p class="pt-3 pb-5 w-80 ">Clavis Capital Partners is a private investment firm with deep experience in investing in, operating and growing US based industrial businesses. We provide flexible capital to make control investments in a broad range of unique industrial oriented companies that have built strong corporate cultures and are at an inflection point in their growth path.</p>
+                            <a class="standard-cta standard-cta-alt" href="#">Who We’ve Partnered With</a>
+                        </div>
+                        <div class="col">
+                            <div class="tab-quotes">
+                                <!-- Content -->
+                                <div class="tab-content tab-content-1 active">
+                                    <p>They have a fresh perspective, are wicked smart and super fast, and still dive into the strategic planning.</p>
+                                    <div>
+                                        <h5>Tammy P.</h5>
+                                        <p>Chief Commercial Officer, <span>DCG ONE</span></p>
+                                    </div>
+                                </div>
+                                <div class="tab-content tab-content-2">
+                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
+                                    <div>
+                                        <h5>Brad C.</h5>
+                                        <p>President, <span>DCG ONE</span></p>
+                                    </div>
+                                </div>
+                                <div class="tab-content tab-content-3">
+                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
+                                    <div>
+                                        <h5>Ben A.</h5>
+                                        <p>Managing Director, <span>DCG ONE</span></p>
+                                    </div>
+                                </div>
+                                <!-- Tabs -->
+                                <div class="tab-nav">
+                                    <a href="#" class="tab active fade-thum" data-toggle-target=".tab-content-1">&nbsp;</a>
+                                    <a href="#" class="tab" data-toggle-target=".tab-content-2">&nbsp;</a>
+                                    <a href="#" class="tab" data-toggle-target=".tab-content-3">&nbsp;</a>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                </section>
             </section>
-            <section class="main__content">
-                main content
-            </section>
-            <section class="bottom__spacer">
-                bottom
-            </section>
+
+            <footer class="footer">
+                <section class="slab-standard footer-bg">
+                    <div class="footer-top pt-5">
+                        <div class="footer-info pb-1">
+                            <a href="#" class="yellow-cta">LET’S TALK</a>
+                            <ul>
+                                <li>8235 Douglas</li>
+                                <li>Suite 960</li>
+                                <li>Dallas, Texas 75225</li>
+                            </ul>
+                            <ul>
+                                <li>214.812.9199</li>
+                                <li>info@claviscp.com</li>
+                            </ul>
+                        </div>
+                        <div class="footer-nav">
+                            <ul>
+                                <li><a href="#">INVESTMENT CRITERIA</a></li>
+                                <li><a href="#">INVESTOR LOGIN</a></li>
+                            </ul>
+                            <ul>
+                                <li><a href="#">CLAVIS IMPACT FUND</a></li>
+                                <li><a href="#">LINKEDIN</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer-bottom pt-2  pb-2">
+                        <p>© 2021 — Clavis Capital Partners. All rights reserved.</p>
+                        <a href="#">privacy policy</a>
+                    </div>
+                </section>
+                
+            </footer>
+
         </main>
 
-        <footer class="footer hide-element">
-            <p>mklscd</p>
-            <p>mklscd</p>
-            <p>mklscd</p>
-        </footer>
+        
 
     </div>
 
 
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="js/jqery-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/ScrollTrigger.min.js"></script>
+    <script defer src="js/jquery.flexslider.js"></script>
     <script src="js/script.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+
+    const tl = gsap.timeline( { 
+
+        scrollTrigger: {
+            trigger: ".headline-animation",
+            start: "top 75%",
+            end: "bottom 65%",
+            once: true
+            //  markers: true,
+            
+
+        }
+
+    });
+
+    tl.to('.headline-animation', { left: 0, opacity: 1, duration: 0.3, ease: "back.out(1.7)"   });
+
+    const tl2 = gsap.timeline( { 
+
+    scrollTrigger: {
+        trigger: ".main-headline-alt span",
+        start: "top 75%",
+        end: "bottom 65%",
+        once: true
+
+    }
+
+    });
+
+    tl2.to('.main-headline-alt span', { stagger: 0.15, left: 0, opacity: 1, duration: 0.3, ease: "back.out(1.7)"  });
+
+    $(window).load(function(){
+          $('.flexslider').flexslider({
+            animation: "fade",
+            slideshowSpeed: 6000,
+            animationLoop: true,
+          });
+        });
+
+    </script>
 
     
 </body>

@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
+
+    
     
     <div class="wrapper">
 
@@ -47,36 +49,43 @@
         <header class="header">
 
             <div class="carousel">
-                <div class="swiper-container mySwiper">
-                    <div class="swiper-wrapper">
-                      <div class="swiper-slide">
-                          <div class="swiper-slider-container">
-                              <h2>Experienced operators,<br /> not financial engineers.</h2>
-                              <p>We are value added investors in unique manufacturing, industrial and business service companies.</p>
-                              <a class="standard-cta" href="who-we-are.html">WHO WE ARE</a>
+                <div class="flexslider">
+                    <ul class="slides">
+                      <li>
+                          <div class="slider-container slide-1-bg">
+                              <div class="slider-container-inner">
+                                <h2>Experienced operators,<br /> not financial engineers.</h2>
+                                <p>We are value added investors in unique manufacturing, industrial and business service companies.</p>
+                                <a class="standard-cta" href="who-we-are.html">WHO WE ARE</a>
+                              </div>
                           </div>
-                      </div>
-                      <div class="swiper-slide">
-                        <div class="swiper-slider-container">
-                            <h2>We don't invest in Companies.<br /> We invest in Cultures. </h2>
-                            <p>We are value added investors in unique manufacturing, industrial and business service companies.</p>
-                            <a class="standard-cta" href="who-we-are.html">WHO WE ARE</a>
+                      </li>
+                      <li>
+                          <div class="slider-container slide-2-bg">
+                              <div class="slider-container-inner">
+                                <h2>We don't invest in Companies.<br /> We invest in Cultures. </h2>
+                                <p>We are value added investors in unique manufacturing, industrial and business service companies.</p>
+                                <a class="standard-cta" href="who-we-are.html">WHO WE ARE</a>
+                              </div>
+                          </div>
+                      </li>
+                      <li>
+                        <div class="slider-container slide-3-bg">
+                            <div class="slider-container-inner">
+                                <h2>We don't invest in Companies.<br /> We invest in Cultures. </h2>
+                                <p>We are value added investors in unique manufacturing, industrial and business service companies.</p>
+                                <a class="standard-cta" href="who-we-are.html">WHO WE ARE</a>
+                            </div>
                         </div>
-                      </div>
-                      <div class="swiper-slide">
-                        <div class="swiper-slider-container">
-                            <h2>We don't invest in Companies.<br /> We invest in Cultures. </h2>
-                            <p>We are value added investors in unique manufacturing, industrial and business service companies.</p>
-                            <a class="standard-cta" href="who-we-are.html">WHO WE ARE</a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-pagination"></div>
+                      </li>
+                    </ul>
+
                     <div class="arrow-dowm">
                         <img src="images/svg/clavis-arrow-down.svg" alt="" />
                     </div>
                   </div>
-            </div>
+                
+              </div>
             
         </header>
 
@@ -207,32 +216,14 @@
     </div>
 
 
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/jqery-min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/ScrollTrigger.min.js"></script>
+    <script defer src="js/jquery.flexslider.js"></script>
     <script src="js/script.js"></script>
 
     <!-- Initialize Swiper -->
     <script>
-      var swiper = new Swiper(".mySwiper", {
-        spaceBetween: 0,
-        effect: "fade",
-        centeredSlides: true,
-        autoplay: {
-          delay: 6000,
-          disableOnInteraction: false,
-        },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-      });
-
 
     const tl = gsap.timeline( { 
 
@@ -263,6 +254,14 @@
     });
 
     tl2.to('.main-headline-alt span', { stagger: 0.15, left: 0, opacity: 1, duration: 0.3, ease: "back.out(1.7)"  });
+
+    $(window).load(function(){
+          $('.flexslider').flexslider({
+            animation: "fade",
+            slideshowSpeed: 6000,
+            animationLoop: true,
+          });
+        });
 
     </script>
 
