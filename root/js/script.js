@@ -1,10 +1,14 @@
 
 $(document).ready(function(){
 
-    var marginHeroStandard = $('.mt-st-h').outerHeight();
-    marginHeroStandard = marginHeroStandard + 150;
-    console.log(marginHeroStandard)
-    $('.main-alt').css({"margin-top" : marginHeroStandard+"px"});
+    if($( document ).width() > 1023) {
+
+        var marginHeroStandard = $('.mt-st-h').outerHeight();
+        marginHeroStandard = marginHeroStandard + 150;
+        console.log(marginHeroStandard)
+        $('.main-alt').css({"margin-top" : marginHeroStandard+"px"});
+
+    }
 
     // hamburger menu
     $(".hamburger").click(function(){

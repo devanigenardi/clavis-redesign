@@ -237,8 +237,13 @@ body .wrapper .slab-full-half img {
 body .wrapper .main {
   width: 100%;
   position: absolute;
-  margin-top: 100vh;
   z-index: 1;
+}
+
+@media (min-width: 768px) {
+  body .wrapper .main {
+    margin-top: 100vh;
+  }
 }
 
 body .wrapper .main .main-content {
@@ -279,8 +284,10 @@ body .wrapper .main .bottom__spacer {
   width: 100vw;
 }
 
-body .wrapper .main-alt {
-  margin-top: 50vh;
+@media (min-width: 768px) {
+  body .wrapper .main-alt {
+    margin-top: 0;
+  }
 }
 
 .body-no-scroll {
@@ -424,9 +431,21 @@ body .wrapper .main-alt {
   z-index: 1;
 }
 
+@media (max-width: 1023px) {
+  .header {
+    position: static;
+  }
+}
+
 .header-alt {
   height: auto;
   position: fixed;
+}
+
+@media (max-width: 1023px) {
+  .header-alt {
+    position: static;
+  }
 }
 
 .nav {
@@ -434,7 +453,7 @@ body .wrapper .main-alt {
   height: 130px;
   position: fixed;
   top: 0px;
-  z-index: 2;
+  z-index: 4;
 }
 
 @media only screen and (max-width: 767px) {
@@ -959,6 +978,18 @@ body .wrapper .main-alt {
   margin: 0 -1rem;
 }
 
+@media (max-width: 1023px) {
+  .flex-grid-inner-alt {
+    margin: 0 -0.5rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .flex-grid-inner-alt {
+    margin: 0 0rem;
+  }
+}
+
 .col {
   padding: 1rem;
 }
@@ -1031,6 +1062,12 @@ body .wrapper .main-alt {
   padding-bottom: 2rem;
 }
 
+@media (max-width: 1023px) {
+  .pb-2-m {
+    padding-bottom: 1rem;
+  }
+}
+
 .pb-3 {
   padding-bottom: 3rem;
 }
@@ -1088,6 +1125,156 @@ body .wrapper .main-alt {
   .w-80 {
     width: 80%;
   }
+}
+
+.grid-collage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.grid-collage .col {
+  padding: 0;
+  height: 100%;
+  min-height: 500px;
+  position: relative;
+  overflow: hidden;
+  margin: 0 1rem 2rem 1rem;
+}
+
+@media (max-width: 1023px) {
+  .grid-collage .col {
+    min-height: 400px;
+    margin: 0 0.5rem 1rem 0.5rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .grid-collage .col {
+    width: 100%;
+    margin: 0 0 1rem 0;
+  }
+  .grid-collage .col:last-of-type {
+    margin-top: 1rem;
+  }
+}
+
+.grid-collage .col.card {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  background: url("../images/clavis-guitars.jpg") center center/auto auto no-repeat;
+  background-size: cover;
+}
+
+.grid-collage .col.stage {
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+  background: url("../images/clavis-guitar.jpg") center center/auto auto no-repeat;
+  background-size: cover;
+}
+
+@media (max-width: 1023px) {
+  .grid-collage .col.stage {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+}
+
+.grid-collage .col .overlay {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s;
+  opacity: 0;
+  background: url("../images/clavis-collage-overlay.png") center center/auto auto no-repeat;
+  background-size: cover;
+}
+
+@media (max-width: 1023px) {
+  .grid-collage .col .overlay {
+    opacity: 1;
+  }
+}
+
+.grid-collage .col .content {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  z-index: 1;
+  padding: 1rem;
+  width: 100%;
+  height: 100%;
+  transition: all 0.2s ease-out;
+  -webkit-transition: all 0.2s ease-out;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 1023px) {
+  .grid-collage .col .content {
+    bottom: 0;
+    overflow: scroll;
+  }
+}
+
+.grid-collage .col .content h5 {
+  color: #d0af21;
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 1rem;
+}
+
+.grid-collage .col .content p {
+  color: #ffffff;
+  font-size: 13px;
+  line-height: 19px;
+  margin-bottom: 1rem;
+  width: 100%;
+  max-width: 75%;
+}
+
+@media (max-width: 1023px) {
+  .grid-collage .col .content p {
+    max-width: 100%;
+  }
+}
+
+.grid-collage .col .content p:last-of-type {
+  margin: 0;
+}
+
+.grid-collage .col:hover .overlay {
+  opacity: 1;
+}
+
+.grid-collage .col:hover .content {
+  bottom: 0%;
+}
+
+.grid-collage .col:nth-last-child(-n+2) {
+  margin-bottom: 0;
 }
 
 .standard-cta {
@@ -1249,6 +1436,12 @@ body .wrapper .main-alt {
   z-index: 1;
   font-size: 15px;
   line-height: 19px;
+}
+
+@media (max-width: 767px) {
+  .footer {
+    position: static;
+  }
 }
 
 .footer .footer-bg {

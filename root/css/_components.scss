@@ -137,6 +137,9 @@
     z-index: 1;
     font-size: 15px;
     line-height: 19px;
+    @media (max-width: 767px) {
+        position: static;
+    }
       .footer-bg {
         background: url('../images/svg/clavis-foooter.svg') left center/auto auto no-repeat;
       }

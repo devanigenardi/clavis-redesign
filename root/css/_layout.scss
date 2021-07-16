@@ -68,8 +68,10 @@ body {
         .main {
             width: 100%;
             position: absolute;
-            margin-top: 100vh;
             z-index: 1;
+            @media (min-width: 768px) {
+              margin-top: 100vh;
+              }
             .main-content {
                 height: auto;
                 width: 100vw;
@@ -108,7 +110,9 @@ body {
             }
         }
         .main-alt {
-            margin-top: 50vh;
+            @media (min-width: 768px) {
+                margin-top: 0;
+              }
         }
     }
 }

@@ -70,6 +70,20 @@
   .flex-grid-inner {
       margin: 0 -1rem;
   }
+
+  @media (max-width: 1023px) {
+    .flex-grid-inner-alt {
+        margin: 0 -0.5rem;
+      }
+  }
+
+  @media (max-width: 767px) {
+    .flex-grid-inner-alt {
+        margin: 0 0rem;
+      }
+  }
+
+
   
   .col {
     padding: 1rem;
@@ -154,6 +168,11 @@
 .pb-2 {
     padding-bottom: 2rem;
 }
+@media (max-width: 1023px){
+    .pb-2-m {
+        padding-bottom: 1rem;
+    }
+}
 .pb-3 {
     padding-bottom: 3rem;
 }
@@ -200,4 +219,108 @@
     @media (min-width: 768px) {
         width: 80%;
     } 
+}
+
+.grid-collage {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .col {
+        padding: 0;
+        height: 100%;
+        min-height: 500px;
+        position: relative;
+        overflow: hidden;
+        margin: 0 1rem 2rem 1rem;
+        @media (max-width: 1023px) {
+            min-height: 400px;
+            margin: 0 0.5rem 1rem 0.5rem;
+        }
+        @media (max-width: 767px) {
+            width: 100%;
+            margin: 0 0 1rem 0;
+
+            &:last-of-type {
+                margin-top: 1rem;
+            }
+        }
+        &.card {
+            flex-grow: 1;
+            background: url('../images/clavis-guitars.jpg') center center/auto auto no-repeat;
+            background-size: cover;
+        }
+        &.stage {
+            flex-grow: 2;
+            background: url('../images/clavis-guitar.jpg') center center/auto auto no-repeat;
+            background-size: cover;
+            @media (max-width: 1023px) {
+                flex-grow: 1;
+            }
+        }
+        .overlay {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            transition: opacity 0.3s;
+            -webkit-transition: opacity 0.3s;
+            opacity: 0;
+            background: url('../images/clavis-collage-overlay.png') center center/auto auto no-repeat;
+            background-size: cover;
+            @media (max-width: 1023px) {
+                opacity: 1;
+            }
+        }
+        .content {
+            position: absolute;
+            bottom: -100%;
+            left: 0;
+            z-index: 1;
+            padding: 1rem;
+            width: 100%;
+            height: 100%;
+            transition: all 0.2s ease-out;
+            -webkit-transition: all 0.2s ease-out;
+            justify-content: flex-end;
+            align-items: flex-start;
+            flex-direction: column;
+            display: flex;
+            @media (max-width: 1023px) {
+                bottom: 0;
+                overflow: scroll;
+            }
+            h5 {
+                color: $yellow;
+                font-size: 16px;
+                line-height: 20px;
+                margin-bottom: 1rem;
+
+            }
+            p {
+                color: $white;
+                font-size: 13px;
+                line-height: 19px;
+                margin-bottom: 1rem;
+                width: 100%;
+                max-width: 75%;
+                @media (max-width: 1023px) {
+                    max-width: 100%;
+                }
+                &:last-of-type {
+                    margin: 0;
+                }
+            }
+        }
+        &:hover .overlay {
+            opacity: 1;
+        }
+
+        &:hover .content {
+            bottom: 0%;
+        }
+        &:nth-last-child(-n+2) {
+            margin-bottom: 0;
+        }
+    }
 }
