@@ -106,6 +106,12 @@
     opacity: 0;
     left: 25px;
     width: 100%;
+    @media (max-width: 1023px) {
+      top: 12px;
+    }
+    @media (max-width: 767px) {
+        top: 3rem;
+      }
   }
 
   .no-break {

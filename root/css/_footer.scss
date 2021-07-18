@@ -1,0 +1,117 @@
+.wrapper {
+    .footer {
+        width: 100%;
+        height: auto;
+        background-color: $blue;
+        position: sticky;
+        bottom: 0;
+        z-index: 1;
+        font-size: 15px;
+        line-height: 19px;
+        @media (max-width: 767px) {
+            position: static;
+        }
+          .footer-bg {
+            background: url('../images/svg/clavis-foooter.svg') left center/auto auto no-repeat;
+          }
+          .footer-top {
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              align-items: center;
+              position: relative;
+              padding: 0 0 1rem;
+              @media (max-width: 767px) {
+                flex-direction: column;
+                align-items: flex-start;
+              }
+              a {
+                  display: block;
+                  text-align: center;
+              }
+              .footer-info {
+                  ul {
+                      padding:0;
+                      margin-top: 2rem;
+                      li {
+                        color: $white;
+                        list-style-type: none;
+                      }
+                      &:last-child {
+                        margin-top: 1.5rem;
+                      }
+                  }
+              }
+              .footer-nav {
+                  display: flex;
+                  flex-direction: row;
+                  @media (max-width: 767px) {
+                    flex-direction: column;
+                    align-items: flex-start;
+                  }
+                  ul {
+                    padding: 0px;
+                    margin-top: 1rem;
+                    li {
+                      list-style-type: none;
+                      margin-bottom: 1rem;
+                      a {
+                        color: $white;
+                        text-decoration: none;
+                        font-weight: bold;
+                        text-align: left;
+                            &:hover {
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                    &:first-child {
+                        margin-right: 4rem;
+                    }
+                }
+              }
+              &::after {
+                  content: '';
+                  width: 100vw;
+                  height: 1px;
+                  background: $white;
+                  position: absolute;
+                  bottom: 0px;
+                  margin-left: -50vw;
+                  left: 50%;
+                  opacity: 0.2;
+              }
+          }
+          .footer-bottom {
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              padding: 2rem 0 0;
+              @media (max-width: 767px) {
+                flex-direction: column;
+                align-items: flex-start;
+              }
+              p, a {
+                color: $white;
+              }
+              p {
+                  font-size: 16px;
+              }
+              a {
+                  font-weight: bold;
+                  text-decoration: none;
+                  text-transform: uppercase;
+                  @media (max-width: 767px) {
+                    margin-top: 1rem;
+                  }
+                  &:hover {
+                    text-decoration: underline;
+                }
+              }
+    
+          }
+          section {
+              padding: 4rem 1rem 2rem;
+          }
+      }
+}

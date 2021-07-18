@@ -2,9 +2,9 @@
 $(document).ready(function(){
 
     if($( document ).width() > 1023) {
-
         var marginHeroStandard = $('.mt-st-h').outerHeight();
-        marginHeroStandard = marginHeroStandard + 150;
+        // var navHeight = $('.nav').outerHeight();
+        marginHeroStandard = marginHeroStandard;
         console.log(marginHeroStandard)
         $('.main-alt').css({"margin-top" : marginHeroStandard+"px"});
 

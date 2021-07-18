@@ -1,6 +1,6 @@
  // main CTA
 .standard-cta {
-    font-size: 15px;
+    font-size: 13px;
     font-weight: bold;
     letter-spacing: 0;
     line-height: 23px;
@@ -16,7 +16,7 @@
   .standard-cta-alt {
     color: $blue;
     border: 1px solid $blue;
-    padding: 16px 17px;
+    padding: 16px 23px;
   }
 
   .standard-cta:hover {
@@ -42,7 +42,7 @@
     background: url('../images/svg/clavis-quotes.svg') no-repeat;
     background-position: left top;
     background-size: 15%;
-    margin-top:11rem;
+    margin-top:7rem;
     position: relative;
     @media (max-width: 767px){
         margin-top:2rem;
@@ -124,111 +124,6 @@
     .fade-thum {
         opacity: 1!important;
     }
-  }
-
-  // footer 
-
-  .footer {
-    width: 100%;
-    height: auto;
-    background-color: $blue;
-    position: sticky;
-    bottom: 0;
-    z-index: 1;
-    font-size: 15px;
-    line-height: 19px;
-    @media (max-width: 767px) {
-        position: static;
-    }
-      .footer-bg {
-        background: url('../images/svg/clavis-foooter.svg') left center/auto auto no-repeat;
-      }
-      .footer-top {
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between;
-          align-items: center;
-          position: relative;
-          @media (max-width: 767px) {
-            flex-direction: column;
-            align-items: flex-start;
-          }
-          .footer-info {
-              ul {
-                  padding:0;
-                  margin-top: 2rem;
-                  li {
-                    color: $white;
-                    list-style-type: none;
-                  }
-                  &:last-child {
-                    margin-top: 1.5rem;
-                  }
-              }
-          }
-          .footer-nav {
-              display: flex;
-              flex-direction: row;
-              @media (max-width: 767px) {
-                flex-direction: column;
-                align-items: flex-start;
-              }
-              ul {
-                padding: 0px;
-                margin-top: 1rem;
-                li {
-                  list-style-type: none;
-                  margin-bottom: 1rem;
-                  a {
-                    color: $white;
-                    text-decoration: none;
-                    font-weight: bold;
-                        &:hover {
-                            text-decoration: underline;
-                        }
-                    }
-                }
-                &:first-child {
-                    margin-right: 4rem;
-                }
-            }
-          }
-          &::after {
-              content: '';
-              width: 100vw;
-              height: 1px;
-              background: $white;
-              position: absolute;
-              bottom: 0px;
-              margin-left: -50vw;
-              left: 50%;
-              opacity: 0.2;
-          }
-      }
-      .footer-bottom {
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between;
-          @media (max-width: 767px) {
-            flex-direction: column;
-            align-items: flex-start;
-          }
-          p, a {
-            color: $white;
-          }
-          a {
-              font-weight: bold;
-              text-decoration: none;
-              text-transform: uppercase;
-              @media (max-width: 767px) {
-                margin-top: 1rem;
-              }
-              &:hover {
-                text-decoration: underline;
-            }
-          }
-
-      }
   }
 
   //hero standard
@@ -625,6 +520,7 @@
     height: 70vh;
     background-attachment: fixed;
     background-position: center center;
+    position: relative;
     @media (max-width: 767px) {
         height: 50vh;
     }
@@ -652,7 +548,6 @@
 .headline-animated {
     .line{
         width: 100%;
-        height: 65px;
         position: relative;
         height: auto;
         span {
@@ -727,83 +622,90 @@
     }
 }
 
-.slab-row  {
-    .target-sector {
-        div {
-            height: 500px;
-            background-size: 100%;
+.target-sector {
+    display: flex;
+    flex-direction: row;
+    .col {
+        position: relative;
+    }
+    @media (max-width: 767px) {
+        flex-direction: column;
+    }
+    div.col.col.three-cols {
+        height: 500px;
+        background-size: 100%;
+        background-position: center;
+        position: relative;
+        @media (max-width: 1023px) {
+            height: 400px;
+        }
+        @media (max-width: 767px) {
+            height: 250px;
+            flex-basis: initial;
+        }
+        &.t01 {
+            background: url('../images/clavis-target-sector-1.jpg') no-repeat;
+            background-size: cover;
             background-position: center;
-            position: relative;
-            @media (max-width: 1023px) {
-                height: 400px;
-            }
-            @media (max-width: 767px) {
-                height: 250px;
-            }
-            &:nth-child(1) {
-                background: url('../images/clavis-target-sector-1.jpg') no-repeat;
-                background-size: cover;
-                background-position: center;
-            }
-    
-            &:nth-child(2) {
-                background: url('../images/clavis-target-sector-2.jpg') no-repeat;
-                background-size: cover;
-                background-position: center;
-            }
-    
-            &:nth-child(3) {
-                background: url('../images/clavis-target-sector-3.jpg') no-repeat;
-                background-size: cover;
-                background-position: center;
-            }
-    
-            &:nth-child(4) {
-                background: url('../images/clavis-target-sector-4.jpg') no-repeat;
-                background-size: cover;
-                background-position: center;
-            }
-    
-            &:nth-child(5) {
-                background: url('../images/clavis-target-sector-5.jpg') no-repeat;
-                background-size: cover;
-                background-position: center;
-            }
-    
-            &:nth-child(6) {
-                background: url('../images/clavis-target-sector-6.jpg') no-repeat;
-                background-size: cover;
-                background-position: center;
-            }
-            h4 {
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                width: 100%;
-                margin-bottom: 0rem;
-                background: linear-gradient(180deg, rgba(0,0,0,0) 0%, #000000 100%);
-                padding: 1.2rem;
-                span {
-                    color: $white;
-                    display: block;
-                    height: 54px;
-                    width: 214px;
-                    background-color: #0F4C81;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    font-size: 19px;
-                    text-align: center;
-                    line-height: 23px;
-                    padding: 0 1rem;
-                    @media (max-width: 767px) {
-                       font-size: 15px;
-                       line-height: 19px;
-                       height: 44px;
-                       width: 170px;
-                    }
+        }
 
+        &.t02 {
+            background: url('../images/clavis-target-sector-2.jpg') no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        &.t03 {
+            background: url('../images/clavis-target-sector-3.jpg') no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        &.t04 {
+            background: url('../images/clavis-target-sector-4.jpg') no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        &.t05 {
+            background: url('../images/clavis-target-sector-5.jpg') no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        &.t06 {
+            background: url('../images/clavis-target-sector-6.jpg') no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        h4 {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            margin-bottom: 0rem;
+            background: linear-gradient(180deg, rgba(0,0,0,0) 0%, #000000 100%);
+            padding: 1.2rem;
+            span {
+                color: $white;
+                display: block;
+                height: 54px;
+                width: 214px;
+                background-color: #0F4C81;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 19px;
+                text-align: center;
+                line-height: 23px;
+                padding: 0 1rem;
+                @media (max-width: 767px) {
+                   font-size: 15px;
+                   line-height: 19px;
+                   height: 44px;
+                   width: 170px;
                 }
+
             }
         }
     }

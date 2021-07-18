@@ -17,59 +17,87 @@ body {
             height: auto;
             margin: 0 auto;
             padding: 0 1rem;
-            &.hero-standard {
-                margin-top: 130px;
-                @media only screen and (max-width: 767px) {
-                  margin-top: 86px;
-                }
-                h2 {
-                    max-width: 80%;
-                    width: 100%;
-                }
-            }
-            &.hero-standard-alt {
-                h2 {
-                    max-width: 100%;
-                }
-            }
         }
+
 
         .slab-full {
             width: 100%;
-            height: auto;
-            .slab-row {
-                max-width: 1430px;
+            padding: 0 0 3rem 0;
+            @media (max-width: 767px) {
+                padding: 0 0 2rem 0;
+            }
+            &.top-intro {
+                padding-top: 130px;
+                @media (max-width: 767px) {
+                    padding-top: 3rem;
+                }
+            }
+            .flex-grid {
+                padding-bottom: 4rem 0;
+                &.flex-gris-sm {
+                    padding-bottom: 2rem 0;
+                }
+                &.slab-title {
+                    max-width: 1430px;
+                    width: 100%;
+                    margin: 0 auto;
+                    padding: 4rem 0 0rem 1rem;
+                    @media (max-width: 767px) {
+                        padding: 2rem 0 0rem 1rem;
+                    }
+                    .eyebrow {
+                        margin-bottom: 0.5rem;
+                    }
+                }
+                .col {
+                    .numbers {
+                        @media (max-width: 1023px) {
+                            width: 50%;
+                            h2 {
+                                font-size: 40px;
+                                line-height: 50px;
+                            }
+                            p {
+                                font-size: 15px;
+                                line-height: 21px;
+                            }
+                        }
+                        @media (max-width: 767px) {
+                            width: 90%;
+                        }
+                    }
+                }
+            }
+            .parallax-slide {
+                max-width: calc(1430px - 2rem);
                 width: 100%;
-                height: auto;
                 margin: 0 auto;
+            }
+            &.slab-full-parallax {
+                position: relative;
                 padding: 0 1rem;
+                &::before {
+                    content: '';
+                    width: 100%;
+                    height: 50%;
+                    left: 0px;
+                    bottom: 0px;
+                    position: absolute;
+                    background: $light-greay;
+                    z-index: 0;
+                }
+            }
+            &.slab-no-padding {
+                padding: 0;
             }
         }
 
-        .slab-full-half {
-            position: relative;
-            width: 100%;
-            height: auto;
-            &::before {
-                content: '';
-                width: 100%;
-                height: 50%;
-                left: 0px;
-                top: 0px;
-                position: absolute;
-                background: $white;
-            }
-            img {
-                height: auto;
-                width: 100%;
-            }
-        }
 
         .main {
             width: 100%;
             position: absolute;
             z-index: 1;
-            @media (min-width: 768px) {
+            @media (min-width: 1024px) {
               margin-top: 100vh;
               }
             .main-content {
@@ -95,18 +123,14 @@ body {
                 }
                 .hard-hat {
                     margin-bottom: -150px;
+                    @media (max-width: 767px) {
+                        margin-bottom: 0;
+                      }
                 }
             }
             .bottom__spacer {
-                /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#e5e5e5+0,d6d6d6+23&1+1,0+22 */
-                // background: -moz-linear-gradient(top,  rgba(229,229,229,1) 0%, rgba(228,228,228,1) 1%, rgba(215,215,215,0) 22%, rgba(214,214,214,0) 23%); /* FF3.6-15 */
-                // background: -webkit-linear-gradient(top,  rgba(229,229,229,1) 0%,rgba(228,228,228,1) 1%,rgba(215,215,215,0) 22%,rgba(214,214,214,0) 23%); /* Chrome10-25,Safari5.1-6 */
-                // background: linear-gradient(to bottom,  rgba(229,229,229,1) 0%,rgba(228,228,228,1) 1%,rgba(215,215,215,0) 22%,rgba(214,214,214,0) 23%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-                // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e5e5e5', endColorstr='#00d6d6d6',GradientType=0 ); /* IE6-9 */
-
                 height: 31vh;
                 width: 100vw;
-
             }
         }
         .main-alt {

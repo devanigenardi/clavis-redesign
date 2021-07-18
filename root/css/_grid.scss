@@ -1,134 +1,184 @@
-
-.flex-grid {
+.flex-grid-container {
     max-width: 1430px;
     width: 100%;
-    margin: 0 auto;
-    display: flex;
-    img {
-        width: 100%;
-        height: auto;
-    }
-  }
-  .flex-grid .col {
-    flex: 1;
     position: relative;
-  }
+    margin-left: -1rem;
+    margin-right: -1rem;
+    margin: 0 auto;
+    .flex-grid {
+        display: flex;
+        width: 100%;
+        margin-left: -1rem;
+        margin-right: -1rem;
+        margin: 0 auto;
+        @media (max-width: 767px) {
+            flex-direction: column;
+            & > * {
+                width: 100%;
+                display: block;
+            }
+        }
+        .col {
+            position: relative;
+            flex: 1;
+            margin: 0 1rem;
+            @media (max-width: 767px) {
+                flex-basis: calc(100% - 1rem);
+                max-width: calc(100% - 1rem);
+            }
+            &.one-col {
+                flex-basis: calc(100% - 1rem);
+                max-width: calc(100% - 1rem);
+            }
+            &.two-cols {
+                flex-basis: calc(50% - 1rem);
+                max-width: calc(50% - 1rem);
+                @media (max-width: 767px) {
+                    flex-basis: calc(100% - 2rem);
+                    max-width: calc(100% - 2rem);
+                }
+            }
+            &.three-cols {
+                flex-basis: 33.333333%;
+                max-width: 33.333333%;
+                @media (max-width: 767px) {
+                    flex-basis: calc(100% - 2rem);
+                    max-width: calc(100% - 2rem);
+                }
+            }
+            &.four-cols {
+                flex-basis: 25%;
+                max-width: 25%;
+                @media (max-width: 1023px) {
+                    flex-basis: calc(50% - 2rem);
+                    max-width: calc(50% - 2rem);
+                    margin-bottom: 2rem;
+                }
+                @media (max-width: 767px) {
+                    flex-basis: calc(100% - 2rem);
+                    max-width: calc(100% - 2rem);
+                }
+            }
+        }
+        &.flex-grid-wrap {
+            @media (max-width: 1023px) {
+                flex-wrap: wrap;
+            }
+        }
+
+        
+        &.pull-out-1 {
+            margin: 0 -1rem;
+        }
+    }
+}
+
+
+
+
+.flex-grid-inner {
+    margin: 0 -1rem;
+    .col {
+        @media (max-width: 767px) {
+            padding: 1rem;
+            margin: 0 0 1rem 0;
+        }
+    }
+}
+
+.flex-grid-alt {
+    width: 100%;
+    max-width: 1430px;
+    margin: 0 auto;
+    @media (max-width: 1023px) {
+        .flex-grid-alt {
+            margin: 0 1rem;
+            padding: 0 1rem;
+        }
+    }
+}
   .flex-grid-two,
   .flex-grid-thirds,
   .flex-grid-fourths {
     display: flex;
     justify-content: space-between;
+    & > * {
+        flex-grow: 1;
+        width: 100%;
+        margin: 0 1rem;
+        @media (max-width: 1023px) {
+            margin: 0 0.5rem;
+        }
+        @media (max-width: 767px) {
+            width: 100%;
+            margin: 0 0 1rem 0;
+            display: block;
+            padding: 1rem;
+        }
+    }
   }
-  .flex-grid-two .col {
-    width: 49%;
+  .flex-grid-two {
+    .col {
+        max-width: 50%;
+        padding: 2;
+        @media (max-width: 767px) {
+            max-width: 100%;
+            padding: 0;
+        }
+      }
   }
   .flex-grid-thirds {
-      flex-wrap: wrap;
-        .col {
-            width: 32%;
-            margin-bottom: 2rem;
+    @media (max-width: 1023px) {
+        padding: 0 0.5rem;
+    }
+    @media (max-width: 767px) {
+        padding: 0 1rem;
+        flex-direction: column;
+    }
+    .col {
+        max-width: 33.33%;
+        padding: 2rem;
+        @media (max-width: 767px) {
+            max-width: 100%;
+            &:last-of-type {
+                margin-bottom: 0;
+            }
         }
+      }
   }
 
-  .flex-grid-fourths .col {
-    width: 23.5%;
-  }
-
-  @media (max-width: 1023px) {
-    .flex-grid-thirds {
+  .flex-grid-fourths {
+    @media (max-width: 1023px) {
+        padding: 0 0.5rem;
         flex-wrap: wrap;
-      .col {
-        width: 49%;
-        margin: 0 0 1rem 0;
-      }
+        justify-content: center;
     }
-  }
-
-  @media (max-width: 1023px) {
-    .flex-grid-fourths {
-        flex-wrap: wrap;
-      .col {
-        width: 49%;
-        margin: 0 0 1rem 0;
-      }
+    @media (max-width: 767px) {
+        padding: 0 1rem;
     }
-  }
-  
-  @media (max-width: 767px) {
-    .flex-grid,
-    .flex-grid-thirds,
-    .flex-grid-fourths,
-    .flex-grid-two {
-      display: block;
-      .col {
-        width: 100%;
-        margin: 0 0 1rem 0;
-      }
-    }
-  }
-
-  .flex-grid-inner {
-      margin: 0 -1rem;
-  }
-
-  @media (max-width: 1023px) {
-    .flex-grid-inner-alt {
-        margin: 0 -0.5rem;
+    .col {
+        max-width: 25%;
+        padding: 2rem;
+        @media (max-width: 1023px) {
+            max-width: 48%;
+            flex-basis: auto;
+            margin-bottom: 1rem;
+        }
+        @media (max-width: 767px) {
+            max-width: 100%;
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
       }
   }
 
   @media (max-width: 767px) {
-    .flex-grid-inner-alt {
+    .flex-grid-alt {
         margin: 0 0rem;
       }
   }
 
-
-  
-  .col {
-    padding: 1rem;
-  }
-
-//   <div class="flex-grid">
-//   <div class="col">This little piggy went to market.</div>
-//   <div class="col">This little piggy stayed home.</div>
-//   <div class="col">This little piggy had roast beef.</div>
-// </div>
-
-// <div class="flex-grid">
-//   <div class="col">This little piggy went to market.</div>
-//   <div class="col">This little piggy stayed home.</div>
-//   <div class="col">This little piggy had roast beef.</div>
-//   <div class="col">This little piggy had none.</div>
-//   <div class="col">This little piggy went wee wee wee all the way home.</div>
-// </div>
-
-// <div class="flex-grid-thirds">
-//   <div class="col">This little piggy went to market.</div>
-//   <div class="col">This little piggy stayed home.</div>
-//   <div class="col">This little piggy had roast beef.</div>
-// </div>
-
-// <div class="flex-grid-two">
-//   <div class="col">This little piggy went to market.</div>
-//   <div class="col">This little piggy stayed home.</div>
-// </div>
-
-.mt-1 {
-    margin-top: 1rem;
-}
-.mt-2 {
-    margin-top: 2rem;
-}
-.mt-3 {
-    margin-top: 3rem;
-}
-.mt-4 {
-    margin-top: 4rem;
-}
-.mt-5 {
-    margin-top: 5rem;
-}
 
 .pt-1 {
     padding-top: 1rem;
@@ -145,33 +195,119 @@
 .pt-5 {
     padding-top: 5rem;
 }
+.pt-6 {
+    padding-top: 6rem;
+}
+.pt-7 {
+    padding-top: 7rem;
+}
+.pt-8 {
+    padding-top: 8rem;
+}
+.pt-9 {
+    padding-top: 9rem;
+}
 
-.mb-1 {
-    margin-bottom: 1rem;
+.pt-10 {
+    padding-top: 10rem;
 }
-.mb-2 {
-    margin-bottom: 2rem;
+
+.pt-11 {
+    padding-top: 11rem;
 }
-.mb-3 {
-    margin-bottom: 3rem;
+
+@media (max-width: 1023px) {
+    .ptm-0 {
+        padding-top: 0rem!important;
+    }
+    .ptm-1 {
+        padding-top: 1rem!important;
+    }
+    .ptm-2 {
+        padding-top: 2rem!important;;
+    }
+    .ptm-3 {
+        padding-top: 4rem!important;;
+    }
+    .pbm-0 {
+        padding-bottom: 0rem!important;;
+    }
+    .pbm-1 {
+        padding-bottom: 1rem!important;;
+    }
+    .pbm-2 {
+        padding-bottom: 2rem!important;;
+    }
+    .pbm-3 {
+        padding-bottom: 3rem!important;;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .ptxs-0 {
+        padding-top: 0rem!important;
+    }
+    .ptxs-1 {
+        padding-top: 1rem!important;
+    }
+    .ptxs-2 {
+        padding-top: 2rem!important;
+    }
+    .ptxs-3 {
+        padding-top: 3rem!important;
+    }
+
+    .ptxs-4 {
+        padding-top: 4rem!important;
+    }
+
+    .ptxs-5 {
+        padding-top: 5rem!important;
+    }
+    .pbxs-0 {
+        padding-bottom: 0rem!important;
+    }
+    .pbxs-1 {
+        padding-bottom: 1rem!important;
+    }
+    .pbxs-2 {
+        padding-bottom: 2rem!important;
+    }
+    .pbxs-3 {
+        padding-bottom: 3rem!important;
+    }
+  }
+
+  @media (max-width: 767px) {
+      .mbxs-1 {
+        margin-bottom: 1rem!important;
+      }
+      .mbxs-2 {
+        margin-bottom: 2rem!important;
+      }
+      .mbxs-3 {
+        margin-bottom: 3rem!important;
+      }
+  }
+
+  @media (max-width: 1023px) {
+    .mbsm-1 {
+      margin-bottom: 1rem;
+    }
+    .mbsm-2 {
+      margin-bottom: 2rem;
+    }
+    .mbsm-3 {
+      margin-bottom: 3rem;
+    }
 }
-.mb-4 {
-    margin-bottom: 4rem;
-}
-.mb-5 {
-    margin-bottom: 5rem;
-}
+
 
 .pb-1 {
     padding-bottom: 1rem;
 }
 .pb-2 {
     padding-bottom: 2rem;
-}
-@media (max-width: 1023px){
-    .pb-2-m {
-        padding-bottom: 1rem;
-    }
 }
 .pb-3 {
     padding-bottom: 3rem;
@@ -188,31 +324,12 @@
 .pb-7 {
     padding-bottom: 7rem;
 }
-
-.top-1 {
-    top: 1rem;
+.pb-8 {
+    padding-bottom: 8rem;
 }
-.top-2 {
-    top: 2rem;
+.pb-9 {
+    padding-bottom: 9rem;
 }
-.top-3 {
-    top: 3rem;
-}
-.top-4 {
-    top: 4rem;
-}
-.top-5 {
-    top: 5rem;
-}
-
-@media (max-width: 767px) {
-    .pb-0 {
-        padding-bottom: 0;
-    }
-    .pt-0 {
-        padding-top: 0;
-    }
-} 
 
 .w-80 {
     width: 100%;
@@ -223,8 +340,13 @@
 
 .grid-collage {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
+    width: 100%;
+    @media (max-width: 767px) {
+        flex-direction: column;
+    }
     .col {
         padding: 0;
         height: 100%;
@@ -238,6 +360,7 @@
         }
         @media (max-width: 767px) {
             width: 100%;
+            display: block;
             margin: 0 0 1rem 0;
 
             &:last-of-type {
@@ -246,12 +369,12 @@
         }
         &.card {
             flex-grow: 1;
-            background: url('../images/clavis-guitars.jpg') center center/auto auto no-repeat;
+            background: url('../images/clavis-guitar.jpg') center center/auto auto no-repeat;
             background-size: cover;
         }
         &.stage {
             flex-grow: 2;
-            background: url('../images/clavis-guitar.jpg') center center/auto auto no-repeat;
+            background: url('../images/clavis-guitars.jpg') center center/auto auto no-repeat;
             background-size: cover;
             @media (max-width: 1023px) {
                 flex-grow: 1;
