@@ -479,6 +479,10 @@ body .wrapper .main .bottom__spacer {
   }
 }
 
+.headline-dark-alt-internal {
+  margin: 1rem 0;
+}
+
 .header {
   width: 100%;
   height: 100vh;
@@ -2529,6 +2533,10 @@ body .wrapper .main .bottom__spacer {
     height: 44px;
     width: 170px;
   }
+}
+
+.porfolio {
+  background-color: red;
 }
 
 .wrapper .footer {
