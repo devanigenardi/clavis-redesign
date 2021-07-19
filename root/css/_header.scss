@@ -1,7 +1,7 @@
 .header {
     width: 100%;
     height: 100vh;
-    position: fixed;
+    position: sticky;
     top: 0;
     z-index: 1;
     @media (max-width: 1023px){
@@ -11,7 +11,8 @@
 
 .header-alt {
     height: auto;
-    position: fixed;
+    position: sticky;
+    top: 0;
     @media (max-width: 1023px){
         position: static;
     }

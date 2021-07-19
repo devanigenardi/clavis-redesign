@@ -275,7 +275,7 @@ body .wrapper .slab-full.slab-no-padding {
 
 body .wrapper .main {
   width: 100%;
-  position: absolute;
+  position: relative;
   z-index: 1;
 }
 
@@ -486,7 +486,8 @@ body .wrapper .main .bottom__spacer {
 .header {
   width: 100%;
   height: 100vh;
-  position: fixed;
+  position: -webkit-sticky;
+  position: sticky;
   top: 0;
   z-index: 1;
 }
@@ -499,7 +500,9 @@ body .wrapper .main .bottom__spacer {
 
 .header-alt {
   height: auto;
-  position: fixed;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
 }
 
 @media (max-width: 1023px) {
@@ -2535,8 +2538,240 @@ body .wrapper .main .bottom__spacer {
   }
 }
 
-.porfolio {
-  background-color: red;
+.flex-grid-thirds .porfolio {
+  padding: 0;
+}
+
+.flex-grid-thirds .porfolio .team-card-info .profile-picture {
+  height: 450px;
+  position: relative;
+  background-size: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  overflow: hidden;
+}
+
+@media (max-width: 1023px) {
+  .flex-grid-thirds .porfolio .team-card-info .profile-picture {
+    -webkit-transition: none;
+    transition: none;
+    height: 310px;
+    background-size: cover;
+  }
+}
+
+.flex-grid-thirds .porfolio .team-card-info .profile-picture.p-id-1 {
+  background-image: url("../images/clavis-porfolio-1.jpg");
+}
+
+.flex-grid-thirds .porfolio .team-card-info .profile-picture.p-id-2 {
+  background-image: url("../images/clavis-porfolio-2.jpg");
+}
+
+.flex-grid-thirds .porfolio .team-card-info .profile-picture.p-id-3 {
+  background-image: url("../images/clavis-porfolio-3.jpg");
+}
+
+.flex-grid-thirds .porfolio .team-card-info .profile-picture.p-id-4 {
+  background-image: url("../images/clavis-porfolio-4.jpg");
+}
+
+.flex-grid-thirds .porfolio .team-card-info .profile-picture.p-id-5 {
+  background-image: url("../images/clavis-porfolio-5.jpg");
+}
+
+.flex-grid-thirds .porfolio .team-card-info .profile-picture.p-id-6 {
+  background-image: url("../images/clavis-porfolio-6.jpg");
+}
+
+.flex-grid-thirds .porfolio .team-card-content {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  padding: 90px 2rem 1rem;
+}
+
+@media (max-width: 1023px) {
+  .flex-grid-thirds .porfolio .team-card-content {
+    padding: 50px 2rem 1rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .flex-grid-thirds .porfolio .team-card-content {
+    margin: 0rem !important;
+  }
+}
+
+.flex-grid-thirds .porfolio .team-card-content .thumb-logo {
+  position: absolute;
+  height: 180px;
+  width: 180px;
+  top: -90px;
+  background: #ffffff;
+  border: 1px solid #DBDBDB;
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 1023px) {
+  .flex-grid-thirds .porfolio .team-card-content .thumb-logo {
+    height: 100px;
+    width: 100px;
+    top: -50px;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 1023px) {
+  .flex-grid-thirds .porfolio .team-card-content .thumb-logo {
+    height: 100px;
+    width: 100px;
+    top: calc(-100px + 1rem);
+    padding: 1rem;
+    margin-left: 1rem;
+  }
+}
+
+.flex-grid-thirds .porfolio .team-card-content .thumb-logo svg {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 767px) {
+  .flex-grid-thirds .porfolio .team-card-content {
+    width: 100%;
+    padding: 0rem;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin-left: 1rem;
+  }
+}
+
+.flex-grid-thirds .porfolio .team-card-content h4 {
+  font-size: 12px;
+  line-height: 19px;
+  text-transform: uppercase;
+  color: #0065A1;
+  margin: 2rem 0 1rem;
+}
+
+@media (max-width: 1023px) {
+  .flex-grid-thirds .porfolio .team-card-content h4 {
+    font-size: 14px;
+  }
+}
+
+.flex-grid-thirds .porfolio .team-card-content h4 span {
+  color: #6C6C6C;
+  white-space: nowrap;
+}
+
+.flex-grid-thirds .porfolio .team-card-content p {
+  font-size: 16px;
+  line-height: 26px;
+  margin: 0 0 1rem;
+}
+
+@media (max-width: 767px) {
+  .flex-grid-thirds .porfolio .team-card-content p {
+    line-height: 21px;
+  }
+}
+
+.flex-grid-thirds .porfolio .team-card-content .card-link {
+  position: relative;
+  font-size: 12px;
+  line-height: 22px;
+  font-weight: bold;
+  color: #0065A1;
+  text-decoration: none;
+  -webkit-transition: background-image 0.5s ease;
+  transition: background-image 0.5s ease;
+  height: auto;
+  width: 100%;
+  padding: 0.8rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 767px) {
+  .flex-grid-thirds .porfolio .team-card-content .card-link {
+    padding: 0.5rem 0;
+  }
+}
+
+.flex-grid-thirds .porfolio .team-card-content .card-link svg {
+  width: 35px;
+}
+
+.flex-grid-thirds .porfolio .team-card-content .card-link svg .collab-arrow-0 {
+  fill: none;
+  stroke: #060606;
+  stroke-width: 3;
+  stroke-linecap: round;
+}
+
+.flex-grid-thirds .porfolio .team-card-content .card-link svg .collab-arrow-1 {
+  fill: none;
+  stroke: #060606;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.flex-grid-thirds .porfolio .team-card-content .card-link span {
+  -webkit-transition: opacity .2s ease-in-out;
+  transition: opacity .2s ease-in-out;
+  -webkit-transition: .2s;
+  transition: .2s;
+  position: absolute;
+  opacity: 0;
+  left: 20px;
+  top: 50px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.flex-grid-thirds .porfolio:hover .profile-picture {
+  background-size: 120%;
+  background-position: center;
+}
+
+.flex-grid-thirds .porfolio:hover .team-card-content a svg .collab-arrow-0 {
+  stroke: #0065A1;
+}
+
+.flex-grid-thirds .porfolio:hover .team-card-content a svg .collab-arrow-1 {
+  stroke: #0065A1;
+}
+
+.flex-grid-thirds .porfolio:hover .team-card-content a span {
+  opacity: 1;
+  left: 50px;
 }
 
 .wrapper .footer {

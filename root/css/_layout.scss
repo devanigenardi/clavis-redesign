@@ -95,7 +95,7 @@ body {
 
         .main {
             width: 100%;
-            position: absolute;
+            position: relative;
             z-index: 1;
             @media (min-width: 1024px) {
               margin-top: 100vh;
