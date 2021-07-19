@@ -550,6 +550,9 @@
         width: 100%;
         position: relative;
         height: auto;
+        @media (max-width: 767px) {
+            line-height: 36px;
+        }
         span {
             position: relative;
             font-size: 52px;
@@ -557,7 +560,7 @@
             line-height: 1;
             opacity: 1;
             @media (max-width: 767px) {
-                font-size: 40px;
+                font-size: 30px;
             }
         }
       }
@@ -853,10 +856,14 @@
                 }
             }
         }
-        &:hover .profile-picture {
-            background-size: 120%;
-            background-position: center;
-        }
+        
+
+        @media (min-width: 1024px) {
+            &:hover .profile-picture {
+                background-size: 120%;
+                background-position: center;
+            }
+         }
     
         &:hover .team-card-content a svg .collab-arrow-0 {
             stroke: $blue;
@@ -963,8 +970,8 @@
                 .member-header {
                     @media (max-width: 767px) {
                         display: flex;
-                        flex-direction: row;
-                        align-items: center;
+                        flex-direction: column;
+                        align-items: flex-start;
                     }
                     img {
                         max-width: 195px;
@@ -979,13 +986,16 @@
                     div {
                         margin-left: 0rem;
                         @media (max-width: 767px) {
-                            margin-left: 1rem;
+                            margin-left: 0rem;
                         }
                         ul {
                             margin: 3rem 0;
                             border-top: none;
                             border-bottom: 1px solid #DBDBDB;
                             padding: 0;
+                            @media (max-width: 767px) {
+                                margin: 2rem 0;
+                            }
                             li {
                                 background-image: none;
                                 padding: 0px;
@@ -1002,6 +1012,9 @@
                                 }
                                 &:last-of-type {
                                     margin-bottom: 3rem;
+                                    @media (max-width: 767px) {
+                                        margin-bottom: 0rem;
+                                    }
                                 }
                             }
                         }
@@ -1071,61 +1084,259 @@
                         line-height: 33px;
                         width: 100%;
                         max-width: 850px;
+                        margin-bottom: 3rem;
+                        border-bottom: 1px solid #DBDBDB;
+                        display: inline-block;
                         @media (max-width: 1023px) {
+                            margin-bottom: 2rem;
+                        }
+                        @media (max-width: 767px) {
                             font-size: 14px;
                             line-height: 20px;
                         }
                     }
-                    ul {
-                        padding: 0px;
-                        display: flex;
-                        flex-direction: row;
-                        align-items: flex-start;
-                        align-items: center;
-                        @media (max-width: 767px) {
-                            flex-direction: column;
-                            align-items: flex-start;
-                        }
-                        li {
-                            list-style-type: none;
-                            margin-right: 1rem;
-                            font-size: 13px;
-                            color: $grey;
-                            display: flex;
-                            align-items: center;
+                    .quote {
+                        margin-top: 2rem;
+                        background: url('../images/svg/clavis-quotes.svg') no-repeat;
+                        background-position: left top;
+                        background-size: 15%;
+                        position: relative;
+                        & > p {
+                            color: #060606;
+                            font-size: 29px;
+                            letter-spacing: 0;
+                            line-height: 39px;
+                            padding: 3rem 0 3rem 0;
+                            border-bottom: none;
+                            margin-bottom: 0rem;
+                            @media (max-width: 1023px) {
+                                font-size: 16px;
+                                line-height: 20px;
+                            }
+
                             @media (max-width: 767px) {
-                                margin-bottom: 1rem;
-                                width: 130px;
+                                padding: 2rem 0 2rem 0;
                             }
-                            i {
-                                padding-right: 0.5rem;
-                                @media (max-width: 767px) {
-                                    width: 130px;
-                                }
-                                img {
-                                    height: auto;
-                                    width: 20px;
-                                    &.ico-1 {
-                                        width: 40px;
-                                    }
-                                    &.ico-2 {
-                                        width: 29px;
-                                    }
-    
-                                    &.ico-3 {
-                                        width: 27px;
-                                    }
-                                }
+                        }
+                        & > div {
+                            display: flex;
+                            flex-direction: row;
+                            align-items: flex-end;
+                            img {
+                                display: block;
+                                width: 60px;
+                                height: 60px;
                             }
-                            span {
-                                display: inline-block;
+                            div {margin: 0 1rem;
+                                h5 {
+                                    color: #060606;
+                                    font-size: 20px;
+                                    font-weight: bold;
+                                    letter-spacing: 0;
+                                    line-height: 20px;
+                                    margin: 0;
+                                    @media (max-width: 1023px) {
+                                        font-size: 16px;
+                                        line-height: 20px;
+                                    }
+                                }
+                                p {
+                                    color: #777777;
+                                    font-size: 17px;
+                                    font-weight: normal;
+                                    letter-spacing: 0;
+                                    line-height: 34px;
+                                    border-bottom: none;
+                                    margin-bottom: 0rem;
+                                    @media (max-width: 1023px) {
+                                        font-size: 14px;
+                                        line-height: 20px;
+                                    }
+                                    span {
+                                        font-weight: bold;
+                                    }
+                                }
                             }
                         }
                     }
+                    
                 }
             }
         }
       }
 }
+
+.lets-talk-container {
+    max-width: 1430px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    padding-top: 129px;
+    @media (max-width: 767px) {
+        padding-top: 60px;
+        flex-direction: column;
+    }
+    .general-info {
+        width: 100%;
+        max-width: 430px;
+        padding: 0 1rem 2rem 1rem;
+        background: #F8F8F8;
+        position: relative;
+        @media (max-width: 767px) {
+            max-width: 100%;
+            padding: 0 1rem 0rem 1rem;
+        }
+        h2 {
+            margin: 3rem 0 4rem 0;
+            @media (max-width: 767px) {
+                margin: 2rem 0 2rem 0;
+            }
+            div {
+                span {
+                    font-size: 39px;
+                    line-height: 56px;
+                }
+            }
+        }
+    
+        div {
+            margin-bottom: 2rem;
+            h4 {
+                position: relative;
+                color: #0065A1;
+                font-size: 15px;
+                font-weight: bold;
+                letter-spacing: 0;
+                line-height: 25px;
+                text-transform: uppercase;
+                margin: 0 0 0.5rem;
+                padding: 0 0 0.5rem;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    width: 90%;
+                    height: 1px;
+                    left: 0;
+                    bottom: 0;
+                    background-color: #979797;
+                    opacity: 0.5;
+                }
+            }
+            ul {
+                padding: 0px;
+                margin: 0px;
+                li {
+                    color: #979797;
+                    font-size: 15px;
+                    letter-spacing: 0;
+                    line-height: 23px;
+                    list-style-type: none;
+                    margin-bottom: 0.5rem;
+                    &.social-icon {
+                        padding-left: 1.5rem;
+                        background-repeat: no-repeat;
+                        background-position: center left;
+                        background-size: 15px;
+
+                        &.phone {
+                            background-image: url('../images/svg/clavis-phone.svg');
+                        }
+                        &.mail {
+                            background-image: url('../images/svg/clavis-contact.svg');
+                        }
+                        &.linkedin {
+                            background-image: url('../images/svg/clavis-in.svg');
+                        }
+                    }
+                }
+            }
+        }
+        &::after {
+            content: '';
+            top: 0px;
+            right: 0px;
+            position: absolute;
+            width: 50vw;
+            background: #F8F8F8;
+            height: 100%;
+            z-index: -1;
+
+        }
+    }
+    .form {
+        width: 100%;
+        padding: 4rem 0;
+        @media (max-width: 767px) {
+            padding: 2rem 0 4rem;
+        }
+        form {
+            margin: 0 auto;
+            width: 100%;
+            max-width: 750px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            padding: 0 1rem;
+            justify-content: space-between;
+            div {
+                width: 47%;
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 1.5rem;
+                label {
+                    font-weight: bold;
+                    margin-bottom: 0.5rem;
+                    display: inline-block;
+                }
+                input {
+                    border: 1px solid #979797;
+                    border-radius: 3px;
+                    padding: 7px;
+                    background: #F8F8F8;
+                }
+                &:nth-child(5) {
+                    width: 100%;
+                    display: block;
+                    textarea {
+                        padding: 1rem;
+                        width: 100%;
+                        height: 38vh;
+                    }
+                    label {
+                        font-weight: bold;
+                        margin-bottom: 0.5rem;
+                    }
+                }
+                &:last-of-type {
+                    margin-bottom: 0rem;
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    div {
+                        width: 47%;
+                        display: flex;
+                        button {
+                            background-color: $yellow;
+                            color: $white;
+                            border: none;
+                            font-weight: bold;
+                            text-transform: uppercase;
+                            font-size: 12px;
+                            line-height: 14px;
+                            padding: 1rem;
+                            width: 100%;
+                        }
+                    }
+
+                }
+                
+            }
+        }
+    }
+    
+}
+
 
 

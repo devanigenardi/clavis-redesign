@@ -4,77 +4,195 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CLAVIS</title>
-    <link rel="stylesheet" href="app.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-    <style type="text/css">
-        .flex-caption {
-          width: 96%;
-          padding: 2%;
-          left: 0;
-          bottom: 0;
-          background: rgba(0,0,0,.5);
-          color: #fff;
-          text-shadow: 0 -1px 0 rgba(0,0,0,.3);
-          font-size: 14px;
-          line-height: 18px;
-        }
-      </style>
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
     
-    <div class="carousel">
+    <div class="wrapper">
+
+        <section class="slab-full slab-no-padding">
+            <nav class="nav nav-alt">
+                <div class="nav-container">
+                    <a class="nav-logo-container" href="index.html"></a>
+                    <ul class="nav-menu">
+                        <li class="nav-item">
+                            <a href="who-we-are.html" class="nav-link">WHO WE ARE</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="what-we-believe.html" class="nav-link">WHAT WE BELEIVE</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="investment-focus.html" class="nav-link">INVESTMENT FOCUS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="potfolio.html" class="nav-link">PORTFOLIO</a>
+                        </li>
+                        <li class="nav-item nav-item-last">
+                            <a href="lets-talk.html" class="yellow-cta">LET'S TALK</a>
+                        </li>
+                    </ul>
+                    <div class="hamburger">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                </div>
+            </nav>
+        </section>
+            
+        </header>
+
+        <main class="main main-alt">
+
+            <section class="main-content">
+
+                <section class="slab-full slab-no-padding-complete ">
+                    
+                  <div class="lets-talk-container">
+                    <div class="general-info">
+                      <h2 class="main-headline headline-animated">
+                        <div class="line">
+                            <span>Let’s talk details.</span>
+                        </div>
+                      </h2>
+                      <div class="info-entry">
+                        <h4>General Inquiries</h4>
+                        <ul>
+                          <li class="social-icon mail">info@claviscp.com  </li>
+                          <li class="social-icon phone">214.812.9199</li>
+                          <li class="social-icon linkedin">Let’s Connect</li>
+                        </ul>
+                      </div>
+                      <div class="info-entry">
+                        <h4>Investment Inquiries</h4>
+                        <ul>
+                          <li class="social-icon mail">phamner@claviscp.com </li>
+                          <li class="social-icon phone">214.812.9540</li>
+                        </ul>
+                      </div>
+                      <div class="social-icon info-entry">
+                        <h4>Investor Relations</h4>
+                        <ul>
+                          <li class="social-icon mail">tdauphinais@claviscp.com  </li>
+                          <li class="social-icon phone">214.989.7050</li>
+                        </ul>
+                      </div>
+                      <div class="info-entry">
+                        <h4>Our Office</h4>
+                        <ul>
+                          <li>8235 Douglas</li>
+                          <li>Suite 960</li>
+                          <li>Dallas, Texas 75225</li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div class="form">
+                      <form action="">
+
+                        <div>
+                          <label for="">Your name</label>
+                          <input type="text" required="required" />
+                        </div>
+                        <div>
+                          <label for="">Company Name</label>
+                          <input type="text" required="required" />
+                        </div>
+                        <div>
+                          <label for="">Phone Number</label>
+                          <input type="tel" placeholder="000-000-0000" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required="required" />
+                        </div>
+                        <div>
+                          <label for="">Email Address</label>
+                          <input type="email" required="required" />
+                        </div>
+                        <div>
+                          <label for="">How can we assist?</label>
+                          <textarea required="required" ></textarea>
+                        </div>
   
-        <section class="slider">
-            <div class="flexslider">
-              <ul class="slides">
-                <li>
-                  <div>
-                    <img src="http://flexslider.woothemes.com/images/kitchen_adventurer_cheesecake_brownie.jpg" />
-                    <p class="flex-caption">Adventurer Cheesecake Brownie</p>
+                        <div>
+                          <div class="captcha"></div>
+                          <div>
+                            <button type="submit" value="submit">SUBMIT</button>
+                          </div>
+                        </div>
+  
+                      </form>
+                    </div>
+
                   </div>
-                </li>
-                <li>
-                  <div>
-                    <img src="http://flexslider.woothemes.com/images/kitchen_adventurer_lemon.jpg" />
-                  <p class="flex-caption">Adventurer Lemon</p>
-                  </div>
-                </li>
-                <li>
-                  <div>
-                    <img src="http://flexslider.woothemes.com/images/kitchen_adventurer_donut.jpg" />
-                  <p class="flex-caption">Adventurer Donut</p>
-                  </div>
-                </li>
-                <li>
-                  <div>
-                    <img src="http://flexslider.woothemes.com/images/kitchen_adventurer_caramel.jpg" />
-                  <p class="flex-caption">Adventurer Caramel</p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </section>
-        
-      </div>
-      
-      
+
+                </section>
+                
+                
+            </section>
+
+            <footer class="footer footer-alt">
+                <section class="slab-standard footer-bg">
+                    <div class="footer-top pt-5">
+                        <div class="footer-info pb-1">
+                            <a href="#" class="yellow-cta">LET’S TALK</a>
+                            <ul>
+                                <li>8235 Douglas</li>
+                                <li>Suite 960</li>
+                                <li>Dallas, Texas 75225</li>
+                            </ul>
+                            <ul>
+                                <li>214.812.9199</li>
+                                <li>info@claviscp.com</li>
+                            </ul>
+                        </div>
+                        <div class="footer-nav">
+                            <ul>
+                                <li><a href="#">INVESTMENT CRITERIA</a></li>
+                                <li><a href="#">INVESTOR LOGIN</a></li>
+                            </ul>
+                            <ul>
+                                <li><a href="#">CLAVIS IMPACT FUND</a></li>
+                                <li><a href="#">LINKEDIN</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer-bottom pt-2  pb-2">
+                        <p>© 2021 — Clavis Capital Partners. All rights reserved.</p>
+                        <a href="#">privacy policy</a>
+                    </div>
+                </section>
+                
+            </footer>
+
+        </main>
+
+    </div>
 
 
-      <script src="js/jqery-min.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/ScrollTrigger.min.js"></script>
+    <script src="js/script.js"></script>
 
-      <!-- FlexSlider -->
-      <script defer src="js/jquery.flexslider.js"></script>
-    
-      <script type="text/javascript">
-        $(window).load(function(){
-          $('.flexslider').flexslider({
-            animation: "fade",
-            animationLoop: true,
-          });
+    <!-- Initialize Swiper -->
+    <script>
+
+        const heroRevealing = gsap.timeline();
+
+        heroRevealing.from(".line span", 0.7, {
+            autoAlpha:0,
+            left: 25,
+            ease: "back.out(1.7)",
+            delay: .5,
+            stagger: {
+                amount: 0.3
+            }
         });
-      </script>
+
+    </script>
 
     
 </body>
