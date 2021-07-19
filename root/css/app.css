@@ -2774,6 +2774,387 @@ body .wrapper .main .bottom__spacer {
   left: 50px;
 }
 
+.global-portfolio .modal {
+  position: fixed;
+  top: 0;
+  right: -100vw;
+  width: 100vw;
+  height: 100vh;
+  background: #ffffff;
+  z-index: 1;
+}
+
+.global-portfolio .modal::before {
+  content: '';
+  position: absolute;
+  left: 0px;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background: #F8F8F8;
+}
+
+@media (max-width: 767px) {
+  .global-portfolio .modal::before {
+    width: 100%;
+  }
+}
+
+.global-portfolio .modal .modal-wrapper {
+  max-width: 1430px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 130px 1rem 1rem;
+  position: relative;
+}
+
+@media (max-width: 767px) {
+  .global-portfolio .modal .modal-wrapper {
+    height: 100%;
+  }
+}
+
+.global-portfolio .modal .modal-wrapper .modal-close-btn {
+  position: absolute;
+  right: 1rem;
+  top: 150px;
+  font-size: 20px;
+  border: none;
+  background: #ffffff;
+  z-index: 4;
+}
+
+@media (max-width: 767px) {
+  .global-portfolio .modal .modal-wrapper .modal-close-btn {
+    background: none;
+  }
+}
+
+.global-portfolio .modal .modal-wrapper .modal-close-btn .close-modal {
+  width: 30px;
+  height: 30px;
+  display: block;
+  background: url("../images/svg/clavis-close-modal.svg") no-repeat;
+}
+
+@media (max-width: 767px) {
+  .global-portfolio .modal .modal-wrapper .modal-close-btn .close-modal {
+    width: 17px;
+    height: 17px;
+    background-size: cover;
+  }
+}
+
+.global-portfolio .modal .members-cv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-top: -1rem;
+}
+
+.global-portfolio .modal .members-cv:before {
+  content: '';
+  height: 50px;
+  width: 100%;
+  bottom: 0px;
+  left: 0px;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#999999+0,e5e5e5+51&0+0,1+51 */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(153, 153, 153, 0)), color-stop(51%, #e5e5e5));
+  background: linear-gradient(to bottom, rgba(153, 153, 153, 0) 0%, #e5e5e5 51%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00999999', endColorstr='#e5e5e5',GradientType=0 );
+  /* IE6-9 */
+  position: absolute;
+  z-index: 1;
+}
+
+@media (max-width: 767px) {
+  .global-portfolio .modal .members-cv {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    height: 100%;
+    overflow: scroll;
+  }
+}
+
+.global-portfolio .modal .members-cv .member-info {
+  padding: 5rem 6rem 2rem 0;
+  max-width: 380px;
+  width: 100%;
+}
+
+@media (max-width: 1023px) {
+  .global-portfolio .modal .members-cv .member-info {
+    padding: 2rem 0rem 0rem 0;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .global-portfolio .modal .members-cv .member-info .member-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.global-portfolio .modal .members-cv .member-info .member-header img {
+  max-width: 195px;
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 767px) {
+  .global-portfolio .modal .members-cv .member-info .member-header img {
+    width: 100px;
+    height: 120px;
+  }
+}
+
+.global-portfolio .modal .members-cv .member-info .member-header div {
+  margin-left: 0rem;
+}
+
+@media (max-width: 767px) {
+  .global-portfolio .modal .members-cv .member-info .member-header div {
+    margin-left: 1rem;
+  }
+}
+
+.global-portfolio .modal .members-cv .member-info .member-header div ul {
+  margin: 3rem 0;
+  border-top: none;
+  border-bottom: 1px solid #DBDBDB;
+  padding: 0;
+}
+
+.global-portfolio .modal .members-cv .member-info .member-header div ul li {
+  background-image: none;
+  padding: 0px;
+}
+
+.global-portfolio .modal .members-cv .member-info .member-header div ul li p {
+  color: #6C6C6C;
+  text-transform: uppercase;
+}
+
+.global-portfolio .modal .members-cv .member-info .member-header div ul li h4 {
+  color: #0065A1;
+  padding: 0;
+  margin: 0 0 1rem 0;
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.global-portfolio .modal .members-cv .member-info .member-header div ul li:last-of-type {
+  margin-bottom: 3rem;
+}
+
+.global-portfolio .modal .members-cv .member-info .member-header div a {
+  font-size: 13px;
+  line-height: 26px;
+  font-weight: bold;
+  color: #0065A1;
+  text-decoration: none;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-right: 30px;
+  width: 100%;
+  max-width: 170px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.global-portfolio .modal .members-cv .member-info .member-header div a svg {
+  width: 30px;
+  position: absolute;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  right: 5px;
+}
+
+.global-portfolio .modal .members-cv .member-info .member-header div a svg .collab-arrow-0 {
+  fill: none;
+  stroke: #060606;
+  stroke-width: 3;
+  stroke-linecap: round;
+}
+
+.global-portfolio .modal .members-cv .member-info .member-header div a svg .collab-arrow-1 {
+  fill: none;
+  stroke: #060606;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.global-portfolio .modal .members-cv .member-info .member-header div a.card-link:hover svg .collab-arrow-0 {
+  stroke: #0065A1;
+}
+
+.global-portfolio .modal .members-cv .member-info .member-header div a.card-link:hover svg .collab-arrow-1 {
+  stroke: #0065A1;
+}
+
+.global-portfolio .modal .members-cv .member-info .member-header div a.card-link:hover svg {
+  right: 0px;
+}
+
+.global-portfolio .modal .members-cv .member-info .member-header div a.card-link:hover {
+  text-decoration: underline;
+}
+
+.global-portfolio .modal .members-cv .scrollable-member-desc {
+  position: relative;
+  height: 100vh;
+}
+
+@media (max-width: 767px) {
+  .global-portfolio .modal .members-cv .scrollable-member-desc {
+    height: auto;
+  }
+}
+
+.global-portfolio .modal .members-cv .scrollable-member-desc .member-desc {
+  padding: 5.5rem 3rem 10rem 8rem;
+  margin-right: 4rem;
+  background: #ffffff;
+  height: 100vh;
+  overflow: scroll;
+  position: relative;
+}
+
+@media (max-width: 1023px) {
+  .global-portfolio .modal .members-cv .scrollable-member-desc .member-desc {
+    padding: 5.5rem 3rem 10rem 1rem;
+    margin-right: 0rem;
+    background: #F8F8F8;
+  }
+}
+
+@media (max-width: 767px) {
+  .global-portfolio .modal .members-cv .scrollable-member-desc .member-desc {
+    padding: 4rem 0 1rem 0;
+    margin-right: 0rem;
+    height: 100%;
+  }
+}
+
+.global-portfolio .modal .members-cv .scrollable-member-desc .member-desc p {
+  font-size: 21px;
+  line-height: 33px;
+  width: 100%;
+  max-width: 850px;
+}
+
+@media (max-width: 1023px) {
+  .global-portfolio .modal .members-cv .scrollable-member-desc .member-desc p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+.global-portfolio .modal .members-cv .scrollable-member-desc .member-desc ul {
+  padding: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 767px) {
+  .global-portfolio .modal .members-cv .scrollable-member-desc .member-desc ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
+.global-portfolio .modal .members-cv .scrollable-member-desc .member-desc ul li {
+  list-style-type: none;
+  margin-right: 1rem;
+  font-size: 13px;
+  color: #6C6C6C;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 767px) {
+  .global-portfolio .modal .members-cv .scrollable-member-desc .member-desc ul li {
+    margin-bottom: 1rem;
+    width: 130px;
+  }
+}
+
+.global-portfolio .modal .members-cv .scrollable-member-desc .member-desc ul li i {
+  padding-right: 0.5rem;
+}
+
+@media (max-width: 767px) {
+  .global-portfolio .modal .members-cv .scrollable-member-desc .member-desc ul li i {
+    width: 130px;
+  }
+}
+
+.global-portfolio .modal .members-cv .scrollable-member-desc .member-desc ul li i img {
+  height: auto;
+  width: 20px;
+}
+
+.global-portfolio .modal .members-cv .scrollable-member-desc .member-desc ul li i img.ico-1 {
+  width: 40px;
+}
+
+.global-portfolio .modal .members-cv .scrollable-member-desc .member-desc ul li i img.ico-2 {
+  width: 29px;
+}
+
+.global-portfolio .modal .members-cv .scrollable-member-desc .member-desc ul li i img.ico-3 {
+  width: 27px;
+}
+
+.global-portfolio .modal .members-cv .scrollable-member-desc .member-desc ul li span {
+  display: inline-block;
+}
+
 .wrapper .footer {
   width: 100%;
   height: auto;
