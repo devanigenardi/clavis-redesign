@@ -575,6 +575,34 @@ body .wrapper .main .bottom__spacer {
   color: #ffffff;
 }
 
+@media (max-width: 767px) {
+  .nav-alt .nav-menu .nav-item::after {
+    content: '';
+    position: absolute;
+    bottom: -1.7rem;
+    left: 0px;
+    height: 1px;
+    width: 100%;
+    background-color: #0065A1;
+    opacity: 0.5;
+  }
+  .nav-alt .nav-menu .nav-item:last-child::after {
+    content: '';
+    display: none;
+  }
+}
+
+.nav-alt .nav-menu .nav-item:first-child::before {
+  content: '';
+  position: absolute;
+  top: -1.7rem;
+  left: 0px;
+  height: 1px;
+  width: 100%;
+  background-color: #0065A1;
+  opacity: 0.5;
+}
+
 .nav-alt .hamburger .bar {
   background: #0065A1;
 }
@@ -740,10 +768,40 @@ body .wrapper .main .bottom__spacer {
   }
   .nav-item {
     margin: 0.5rem 0;
-    font-size: 17px;
+    font-size: 19px;
     line-height: 21px;
     position: relative;
     width: 100%;
+  }
+}
+
+@media only screen and (max-width: 767px) and (max-width: 767px) {
+  .nav-item::after {
+    content: '';
+    position: absolute;
+    bottom: -1.7rem;
+    left: 0px;
+    height: 1px;
+    width: 100%;
+    background-color: #ffffff;
+    opacity: 0.5;
+  }
+  .nav-item:last-child::after {
+    content: '';
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .nav-item:first-child::before {
+    content: '';
+    position: absolute;
+    top: -1.7rem;
+    left: 0px;
+    height: 1px;
+    width: 100%;
+    background-color: #ffffff;
+    opacity: 0.5;
   }
   .hamburger {
     display: block;
@@ -1598,6 +1656,7 @@ body .wrapper .main .bottom__spacer {
   color: #ffffff;
   text-decoration: none;
   font-weight: bold;
+  display: inline-block;
 }
 
 .tab-quotes {
@@ -2081,6 +2140,13 @@ body .wrapper .main .bottom__spacer {
         -ms-flex-align: center;
             align-items: center;
   }
+  .modal .members-cv .member-info .member-header div {
+    margin-right: 1rem;
+  }
+  .modal .members-cv .member-info .member-header div h4 {
+    font-size: 21px;
+    line-height: 27px;
+  }
 }
 
 .modal .members-cv .member-info .member-header img {
@@ -2122,7 +2188,7 @@ body .wrapper .main .bottom__spacer {
 
 @media (max-width: 767px) {
   .modal .members-cv .member-info .member-header div p {
-    line-height: 13px;
+    line-height: 17px;
   }
 }
 
@@ -2195,7 +2261,7 @@ body .wrapper .main .bottom__spacer {
 
 @media (max-width: 767px) {
   .modal .members-cv .scrollable-member-desc .member-desc {
-    padding: 4rem 0 1rem 0;
+    padding: 4rem 2rem 1rem 0;
     margin-right: 0rem;
     height: 100%;
   }
@@ -2271,6 +2337,12 @@ body .wrapper .main .bottom__spacer {
 @media (max-width: 767px) {
   .modal .members-cv .scrollable-member-desc .member-desc ul li i {
     width: 130px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
@@ -2293,6 +2365,12 @@ body .wrapper .main .bottom__spacer {
 
 .modal .members-cv .scrollable-member-desc .member-desc ul li span {
   display: inline-block;
+}
+
+@media (max-width: 767px) {
+  .modal .members-cv .scrollable-member-desc .member-desc ul li span {
+    width: 150px;
+  }
 }
 
 .parallax-slide {
@@ -3085,7 +3163,7 @@ body .wrapper .main .bottom__spacer {
 
 @media (max-width: 767px) {
   .global-portfolio .modal .members-cv .scrollable-member-desc .member-desc {
-    padding: 4rem 0 1rem 0;
+    padding: 4rem 2rem 1rem 0;
     margin-right: 0rem;
     height: 100%;
   }
@@ -3370,6 +3448,12 @@ body .wrapper .main .bottom__spacer {
       -ms-flex-direction: column;
           flex-direction: column;
   margin-bottom: 1.5rem;
+}
+
+@media (max-width: 767px) {
+  .lets-talk-container .form form div {
+    width: 100%;
+  }
 }
 
 .lets-talk-container .form form div label {
