@@ -215,6 +215,7 @@
                 p {
                     font-size: 14px;
                     line-height: 26px;
+                    margin-bottom: 1rem;
                     @media (max-width: 767px) {
                         line-height: 16px;
                     }
@@ -252,6 +253,7 @@
                         top: 50%;
                         -ms-transform: translateY(-50%);
                         transform: translateY(-50%);
+                        text-transform: uppercase;
                     }
                 }
             }
