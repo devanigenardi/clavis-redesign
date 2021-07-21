@@ -499,13 +499,13 @@
                         i {
                             padding-right: 0.5rem;
                             @media (max-width: 767px) {
-                                width: 130px;
+                                width: 50px;
                                 display: flex;
                                 justify-content: center;
                             }
                             img {
                                 height: auto;
-                                width: 20px;
+                                width: 50px;
                                 &.ico-1 {
                                     width: 40px;
                                 }
@@ -515,6 +515,9 @@
 
                                 &.ico-3 {
                                     width: 27px;
+                                }
+                                &.ico-4 {
+                                    width: 20px;
                                 }
                             }
                         }

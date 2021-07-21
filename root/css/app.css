@@ -2336,7 +2336,7 @@ body .wrapper .main .bottom__spacer {
 
 @media (max-width: 767px) {
   .modal .members-cv .scrollable-member-desc .member-desc ul li i {
-    width: 130px;
+    width: 50px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2348,7 +2348,7 @@ body .wrapper .main .bottom__spacer {
 
 .modal .members-cv .scrollable-member-desc .member-desc ul li i img {
   height: auto;
-  width: 20px;
+  width: 50px;
 }
 
 .modal .members-cv .scrollable-member-desc .member-desc ul li i img.ico-1 {
@@ -2361,6 +2361,10 @@ body .wrapper .main .bottom__spacer {
 
 .modal .members-cv .scrollable-member-desc .member-desc ul li i img.ico-3 {
   width: 27px;
+}
+
+.modal .members-cv .scrollable-member-desc .member-desc ul li i img.ico-4 {
+  width: 20px;
 }
 
 .modal .members-cv .scrollable-member-desc .member-desc ul li span {
