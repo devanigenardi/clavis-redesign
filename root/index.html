@@ -95,10 +95,17 @@
                     <div class="flex-grid-container pt-2">
                         <div class="flex-grid">
                             <div class="col two-cols ptm-2">
-                                <div class="signature">
+                                <div class="signature pb-3">
                                     <h2 class="main-headline headline-animation-container"><span class="headline-animation">We bring our <span class="no-break">hard hat.</span></span></h2>
+                                    <div>
+                                        <img src="images/clavis-signature.png" alt="Todd Dauphinais" />
+                                        <div>
+                                            <h3>Todd Dauphinais</h3>
+                                            <p>Founding Principal & Managing Partner</p>
+                                        </div>
+                                    </div>
                                 </div>
-                                <p class="hide-desktop">Clavis professionals are career operators, not financial engineers. All of our Clavis professionals are career operators, not financial engineers. All of our Principals have held leadership positions in large and small manufacturing and industrial companies across a number of different sectors throughout their careers. We bring an operator mindset to our investing activity. We bring experience. We bring connections. We bring resources. We bring our hard hat. 
+                                <p class="hide-desktop">Clavis professionals are career operators, not financial engineers. All of our Principals have held leadership positions in large and small manufacturing and industrial companies across a number of different sectors throughout their careers. We bring an operator mindset to our investing activity. We bring experience. We bring connections. We bring resources. We bring our hard hat.  
                                 </p>
                                 <div class="pt-5 ptm-1">
                                     <div class="flex-grid pull-out-1 pb-4 ptm-2 pbm-2">
@@ -124,7 +131,7 @@
                                 </div>
                             </div>
                             <div class="col two-cols">
-                                <p class="hide-mobile pt-2 pb-4">Clavis professionals are career operators, not financial engineers. All of our Principals have held leadership positions in large and small manufacturing and industrial companies across a number of different sectors throughout their careers. We bring an operator mindset to our investing activity. we bring experience. we bring connections. we bring resources. We bring our hard hat.
+                                <p class="hide-mobile pt-2 pb-4">Clavis professionals are career operators, not financial engineers. All of our Principals have held leadership positions in large and small manufacturing and industrial companies across a number of different sectors throughout their careers. We bring an operator mindset to our investing activity. We bring experience. We bring connections. We bring resources. We bring our hard hat. 
                                 </p>
                                 <img class="hard-hat" src="images/clavis-helmet-2.jpeg" alt="We bring our hard hat." />
                             </div>
@@ -144,8 +151,38 @@
                             </div>
                             <div class="col two-cols">
                                 <div class="tab-quotes pbxs-1">
+
+                                    <div class="flexslider">
+                                        <ul class="slides">
+                                          <li class="tab-content">
+                                            <p>“They have a fresh perspective, are wicked smart and super fast, and still dive into the strategic planning.”</p>
+                                            <div>
+                                                <h5>Tammy P.</h5>
+                                                <p>Chief Commercial Officer, <span>DCG ONE</span></p>
+                                            </div>
+                                          </li>
+                                          <li class="tab-content">
+                                            <p>“Lorem ipsum…”.</p>
+                                            <div>
+                                                <h5>Brad C.</h5>
+                                                <p>President, <span>DCG ONE</span></p>
+                                            </div>
+                                          </li>
+                                          <li class="tab-content">
+                                            <p>“Lorem ipsum…”</p>
+                                            <div>
+                                                <h5>Ben A.</h5>
+                                                <p>Managing Director, <span>DCG ONE</span></p>
+                                            </div>
+                                          </li>
+                                        </ul>
+                    
+                                        <div class="arrow-dowm">
+                                            <img src="images/svg/clavis-arrow-down.svg" alt="" />
+                                        </div>
+                                      </div>
                                     <!-- Content -->
-                                    <div class="tab-content tab-content-1 active">
+                                    <!-- <div class="tab-content tab-content-1 active">
                                         <p>“They have a fresh perspective, are wicked smart and super fast, and still dive into the strategic planning.”</p>
                                         <div>
                                             <h5>Tammy P.</h5>
@@ -165,13 +202,13 @@
                                             <h5>Ben A.</h5>
                                             <p>Managing Director, <span>DCG ONE</span></p>
                                         </div>
-                                    </div>
+                                    </div> -->
                                     <!-- Tabs -->
-                                    <div class="tab-nav">
+                                    <!-- <div class="tab-nav">
                                         <a href="#" class="tab active fade-thum" data-toggle-target=".tab-content-1">&nbsp;</a>
                                         <a href="#" class="tab" data-toggle-target=".tab-content-2">&nbsp;</a>
                                         <a href="#" class="tab" data-toggle-target=".tab-content-3">&nbsp;</a>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
@@ -262,9 +299,10 @@
     $(window).load(function(){
           $('.flexslider').flexslider({
             animation: "fade",
-            slideshowSpeed: 4000,
+            slideshowSpeed: 5000,
+            animationSpeed: 700, 
             animationLoop: true,
-            pauseOnAction: false, 
+            pauseOnAction: false,
           });
         });
 

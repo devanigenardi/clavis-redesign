@@ -115,16 +115,50 @@ body {
                 z-index: 2;
                 .signature {
                     position: relative;
-                    padding-top: 50%;
-                    background: url('../images/clavis-helmet-1.jpg') no-repeat;
-                    background-size: 86%;
-                    background-position: top left;
+                    padding-top: 38%;
+                    background: url('../images/clavis-helmet-1.png') no-repeat;
+                    background-size: 59%;
+                    background-position: 71% 2%;
                     h2 {
                         position: absolute;
                         left: 0px;
                         top: -1.2rem;
                         @media (max-width: 767px) {
                             top: -4rem;
+                        }
+                    }
+                    & > div {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        align-items: flex-end;
+                        img {
+                            flex: 1 1 11%;
+                            max-width: 140px;
+                            width: 100%;
+                            @media (max-width: 767px) {
+                                max-width: 100px;
+                            }
+                        }
+
+                        div {
+                            display: flex;
+                            flex-direction: column;
+                            margin-left: 1rem;
+                            flex: 1 1 70%;
+                            h3 {
+                                font-size: 21px;
+                                @media (max-width: 767px) {
+                                    font-size: 16px;
+                                    line-height: 18px;
+                                }
+                            }
+                            p {
+                                @media (max-width: 767px) {
+                                    font-size: 12px;
+                                    line-height: 14px;
+                                }
+                            }
                         }
                     }
                 }

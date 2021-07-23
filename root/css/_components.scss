@@ -45,85 +45,113 @@
     background-size: 15%;
     margin-top:7rem;
     position: relative;
+    height: auto;
+    overflow: hidden;
     @media (max-width: 767px){
         margin-top:2rem;
     }
-    .tab-content {
-        display: none;
-        & > p {
-            color: #060606;
-            font-size: 29px;
-            letter-spacing: 0;
-            line-height: 49px;
-            height: 165px;
-            padding: 2rem 0 15rem 0;
-            @media (max-width: 1300px){
-                height: initial;
-                padding: 2rem 0;
-            }
+    .flexslider {
+        .flex-direction-nav {
+            display: none;
         }
-        & > div {
+        .flex-control-nav {
             position: absolute;
-            bottom: -8px;
-            left: 36%;
+            bottom: -7px;
+            left: 0;
+            z-index: 3;
             @media (max-width: 1300px) {
                 position: initial;
                 margin-bottom: 2rem;
             }
-            & > h5 {
-                color: $dark-grey;
-                font-size: 20px;
-                font-weight: bold;
-                letter-spacing: 0;
-                line-height: 20px;
-                margin: 0px;
-            } 
-            & > p {
-                color: #777777;
-                font-size: 17px;
-                font-weight: normal;
-                letter-spacing: 0;
-                line-height: 34px;
-                span {
-                    font-weight: bold;
+            @media (max-width: 767px) {
+                display: block!important;
+                margin-bottom: 0rem;
+            }
+            li {
+                width: 60px;
+                height: 60px;
+                display: inline-block;
+                background-repeat: no-repeat;
+                background-size: cover;
+                margin-right: 1rem;
+                position: relative;
+                &:nth-child(1) {
+                    background-image: url('../images/clavis-usr1.png');
                 }
-            } 
-        }
-    }
-
-    .tab-nav {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        @media (max-width: 1300px) {
-            position: relative;
-        }
-        a.tab {
-            opacity: 0.5;
-        }
-        a {
-            width: 60px;
-            height: 60px;
-            display: inline-block;
-            background-repeat: no-repeat;
-            background-size: cover;
-            margin-right: 1rem;
-            &:nth-child(1) {
-                background-image: url('../images/clavis-usr1.png');
+                &:nth-child(2) {
+                    background-image: url('../images/clavis-usr2.png');
+                }
+                &:nth-child(3) {
+                    background-image: url('../images/clavis-usr3.png');
+                }
+                a {
+                    font-size: 0px;
+                    line-height: 0px;
+                    padding: 30px;
+                    width: 8px!important;
+                    height: 8px!important;
+                    opacity: 1!important;
+                    background: none!important;
+                    border-radius: 50%;
+                    position: absolute;
+                    &.flex-active {
+                        background: $white!important;
+                        opacity: 0.5!important;
+                    }
+                }
+              
             }
-            &:nth-child(2) {
-                background-image: url('../images/clavis-usr2.png');
+            @media (max-width: 767px) {
+              display: none;
             }
-            &:nth-child(3) {
-                background-image: url('../images/clavis-usr3.png');
+          }
+        .slides {
+            display: block;
+            height: auto;
+            overflow: hidden;
+            .tab-content {
+                display: none;
+                & > p {
+                    color: #060606;
+                    font-size: 29px;
+                    letter-spacing: 0;
+                    line-height: 49px;
+                    height: 165px;
+                    padding: 2rem 0 15rem 0;
+                    @media (max-width: 1300px){
+                        height: initial;
+                        padding: 2rem 0;
+                    }
+                }
+                & > div {
+                    position: absolute;
+                    bottom: -8px;
+                    left: 36%;
+                    @media (max-width: 1300px) {
+                        position: initial;
+                        margin-bottom: 2rem;
+                    }
+                    & > h5 {
+                        color: $dark-grey;
+                        font-size: 20px;
+                        font-weight: bold;
+                        letter-spacing: 0;
+                        line-height: 20px;
+                        margin: 0px;
+                    } 
+                    & > p {
+                        color: #777777;
+                        font-size: 17px;
+                        font-weight: normal;
+                        letter-spacing: 0;
+                        line-height: 37px;
+                        span {
+                            font-weight: bold;
+                        }
+                    } 
+                }
             }
         }
-    }
-    .tab-content.active {
-        display: block;
-    }
-    .fade-thum {
-        opacity: 1!important;
     }
   }
 
