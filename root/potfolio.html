@@ -49,7 +49,7 @@
             <section class="slab-full slab-no-padding top-intro">
                 <div class="flex-grid-container">
                     <div class="flex-grid pt-11 ptxs-5 pb-3">
-                        <div class="col two-cols pbxs-2">
+                        <div class="col pbxs-2">
                             <h2 class="main-headline headline-animated">
                                 <div class="line">
                                     <span>Who we’ve</span>
@@ -73,12 +73,55 @@
 
             <section class="main-content">
 
-                <section class="slab-full pbxs-0">
+                <section class="slab-full pbxs-0 portfolio-container">
+                    <div class="filter-col">
+
+                        <div class="filter-hero">
+                            <h3></h3>
+                            <button class="uncheak-all" id="checkAll" >CLEAR</button>
+                            <button class="show-hide-filter"></button>
+                        </div>
+
+                        <div class="filter-items-container">
+                            <fieldset class="platform">
+                                <legend>PLATFORM</legend>
+                                <input class="show-filter" id="plat-01" type="checkbox" name="plat-01" value="plat-01" />
+                                <label class="show-filter" for="plat-01">Business Services</label><br />
+                                <input class="show-filter" id="plat-02" type="checkbox" name="plat-02" value="plat-02" />
+                                <label class="show-filter" for="plat-02">Industrial Distribution</label><br />
+                                <input class="show-filter" id="plat-03" type="checkbox" name="plat-03" value="plat-03" />
+                                <label class="show-filter" for="plat-03">Aerospace</label><br />
+                                <input class="show-filter" id="plat-04" type="checkbox" name="plat-04" value="plat-04" />
+                                <label class="show-filter" for="plat-04">Infrastructure</label><br />
+                                <input class="show-filter" id="plat-05" type="checkbox" name="plat-05" value="plat-05" />
+                                <label class="show-filter" for="plat-05">Manufacturing</label>
+                            </fieldset>
+                            <fieldset class="status">
+                                <legend>STATUS</legend>
+                                <input class="show-filter" id="stat-01" type="checkbox" name="stat-01" value="stat-01" />
+                                <label class="show-filter" for="stat-01">Active</label><br />
+                                <input class="show-filter" id="" type="checkbox" disabled name="" value="" />
+                                <label class="show-filter" for="">Add on</label><br />
+                                <input class="show-filter" id="stat-02" type="checkbox" name="stat-02" value="stat-02" />
+                                <label class="show-filter" for="stat-02">Exited</label>
+                            </fieldset>
+                            <button class="uncheak-all-mobile" id="checkAllMobile" >CLEAR FILTER</button>
+                        </div>
+                        
+                        
+                        <!-- <div class="show plat-01 stat-01">bussines - current</div> -->
+                        <!-- <div class="show plat-02 stat-01">Industri - current</div>
+                        <div class="show plat-03 stat-01">Aerospace - current</div>
+                        <div class="show plat-04 stat-02">Infrastructurin - exited</div>
+                        <div class="show plat-05 stat-01">Manufacturing - current</div> -->
+                        
+                        
+                    </div>
                     <div class="flex-grid flex-grid-alt">
                         <!-- portfolio items -->
-                        <div class="flex-grid-thirds">
+                        <div class="flex-grid-thirds porfolio-items">
                             <!-- portfolio item 1 -->
-                            <div class="col porfolio porfolio-1">
+                            <div class="col porfolio porfolio-1 show plat-01 stat-01">
                                 <div class="our-team-card-btn js-btn-modal pb-2 pbm-2" data-id="1">
                                     <div class="team-card-info">
                                         <div class="profile-picture p-id-1"></div>
@@ -86,7 +129,10 @@
                                             <div class="thumb-logo">
                                                 <img src="images/svg/clavis-logo-thumb-1.svg" alt="">
                                             </div>
-                                            <h4 class="headline-dark-alt">Business Services Platform</h4>
+                                            <h4 class="headline-dark-alt">
+                                                <span>Industry:</span> Business Services Platform<br>
+                                                <span>Status:</span> Current
+                                            </h4>
                                             <p class="mb-1">Industry-leading specialty print production, packaging, and marketing solutions company.</p>
                                             <a href="#!" class="card-link">
                                                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -106,7 +152,7 @@
                                 </div>
                             </div>
                             <!-- portfolio item 2 -->
-                            <div class="col porfolio porfolio-2">
+                            <div class="col porfolio porfolio-2 show plat-02 stat-01">
                                 <div class="our-team-card-btn js-btn-modal pb-2 pbm-2" data-id="2">
                                     <div class="team-card-info">
                                         <div class="profile-picture p-id-2"></div>
@@ -114,8 +160,11 @@
                                             <div class="thumb-logo">
                                                 <img src="images/svg/clavis-logo-thumb-2.svg" alt="">
                                             </div>
-                                            <h4 class="headline-dark-alt">Industrial Distribution Platform</h4>
-                                            <p class="mb-1">Oilfield products distributor serving leading production and midstream customers</p>
+                                            <h4 class="headline-dark-alt">
+                                                <span>Industry:</span> Industrial Distribution Platform<br>
+                                                <span>Status:</span> Current
+                                            </h4>
+                                            <p class="mb-1">Oilfield products distributor serving leading production and midstream customers.</p>
                                             <a href="#!" class="card-link">
                                                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                                 viewBox="0 0 40 22" style="enable-background:new 0 0 40 22;" xml:space="preserve">
@@ -134,7 +183,7 @@
                                 </div>
                             </div>
                             <!-- portfolio item 3 -->
-                            <div class="col porfolio porfolio-3">
+                            <div class="col porfolio porfolio-3 show plat-03 stat-01">
                                 <div class="our-team-card-btn js-btn-modal pbm-2" data-id="3">
                                     <div class="team-card-info">
                                         <div class="profile-picture p-id-3"></div>
@@ -142,8 +191,134 @@
                                             <div class="thumb-logo">
                                                 <img src="images/svg/clavis-logo-thumb-3.svg" alt="">
                                             </div>
-                                            <h4 class="headline-dark-alt">Aerospace Platform</h4>
+                                            <h4 class="headline-dark-alt">
+                                                <span>Industry:</span> Aerospace Platform<br>
+                                                <span>Status:</span> Current
+                                            </h4>
                                             <p class="mb-1">Specialty maintenance tooling and ground support equipment manufacturer.</p>
+                                            <a href="#!" class="card-link">
+                                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                                viewBox="0 0 40 22" style="enable-background:new 0 0 40 22;" xml:space="preserve">
+                                                    <g id="Arrow_read_more">
+                                                        <g transform="translate(2.000000, 2.341987)">
+                                                            <line class="collab-arrow-0" x1="0" y1="8.7" x2="35" y2="8.7"/>
+                                                            <line class="collab-arrow-1" x1="35" y1="8.7" x2="26.3" y2="0"/>
+                                                            <line class="collab-arrow-1" x1="35" y1="8.7" x2="26.3" y2="17.3"/>
+                                                        </g>
+                                                    </g>
+                                                </svg>
+                                                <!-- <span>MEET THE CHIEF CULTURE OFFICER</span> -->
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col porfolio porfolio-4 show plat-03 stat-01">
+                                <div class="our-team-card-btn js-btn-modal pb-2 pbm-2" data-id="4">
+                                    <div class="team-card-info">
+                                        <div class="profile-picture p-id-4"></div>
+                                        <div class="team-card-content">
+                                            <div class="thumb-logo">
+                                                <img src="images/svg/clavis-logo-thumb-4.svg" alt="">
+                                            </div>
+                                            <h4 class="headline-dark-alt">
+                                                <span>Industry:</span> Aerospace Platform<br>
+                                                <span>Status:</span> Current
+                                            </h4>
+                                            <p class="mb-1">Manufacturer of high quality airplane jacks serving the commercial, business and military jet markets.</p>
+                                            <a href="#!" class="card-link">
+                                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                                viewBox="0 0 40 22" style="enable-background:new 0 0 40 22;" xml:space="preserve">
+                                                    <g id="Arrow_read_more">
+                                                        <g transform="translate(2.000000, 2.341987)">
+                                                            <line class="collab-arrow-0" x1="0" y1="8.7" x2="35" y2="8.7"/>
+                                                            <line class="collab-arrow-1" x1="35" y1="8.7" x2="26.3" y2="0"/>
+                                                            <line class="collab-arrow-1" x1="35" y1="8.7" x2="26.3" y2="17.3"/>
+                                                        </g>
+                                                    </g>
+                                                </svg>
+                                                <!-- <span>MEET THE CHIEF CULTURE OFFICER</span> -->
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- portfolio item 5 -->
+                            <div class="col porfolio porfolio-5 show plat-04 stat-01">
+                                <div class="our-team-card-btn js-btn-modal pb-2 pbm-2" data-id="5">
+                                    <div class="team-card-info">
+                                        <div class="profile-picture p-id-5"></div>
+                                        <div class="team-card-content">
+                                            <div class="thumb-logo">
+                                                <img src="images/svg/clavis-logo-thumb-5.svg" alt="">
+                                            </div>
+                                            <h4 class="headline-dark-alt">
+                                                <span>Industry:</span> Infrastructure Platform<br>
+                                                <span>Status:</span> Current
+                                            </h4>
+                                            <p class="mb-1">Manufacturing and construction of storage tanks for petroleum, agriculture and commercial liquids markets.</p>
+                                            <a href="#!" class="card-link">
+                                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                                viewBox="0 0 40 22" style="enable-background:new 0 0 40 22;" xml:space="preserve">
+                                                    <g id="Arrow_read_more">
+                                                        <g transform="translate(2.000000, 2.341987)">
+                                                            <line class="collab-arrow-0" x1="0" y1="8.7" x2="35" y2="8.7"/>
+                                                            <line class="collab-arrow-1" x1="35" y1="8.7" x2="26.3" y2="0"/>
+                                                            <line class="collab-arrow-1" x1="35" y1="8.7" x2="26.3" y2="17.3"/>
+                                                        </g>
+                                                    </g>
+                                                </svg>
+                                                <!-- <span>MEET THE CHIEF CULTURE OFFICER</span> -->
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- portfolio item 6 -->
+                            <div class="col porfolio porfolio-6 show plat-05 stat-02">
+                                <div class="our-team-card-btn js-btn-modal pbm-2" data-id="6">
+                                    <div class="team-card-info">
+                                        <div class="profile-picture p-id-6"></div>
+                                        <div class="team-card-content">
+                                            <div class="thumb-logo">
+                                                <img src="images/svg/clavis-logo-thumb-6.svg" alt="">
+                                            </div>
+                                            <h4 class="headline-dark-alt">
+                                                <span>Industry:</span> Manufacturing Platform<br>
+                                                <span>Status:</span> Exited 2020
+                                            </h4>
+                                            <p class="mb-1">Leading producer of high quality components for the firearms and defense markets.</p>
+                                            <a href="#!" class="card-link">
+                                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                                viewBox="0 0 40 22" style="enable-background:new 0 0 40 22;" xml:space="preserve">
+                                                    <g id="Arrow_read_more">
+                                                        <g transform="translate(2.000000, 2.341987)">
+                                                            <line class="collab-arrow-0" x1="0" y1="8.7" x2="35" y2="8.7"/>
+                                                            <line class="collab-arrow-1" x1="35" y1="8.7" x2="26.3" y2="0"/>
+                                                            <line class="collab-arrow-1" x1="35" y1="8.7" x2="26.3" y2="17.3"/>
+                                                        </g>
+                                                    </g>
+                                                </svg>
+                                                <!-- <span>MEET THE CHIEF CULTURE OFFICER</span> -->
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- portfolio item 7 -->
+                            <div class="col porfolio porfolio-7 show plat-01 stat-01">
+                                <div class="our-team-card-btn js-btn-modal pbm-2" data-id="7">
+                                    <div class="team-card-info">
+                                        <div class="profile-picture p-id-7"></div>
+                                        <div class="team-card-content">
+                                            <div class="thumb-logo">
+                                                <img src="images/svg/jetmac-logo-thumb-7.svg" alt="">
+                                            </div>
+                                            <h4 class="headline-dark-alt">
+                                                <span>Industry:</span> Business Services Platform<br>
+                                                <span>Status:</span> Current
+                                            </h4>
+                                            <p class="mb-1">Top-rated Digital Marketing Agency powered by two decades of experience serving programmatic and enterprise customers. </p>
                                             <a href="#!" class="card-link">
                                                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                                 viewBox="0 0 40 22" style="enable-background:new 0 0 40 22;" xml:space="preserve">
@@ -164,93 +339,11 @@
                         </div>
                     </div>
                     <!-- portfolio item 4 -->
-                    <div class="flex-grid flex-grid-alt">
+                    <!-- <div class="flex-grid flex-grid-alt">
                         <div class="flex-grid-thirds">
-                            <div class="col porfolio porfolio-4">
-                                <div class="our-team-card-btn js-btn-modal pb-2 pbm-2" data-id="4">
-                                    <div class="team-card-info">
-                                        <div class="profile-picture p-id-4"></div>
-                                        <div class="team-card-content">
-                                            <div class="thumb-logo">
-                                                <img src="images/svg/clavis-logo-thumb-4.svg" alt="">
-                                            </div>
-                                            <h4 class="headline-dark-alt">Aerospace Platform</h4>
-                                            <p class="mb-1">Manufacturer of high-quality airplane jacks serving the commercial, business and military jet markets</p>
-                                            <a href="#!" class="card-link">
-                                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                                viewBox="0 0 40 22" style="enable-background:new 0 0 40 22;" xml:space="preserve">
-                                                    <g id="Arrow_read_more">
-                                                        <g transform="translate(2.000000, 2.341987)">
-                                                            <line class="collab-arrow-0" x1="0" y1="8.7" x2="35" y2="8.7"/>
-                                                            <line class="collab-arrow-1" x1="35" y1="8.7" x2="26.3" y2="0"/>
-                                                            <line class="collab-arrow-1" x1="35" y1="8.7" x2="26.3" y2="17.3"/>
-                                                        </g>
-                                                    </g>
-                                                </svg>
-                                                <!-- <span>MEET THE CHIEF CULTURE OFFICER</span> -->
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- portfolio item 5 -->
-                            <div class="col porfolio porfolio-5">
-                                <div class="our-team-card-btn js-btn-modal pb-2 pbm-2" data-id="5">
-                                    <div class="team-card-info">
-                                        <div class="profile-picture p-id-5"></div>
-                                        <div class="team-card-content">
-                                            <div class="thumb-logo">
-                                                <img src="images/svg/clavis-logo-thumb-5.svg" alt="">
-                                            </div>
-                                            <h4 class="headline-dark-alt">Infrastructure Platform</h4>
-                                            <p class="mb-1">Manufacturing and construction of storage tanks for petroleum, agriculture and commercial liquids markets.</p>
-                                            <a href="#!" class="card-link">
-                                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                                viewBox="0 0 40 22" style="enable-background:new 0 0 40 22;" xml:space="preserve">
-                                                    <g id="Arrow_read_more">
-                                                        <g transform="translate(2.000000, 2.341987)">
-                                                            <line class="collab-arrow-0" x1="0" y1="8.7" x2="35" y2="8.7"/>
-                                                            <line class="collab-arrow-1" x1="35" y1="8.7" x2="26.3" y2="0"/>
-                                                            <line class="collab-arrow-1" x1="35" y1="8.7" x2="26.3" y2="17.3"/>
-                                                        </g>
-                                                    </g>
-                                                </svg>
-                                                <!-- <span>MEET THE CHIEF CULTURE OFFICER</span> -->
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- portfolio item 6 -->
-                            <div class="col porfolio porfolio-6">
-                                <div class="our-team-card-btn js-btn-modal pbm-2" data-id="6">
-                                    <div class="team-card-info">
-                                        <div class="profile-picture p-id-6"></div>
-                                        <div class="team-card-content">
-                                            <div class="thumb-logo">
-                                                <img src="images/svg/clavis-logo-thumb-6.svg" alt="">
-                                            </div>
-                                            <h4 class="headline-dark-alt">Manufacturing Platform <span>• Exited 2020</span></h4>
-                                            <p class="mb-1">Leading producer of high-quality components for the firearms and defense markets</p>
-                                            <a href="#!" class="card-link">
-                                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                                viewBox="0 0 40 22" style="enable-background:new 0 0 40 22;" xml:space="preserve">
-                                                    <g id="Arrow_read_more">
-                                                        <g transform="translate(2.000000, 2.341987)">
-                                                            <line class="collab-arrow-0" x1="0" y1="8.7" x2="35" y2="8.7"/>
-                                                            <line class="collab-arrow-1" x1="35" y1="8.7" x2="26.3" y2="0"/>
-                                                            <line class="collab-arrow-1" x1="35" y1="8.7" x2="26.3" y2="17.3"/>
-                                                        </g>
-                                                    </g>
-                                                </svg>
-                                                <!-- <span>MEET THE CHIEF CULTURE OFFICER</span> -->
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            
                         </div>
-                    </div>
+                    </div> -->
                 </section>
                 
                 <!-- modal overlay -->
@@ -598,6 +691,64 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="modal js-modal" data-id="modal7">
+                        <div class="modal-wrapper">
+                            <button class="modal-close-btn js-close-btn">
+                                <i class="close-modal" title="">&nbsp;</i>
+                            </button>
+                            <div class="members-cv">
+                                <div class="member-info">
+                                    <div class="member-header">
+                                        <img src="images/svg/jetmac-logo-thumb-7.svg" alt="" />
+                                        <div>
+                                            <ul>
+                                                <li>
+                                                    <p>PARTNERS SINCE7</p>
+                                                    <h4>2019</h4>
+                                                </li>
+                                                <li>
+                                                    <p>industry</p>
+                                                    <h4>Business Services Platform</h4>
+                                                </li>
+                                                <li>
+                                                    <p>STATUS</p>
+                                                    <h4>Current</h4>
+                                                </li>
+                                            </ul>
+                                             <a href="https://www.clickheredigital.com/" target="_blank" class="card-link">CLICKHERE.com
+                                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                                viewBox="0 0 40 22" style="enable-background:new 0 0 40 22;" xml:space="preserve">
+                                                    <g id="Arrow_read_more">
+                                                        <g transform="translate(2.000000, 2.341987)">
+                                                            <line class="collab-arrow-0" x1="0" y1="8.7" x2="35" y2="8.7"/>
+                                                            <line class="collab-arrow-1" x1="35" y1="8.7" x2="26.3" y2="0"/>
+                                                            <line class="collab-arrow-1" x1="35" y1="8.7" x2="26.3" y2="17.3"/>
+                                                        </g>
+                                                    </g>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="scrollable-member-desc">
+                                    <div class="member-desc pt-2 ptxs-2">
+                                        <p class="mb-2 capital-letter pb-3 pbxs-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut massa velit. Curabitur ac diam quis ante auctor iaculis. Donec maximus leo in orci commodo, et interdum enim consequat. Vivamus nec mattis nisl. Fusce mauris sem, tristique laoreet ultrices at, finibus at purus. Phasellus mi erat, vestibulum feugiat dignissim vitae, elementum ut nisi. Vivamus et venenatis tellus, eu bibendum sem.</p>
+                                        <div class="quote">
+                                            <p>Cras ex urna, elementum ac porta vitae, mollis tempus felis.</p>
+                                            <div class="member">
+                                                <img src="images/clavis-usr1.png" alt="" />
+                                                <div>
+                                                    <h5>Why Work With Us</h5>
+                                                    <p>Digital Marketing Agency <span>Click Here</span></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 
@@ -647,6 +798,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/ScrollTrigger.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/portfolio-filter.js"></script>
 
     <!-- Initialize Swiper -->
     <script>

@@ -14,7 +14,7 @@
         @media (max-width: 767px) {
             flex-direction: column;
             & > * {
-                width: 100%;
+                width: calc(100% - 2rem);
                 display: block;
             }
         }
@@ -114,6 +114,13 @@
             margin: 0 0 1rem 0;
             display: block;
             padding: 1rem;
+        }
+    }
+
+    &.porfolio-items {
+        flex-wrap: wrap;
+        .porfolio {
+            width: 30%;
         }
     }
   }

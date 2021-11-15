@@ -1,0 +1,200 @@
+.portfolio-container {
+    width: 100%;
+    max-width: 1430px;
+    margin: 0 auto;
+    display: flex;
+    @media (max-width: 767px) {
+        flex-direction: column;
+    }
+    .filter-col {
+        width: 24%;
+        padding: 0 1rem;
+        position: relative;
+        margin-right: 1%;
+        @media (max-width: 767px) {
+            width: 100%;
+            margin-right: 0;
+            padding-bottom: 30px;
+        }
+        .filter-hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #DBDBDB;
+            padding: 100px 0 6px 0;
+            position: relative;
+            @media (max-width: 767px) {
+                padding: 8px 0 6px 0;
+                background-color: $blue;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    height: 100%;
+                    width: 100vw;
+                    top: 0px;
+                    right: 0px;
+                    background-color: $blue;
+                    z-index: -1;
+                    margin-right: -1rem;
+                }
+            }
+            h3 {
+                color: $blue;
+                font-size: 19px;
+                font-weight: bold;
+                letter-spacing: 0;
+                &::before {
+                    content: 'FILTER BY:';
+                    @media (max-width: 767px) {
+                        content: 'FILTER:';
+                        color: $white;
+                    }
+                }
+            }
+            .uncheak-all {
+                border: none;
+                background: none;
+                font-size: 14px;
+                color: #777777;
+                font-weight: bold;
+                @media (max-width: 767px) {
+                    display: none;
+                }
+            }
+
+            .show-hide-filter {
+                content: '';
+                height: 11px;
+                width: 18px;
+                position: absolute;
+                right: 0px;
+                top: 0px;
+                bottom: 0;
+                margin: auto;
+                background-image: url('../images/arrow-down-alt.png');
+                background-repeat: no-repeat;
+                background-size: contain;
+                padding: 0;
+                border: 0;
+                background-color: transparent;
+                cursor: pointer;
+                @media (min-width: 768px) {
+                    display: none;
+                }
+            }
+            
+            .flip-arrow {
+                -webkit-transform: rotateX(180deg);
+                transform: rotateX(180deg);
+            }
+
+        }
+        .uncheak-all-mobile {
+            border: 0;
+            background-color: $white;
+            border: 1px solid $blue;
+            padding: 0;
+            height: 44px;
+            width: 100%;
+            color: $blue;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 21px;
+            margin-top: 20px;
+            @media (min-width: 768px) {
+                display: none;
+            }
+            
+        }
+        .filter-items-container {
+            @media (max-width: 768px) {
+                overflow:hidden;
+                transition:max-height 0.3s ease-out; // note that we're transitioning max-height, not height!
+                max-height:0px; // still have to hard-code a value!
+            }
+        }
+        .expand-filter-container {
+            max-height:450px;
+        }
+        fieldset {
+            padding: 0 0 0 30px;
+            border: 0;
+            margin: 0;
+            margin-top: 20px;
+            width: 100%;
+            legend {
+                color: $blue;
+                font-weight: bold;
+                font-size: 14px;
+                line-height: 21px;margin-bottom: 5px;
+                position: relative;
+                &:before {
+                    content: '';
+                    height: 11px;
+                    width: 18px;
+                    position: absolute;
+                    left: -25px;
+                    top: 4px;
+                    background-image: url('../images/arrow-down.jpg');
+                    background-repeat: no-repeat;
+                    background-size: contain;
+
+                }
+            }
+            input{
+                width: 10px; height: 10px;
+                border-radius: 50%;
+                background: none;
+                cursor: pointer;
+                border: 0;
+                appearance: none; -webkit-appearance: none; 
+                border: 2px solid #777777;
+                margin: 0;
+             }
+             input:checked{
+                border: 2px solid $blue;
+                background-color: $blue;
+            }
+            label {
+                font-size: 14px;
+                line-height: 21px;
+                color: #777777;
+                margin-bottom: 3px;
+                display: inline-block;
+            }
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            height: 100%;
+            width: 100vw;
+            top: 0px;
+            right: 0px;
+            background-color: #F8F8F8;
+            z-index: -1;
+        }
+    }
+    .flex-grid-alt {
+        max-width: 100%;
+        width: 75%;
+        @media (max-width: 767px) {
+            width: 100%;
+        }
+        .porfolio-items {
+            justify-content: flex-start;
+            flex-direction: row;
+            .porfolio {
+                width: calc(33.3333% - 2rem);
+                margin: 0 1rem;
+                flex-grow: 0;
+                @media (max-width: 767px) {
+                    width: calc(50% - 2rem);
+                }
+                @media (max-width: 540px) {
+                    width: 100%;
+                    margin: 0;
+                }
+            }
+        }
+    }
+}

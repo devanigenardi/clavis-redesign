@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CLAVIS</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="css/app.css">
@@ -14,12 +14,18 @@
     <div class="wrapper">
 
         <section class="slab-full slab-no-padding">
-            <nav class="nav nav-alt">
+            <nav class="nav nav-alt nav-sub-menu">
                 <div class="nav-container">
                     <a class="nav-logo-container" href="index.html"></a>
-                    <ul class="nav-menu">
+                    <ul class="nav-menu nav-menu-alt">
                         <li class="nav-item">
                             <a href="who-we-are.html" class="nav-link">WHO WE ARE</a>
+                            <ul>
+                                <li class="menu-item" menu-link="n1">What We Do</li>
+                                <li class="menu-item" menu-link="n2">Our Team</li>
+                                <li class="menu-item" menu-link="n3">Our Culture</li>
+                                <li class="menu-item" menu-link="n4">Inside Look</li>
+                            </ul>
                         </li>
                         <li class="nav-item">
                             <a href="what-we-believe.html" class="nav-link">WHAT WE BELIEVE</a>
@@ -47,8 +53,8 @@
 
             <section class="slab-full slab-no-padding top-intro">
                 <div class="flex-grid-container">
-                    <div class="flex-grid pt-11 ptxs-5 pb-3">
-                        <div class="col two-cols pbxs-2">
+                    <div class="flex-grid pt-8 ptxs-5 pb-0">
+                        <div class="col pbxs-2 pt-5 ptxs-0 pb-5">
                             <h2 class="main-headline headline-animated">
                                 <div class="line">
                                     <span>We are business</span>
@@ -60,11 +66,12 @@
                                     <span>investors second.</span>
                                 </div>
                             </h2>
+                            <p class="pb-2">In 2013, Clavis set out to build a different type of investment group. One that believes that operators don’t just make better partners—they build better businesses.</p>
+                            <p class="pb-2">Our investment approach relies heavily on our operational background and experience to help our portfolio investments achieve ambitious strategic and operational growth objectives. We provide significant operational help and support over and above our capital dollars. Our team works side by side with management to do the heavy lifting needed to achieve great things.</p>
+                            <p>We ask a lot out of the companies we invest in. We demand a lot out of ourselves as well. We operate Clavis in an open, collaborative and ethical manner and have a win-win oriented culture.</p>
                         </div>
                         <div class="col">
-                            <p class="pb-2">In 2013, Clavis set out to build a different type of investment group. One that believes that operators don’t just make better partners - they build better businesses.</p>
-                            <p class="pb-2">Our investment approach relies heavily on our operational background and experience to help our portfolio investments achieve ambitious strategic, operational and revenue growth objectives. We provide significant operational help and support over and above our capital dollars. Our team works side by side with management to do the heavy lifting needed to achieve great things.</p>
-                            <p>We ask a lot out of the companies we invest in. We demand a lot out of ourselves as well. We operate Clavis in an open, collaborative and ethical manner and have a win-win oriented culture.</p>
+                            <div class="parallax-slide parallax-slide-1"></div>
                         </div>
                     </div>
                 </div>
@@ -76,11 +83,8 @@
         <main class="main main-alt">
 
             <section class="main-content">
-                <section class="slab-full slab-full-parallax">
-                    <div class="parallax-slide parallax-slide-1"></div>
-                </section>
-
-                <section class="slab-full light-grey-bg">
+               
+                <section id="n1" class="slab-full light-grey-bg">
                     <div class="flex-grid-container">
                         <div class="flex-grid pt-4">
                             <div class="col two-cols">
@@ -88,7 +92,7 @@
                                 <h3 class="headline-dark mbxs-1">We help you grow.</h3>
                             </div>
                             <div class="col two-col">
-                                <p>We focus on investments in unique businesses with strong cultures and growth potential. Our firm works collaboratively with existing management teams, providing not only capital but experience, resources and connections to grow. We operate under an open, collaborative, win-win philosophy where all stakeholders - investors, management, employees and customers - benefit from our collective efforts.</p>
+                                <p>We focus on investments in unique businesses with strong cultures and growth potential. Our firm works collaboratively with existing management teams, providing not only capital but experience, resources, and connections to grow. We operate under an open, collaborative, win-win philosophy where all stakeholders—investors, management, employees and customers—benefit from our collective efforts.</p>
                             </div>
                         </div>
                     </div>
@@ -110,17 +114,17 @@
                             <div class="col">
                                 <img src="images/svg/clavis-operators-icon.svg" alt="" />
                                 <h4 class="headline-dark-alt headline-dark-alt-internal mt-1 mb-1">We are expert operators.</h4>
-                                <p>Decades in operations equips us to forge a strategy around you. We work our way from the c-suite to the factory floor building custom-fit solutions that leave a lasting impact.</p>
+                                <p>Decades in operations equips us to forge a strategy around you. We work our way from the c-suite to the factory floor, building custom-fit solutions that leave a lasting impact.</p>
                             </div>
                         </div>
                     </div>
                 </section>
 
-                <section class="slab-full">
+                <section id="n2" class="slab-full">
                     <div class="flex-grid slab-title">
                         <div class="col ptxs-2">
                             <h2 class="eyebrow mb-1">OUR TEAM</h2>
-                            <h3 class="headline-dark">Business builders at&nbsp;heart.</h3>
+                            <h3 class="headline-dark pb-1 ">Business builders at&nbsp;heart.</h3>
                         </div>
                     </div>
                 </section>
@@ -221,7 +225,7 @@
                     </div>
                 </section>
 
-                <section class="slab-full light-grey-bg">
+                <section id="n3" class="slab-full light-grey-bg">
                     <div class="flex-grid slab-title">
                         <div class="col ptxs-1">
                             <h2 class="eyebrow mb-1">CULTURE</h2>
@@ -234,9 +238,9 @@
                     <div class="flex-grid-container">
                         <div class="flex-grid flex-grid-wrap collaborators-chart pb-1 pbxs-0">
                             <div class="col four-cols mbxs-1">
-                                <img src="images/svg/clavis-hat-icon.svg" alt="" />
+                                <img class="hat" src="images/svg/clavis-hat-icon.svg" alt="" />
                                 <h4 class="headline-dark-alt headline-dark-alt-internal mt-1 mb-1">Scrappy</h4>
-                                <p>Resourceful, hands-on and self-reliant. We’re just as comfortable with blue jeans, hard hats and a little elbow grease as we are in the c-suite or a sea of spreadsheets.</p>
+                                <p>Resourceful, hands on and self reliant. We’re just as comfortable with blue jeans, hard hats and a little elbow grease as we are in the c-suite or a sea of spreadsheets.</p>
                             </div>
                             <div class="col four-cols mbxs-1">
                                 <img src="images/svg/clavis-curious-icon.svg" alt="" />
@@ -258,7 +262,7 @@
                     </div>
                 </section>
 
-                <section class="slab-full">
+                <section id="n4" class="slab-full">
                     <div class="flex-grid slab-title">
                         <div class="col ptxs-1">
                             <h2 class="eyebrow">INSIDE LOOK</h2>

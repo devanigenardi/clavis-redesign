@@ -71,6 +71,16 @@ $(document).ready(function(){
         });
       });
 
+    // scroll anchoring menu
+
+    $('.menu-item').click(function() {
+        var keyword = $(this).attr('menu-link');
+        var scrollTo = $('#' + keyword);
+        $('html, body').animate({
+            scrollTop: scrollTo.offset().top + -100
+        }, 50);
+    });
+
 });
 
 // $(window).scroll(function(){

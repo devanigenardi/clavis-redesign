@@ -175,6 +175,10 @@
           img {
               width: auto;
               height: 70px;
+              &.hat {
+                  margin-top: 1rem;
+                  height: calc(70px - 1rem);
+              }
           }
       }
   }
@@ -563,7 +567,7 @@
   }
 
 .parallax-slide {
-    height: 70vh;
+    height: 100%;
     background-attachment: fixed;
     background-position: center center;
     position: relative;
@@ -574,24 +578,22 @@
 
 .parallax-slide-1 {
     background: url('../images/clavis-parallax-1.jpg') no-repeat center;
-    background-attachment: fixed;
     background-size: cover;
 }
 
 .parallax-slide-2 {
     background: url('../images/clavis-parallax-2.jpg') no-repeat center;
-    background-attachment: fixed;
     background-size: cover;
 }
 
 .parallax-slide-3 {
     background: url('../images/clavis-parallax-3.jpg') no-repeat center;
-    background-attachment: fixed;
     background-size: cover;
 }
 
 
 .headline-animated {
+    margin-bottom: 2rem;
     .line{
         width: 100%;
         position: relative;
@@ -646,6 +648,9 @@
         a.standard-cta-alt {
             padding: 16px 40px;
         }
+        a.standard-cta-alt-2 {
+            padding: 16px 60px;
+        }
         ul {
             padding: 0;
             li {
@@ -660,10 +665,19 @@
                 }
             }
         }
+        &.slab-card-alt {
+            p, h4 {
+                @media (max-width: 767px) {
+                    padding: 0 0 2.2rem 0;
+                    margin: 0;
+                }
+            }
+        }
         
     }
     &.slab-inner-card-alt {
         padding: 3.5rem 0;
+        background: url('../images/clavis-grinder.jpg') left center / auto auto no-repeat;
         .slab-card {
             padding:50px 45px;
         }
@@ -681,12 +695,12 @@
         flex-direction: column;
     }
     div.col.col.three-cols {
-        height: 500px;
         background-size: 100%;
         background-position: center;
         position: relative;
+        padding-top: 17%;
         @media (max-width: 1023px) {
-            height: 400px;
+            min-height: 200px;
         }
         @media (max-width: 767px) {
             height: 250px;
@@ -765,7 +779,7 @@
         padding: 0;
         .team-card-info {
             .profile-picture {
-                height: 450px;
+                padding-top: 76%;
                 position: relative;
                 background-size: 100%;
                 background-position: center center;
@@ -774,9 +788,7 @@
                 overflow: hidden;
                 @media (max-width: 1023px) {
                     transition: none;
-                    height: 310px;
                     background-size: cover;
-                    
                 }
                 &.p-id-1 {
                     background-image: url('../images/clavis-porfolio-1.jpg');
@@ -796,6 +808,9 @@
                 &.p-id-6 {
                     background-image: url('../images/clavis-porfolio-6.jpg');
                 }
+                &.p-id-7 {
+                    background-image: url('../images/clavis-porfolio-7.jpg');
+                }
             }
         }
         .team-card-content {
@@ -804,9 +819,9 @@
             flex-direction: column;
             justify-content: center;
             width: 100%;
-            padding: 90px 2rem 1rem;
+            padding: 90px 2rem 1rem 0rem;
             @media (max-width: 1023px) {
-                padding: 50px 2rem 1rem;
+                padding: 30px 2rem 1rem 0rem;
             }
             @media (max-width: 767px) {
                 margin: 0rem!important;
@@ -814,8 +829,11 @@
             .thumb-logo {
                 position: absolute;
                 height: 180px;
-                width: 180px;
+                width: 60%;
                 top: -90px;
+                left: 0;
+                right: 0;
+                margin: auto;
                 background: $white;
                 border: 1px solid #DBDBDB;
                 padding: 2rem;
@@ -823,15 +841,8 @@
                 @media (max-width: 1023px) {
                     height: 100px;
                     width: 100px;
-                    top: -50px;
-                    padding: 1rem;
-                }
-                @media (max-width: 1023px) {
-                    height: 100px;
-                    width: 100px;
                     top: calc(-100px + 1rem);
                     padding: 1rem;
-                    margin-left: 1rem;
                 }
                 svg {
                     width: 100%;
@@ -850,12 +861,16 @@
                 text-transform: uppercase;
                 color: $blue;
                 margin: 2rem 0 1rem;
+                text-align: center;
+                text-transform: capitalize;
                 @media (max-width: 1023px) {
                     font-size: 14px;
                 }
                 span {
                     color: #6C6C6C;
                     white-space: nowrap;
+                    font-weight: normal;
+                    text-transform: uppercase;
                 }
             }
             p {
